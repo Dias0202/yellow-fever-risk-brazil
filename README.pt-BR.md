@@ -4,6 +4,7 @@ Previsão, com uma temporada de antecedência, de febre amarela silvestre nos 5.
 municípios brasileiros, e as análises ecológicas, de vacinação e de cenários
 climáticos que a sustentam.
 
+> **Painel online:** https://dias0202.github.io/yellow-fever-risk-brazil/ ·
 > English version: [README.md](README.md) · Model card: [MODEL_CARD.md](MODEL_CARD.md)
 
 ## O problema

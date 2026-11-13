@@ -3,6 +3,7 @@
 Season-ahead forecasting of sylvatic yellow fever in Brazil's 5,570 municipalities,
 plus the ecological, vaccination and climate-scenario analyses that support it.
 
+> **Live dashboard:** https://dias0202.github.io/yellow-fever-risk-brazil/ ·
 > Portuguese version: [README.pt-BR.md](README.pt-BR.md) · Model card: [MODEL_CARD.md](MODEL_CARD.md)
 
 ## The problem
