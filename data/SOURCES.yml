@@ -1,0 +1,191 @@
+# Proveniencia das fontes de dados.
+#
+# Cada fonte declara responsavel, URL ou DOI, forma de obtencao, verificacao de
+# integridade e lacunas conhecidas. Fontes com download automatizado sao
+# conferidas por tamanho minimo e sha256; as exportacoes manuais sao colocadas em
+# data/raw/ (ver a secao "Reproducibility" do README) e conferidas pelo
+# diagnostico gravado em results/metrics/ a cada reconstrucao do painel.
+#
+# Campos:
+#   estado       obtida_automaticamente | exportacao_manual | derivada
+#   verificacao  como conferir que o arquivo esta integro
+#   lacunas      o que se sabe que falta, declarado e nao escondido
+
+versao_do_documento: 2
+atualizado_em: 2026-08-18
+
+fontes:
+
+  epidemiologia_casos_humanos:
+    descricao: Casos humanos confirmados de febre amarela, por municipio provavel de infeccao
+    responsavel: Ministerio da Saude, CGARB/DEDT/SVSA
+    arquivo: fa_casoshumanos_1994-2025.csv
+    estado: exportacao_manual
+    periodo: [1994, 2025]
+    registros: 2886
+    formato: CSV, separador ponto e virgula, codificacao latin-1
+    chave: COD_MUN_LPI (codigo IBGE de seis digitos), ANO_IS
+    lacunas:
+      - 7 registros sem codigo municipal, descartados e contabilizados no diagnostico
+      - nenhum caso registrado em 2012
+    pendente:
+      - obter a data exata da extracao e a versao da base SINAN
+      - registrar os criterios de confirmacao usados
+
+  epidemiologia_epizootias:
+    descricao: Epizootias em primatas nao humanos
+    responsavel: Ministerio da Saude, CGARB/DEDT/SVSA
+    arquivo: fa_epizpnh_1994-2025.csv
+    estado: exportacao_manual
+    periodo: [2000, 2025]
+    registros: 2556
+    chave: COD_MUN_OCOR, ANO_OCOR
+    lacunas:
+      - a serie comeca em 2000, nao em 1994, apesar do nome do arquivo
+      - nenhum registro nacional em 2004, 2005, 2006, 2010, 2011, 2012 e 2013
+      - estas sao lacunas de vigilancia, nao ausencia de circulacao viral, e estao
+        marcadas na coluna epizootia_observavel do painel
+
+  clima_terraclimate:
+    descricao: Clima mensal em grade de 1/24 de grau
+    responsavel: Abatzoglou et al. 2018, University of Idaho
+    doi: 10.1038/sdata.2017.191
+    url_base: https://climate.northwestknowledge.net/TERRACLIMATE-DATA
+    padrao: TerraClimate_{variavel}_{ano}.nc
+    variaveis: [ppt, tmax, tmin, vpd, ws]
+    estado: obtida_automaticamente
+    downloader: src/yfvrisk/ingest/baixar_terraclimate.py
+    periodo: [1994, 2024]
+    verificacao: tamanho minimo de 10 MB antes de promover o download, sha256 em MANIFESTO.jsonl
+    lacunas:
+      - nao ha 2025, enquanto a epidemiologia vai ate 2025
+      - tmax_1994.nc estava com 0 bytes na copia recebida e foi rebaixado da fonte
+
+  clima_futuro_worldclim_cmip6:
+    descricao: Projecoes climaticas mensais CMIP6 para 2021-2040 e normais de 1970-2000
+    responsavel: WorldClim 2.1, Fick e Hijmans
+    doi: 10.1002/joc.5086
+    url_base_futuro: https://geodata.ucdavis.edu/cmip6
+    url_base_historico: https://geodata.ucdavis.edu/climate/worldclim/2_1/base
+    estado: obtida_automaticamente
+    downloader: src/yfvrisk/ingest/baixar_worldclim.py
+    modelos: [INM-CM5-0, MIROC6, MPI-ESM1-2-HR, EC-Earth3-Veg, UKESM1-0-LL]
+    criterio_de_escolha_dos_modelos: >-
+      cobertura da faixa de sensibilidade climatica de equilibrio do CMIP6, de
+      ~1,9 K (INM-CM5-0) a ~5,3 K (UKESM1-0-LL), valores do IPCC AR6 tabela
+      7.SM.5. O criterio e esse, e nao disponibilidade: um ensemble so de modelos
+      de sensibilidade media reportaria incerteza falsamente estreita.
+    cenarios: [ssp126, ssp245, ssp370, ssp585]
+    periodos: ["2021-2040"]
+    variaveis: [tmin, tmax, prec]
+    resolucao: 10 arc-min nas duas pontas da anomalia
+    verificacao: tamanho minimo de 3 MB antes de promover o download, sha256 em MANIFESTO.jsonl
+    metodo: >-
+      delta. A anomalia futuro-menos-historico e calculada dentro do WorldClim,
+      na mesma resolucao dos dois lados, e aplicada sobre a linha de base
+      observada do TerraClimate que ja esta no painel. Transporta a MUDANCA
+      projetada, nao o nivel projetado, e com isso cancela o vies sistematico
+      de cada GCM.
+    decisoes_de_desenho:
+      - cinco GCMs, e nao um, porque no horizonte de 2021-2040 a incerteza
+        estrutural entre modelos e a maior fonte de incerteza
+      - linha de base e futuro do WorldClim na mesma resolucao (10 arc-min), para
+        que a anomalia nao misture mudanca climatica com mudanca de resolucao
+    lacunas:
+      - o WorldClim futuro traz apenas tmin, tmax e prec. O painel usa tambem vpd
+        e ws, que nao tem projecao nesta fonte; o tratamento delas esta declarado
+        no modulo de cenarios
+      - >-
+        as bioclimaticas (bioc) nao sao usadas, porque seriam derivadas com
+        definicao diferente da do painel; misturar convencoes produziria colunas
+        projetadas que o modelo nao le
+
+  floresta_hansen:
+    descricao: Cobertura arborea em 2000 e perda anual, a 30 m
+    responsavel: Hansen et al. 2013, University of Maryland
+    doi: 10.1126/science.1244693
+    url_base: https://storage.googleapis.com/earthenginepartners-hansen/GFC-2024-v1.12
+    versao: GFC-2024-v1.12
+    camadas_usadas: [treecover2000, lossyear, gain, datamask]
+    camadas_ignoradas: [first, last]
+    estado: obtida_automaticamente
+    downloader: src/yfvrisk/ingest/baixar_hansen.py
+    periodo_perda: [2001, 2024]
+    lacunas:
+      - a faixa de latitude 10N e indispensavel, porque sem ela ficam 24 municipios sem
+        dado e 20 parcialmente cobertos, 12,4% do territorio; o downloader a inclui
+      - as camadas first e last somam 121 GB e nao entram em nenhuma metrica de
+        floresta
+
+  uso_do_solo:
+    descricao: Proporcao de formacao florestal, plantacao, pastagem, area urbana e areas umidas
+    responsavel: Abdalla e Augusto 2022, derivado do MapBiomas
+    doi: 10.1038/s41597-022-01581-2
+    arquivo: KrempserData/01-stats-1985--2020-land_use_cover-BR.csv
+    estado: exportacao_manual
+    periodo: [1985, 2020]
+    problemas_conhecidos:
+      - as colunas -mean_normalized estao na ordem de 1e-4, sem variancia util;
+        o painel usa a fracao de area calculada a partir das colunas -count
+        (ver src/yfvrisk/ingest/uso_solo.py)
+      - e um derivado de terceiros do MapBiomas, e nao a colecao oficial; deve
+        ser citado como tal (DOI acima)
+      - o dicionario de dados do derivado lista DOIs em sequencia (01581-2 a
+        01581-6); apenas o 01581-2 resolve
+    pendente:
+      - conferir contra a colecao oficial do MapBiomas
+
+  populacao_ibge:
+    descricao: Estimativas populacionais municipais
+    responsavel: IBGE
+    url: https://www.ibge.gov.br/estatisticas/sociais/populacao/9103-estimativas-de-populacao.html
+    estado: exportacao_manual
+    periodo: [1994, 2025]
+    arquivos: 27 planilhas anuais
+    lacunas:
+      - sem planilha para 1996, 2007, 2010, 2022 e 2024, interpolados e marcados
+      - o formato do codigo municipal muda em 2008, de quatro digitos sem
+        verificador para cinco com verificador
+      - o layout das planilhas varia; a leitura identifica colunas por conteudo
+
+  vacinacao_pni:
+    descricao: Cobertura vacinal contra febre amarela
+    responsavel: Programa Nacional de Imunizacoes, DATASUS/TabNet
+    url: http://tabnet.datasus.gov.br
+    arquivo: vacin.csv
+    estado: exportacao_manual
+    periodo: [1994, 2022]
+    lacunas:
+      - a fonte termina em 2022 e o painel vai ate 2025
+      - 40% das celulas vazias, concentradas no inicio da serie (94,7% em 1994)
+      - 1.010 registros acima de 200% e 39 acima de 500%, com maximo de 10.100%
+        no municipio 150475 em 2017; conferido no texto bruto, e da fonte
+    pendente:
+      - reexportar do TabNet cobrindo 2023 a 2025
+      - registrar os parametros exatos da consulta
+
+  malha_municipal_ibge:
+    descricao: Malha municipal digital
+    responsavel: IBGE
+    versao: 2022
+    crs: EPSG:4674 (SIRGAS 2000)
+    estado: exportacao_manual
+    feicoes: 5572
+    observacao:
+      - duas feicoes nao sao municipios, e sim corpos d'agua no Rio Grande do Sul,
+        Lagoa Mirim (4300001) e Lagoa dos Patos (4300002); removidas, restam 5570
+      - truncadas a seis digitos, ambas colapsam em 430000, o que produz uma
+        contagem intermediaria de 5571; por isso os codigos ficam com sete digitos
+
+  estradas_openstreetmap:
+    descricao: Malha viaria, usada para distancia a estrada
+    responsavel: OpenStreetMap, extratos da Geofabrik
+    url: https://download.geofabrik.de/south-america/brazil.html
+    data_do_extrato: 2025-11-24
+    estado: exportacao_manual
+    problemas_conhecidos:
+      - distancia a estrada calculada sobre latitude e longitude nao projetadas
+        sai em graus, e nao em metros; precisa ser feita em projecao metrica
+    pendente:
+      - calcular em projecao metrica (EPSG:5880); o painel atual nao tem
+        variavel de distancia a estrada

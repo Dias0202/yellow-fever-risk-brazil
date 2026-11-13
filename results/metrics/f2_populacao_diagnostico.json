@@ -1,0 +1,239 @@
+{
+  "arquivos": [
+    {
+      "arquivo": "1994.xls",
+      "ano": 1994,
+      "convencao": "antigo_4_digitos_sem_verificador",
+      "taxa_correspondencia": 1.0,
+      "municipios_aproveitados": 4974
+    },
+    {
+      "arquivo": "1995.xls",
+      "ano": 1995,
+      "convencao": "antigo_4_digitos_sem_verificador",
+      "taxa_correspondencia": 1.0,
+      "municipios_aproveitados": 4974
+    },
+    {
+      "arquivo": "1997.xls",
+      "ano": 1997,
+      "convencao": "antigo_4_digitos_sem_verificador",
+      "taxa_correspondencia": 1.0,
+      "municipios_aproveitados": 5507
+    },
+    {
+      "arquivo": "1998.xls",
+      "ano": 1998,
+      "convencao": "antigo_4_digitos_sem_verificador",
+      "taxa_correspondencia": 1.0,
+      "municipios_aproveitados": 5507
+    },
+    {
+      "arquivo": "1999.xls",
+      "ano": 1999,
+      "convencao": "antigo_4_digitos_sem_verificador",
+      "taxa_correspondencia": 1.0,
+      "municipios_aproveitados": 5507
+    },
+    {
+      "arquivo": "2000.xls",
+      "ano": 2000,
+      "convencao": "antigo_4_digitos_sem_verificador",
+      "taxa_correspondencia": 1.0,
+      "municipios_aproveitados": 5507
+    },
+    {
+      "arquivo": "2001.xls",
+      "ano": 2001,
+      "convencao": "antigo_4_digitos_sem_verificador",
+      "taxa_correspondencia": 1.0,
+      "municipios_aproveitados": 5560
+    },
+    {
+      "arquivo": "2002.xls",
+      "ano": 2002,
+      "convencao": "antigo_4_digitos_sem_verificador",
+      "taxa_correspondencia": 1.0,
+      "municipios_aproveitados": 5560
+    },
+    {
+      "arquivo": "2003.xls",
+      "ano": 2003,
+      "convencao": "antigo_4_digitos_sem_verificador",
+      "taxa_correspondencia": 1.0,
+      "municipios_aproveitados": 5560
+    },
+    {
+      "arquivo": "2004.xls",
+      "ano": 2004,
+      "convencao": "antigo_4_digitos_sem_verificador",
+      "taxa_correspondencia": 1.0,
+      "municipios_aproveitados": 5564
+    },
+    {
+      "arquivo": "2005.xls",
+      "ano": 2005,
+      "convencao": "antigo_4_digitos_sem_verificador",
+      "taxa_correspondencia": 1.0,
+      "municipios_aproveitados": 5564
+    },
+    {
+      "arquivo": "2006.xls",
+      "ano": 2006,
+      "convencao": "antigo_4_digitos_sem_verificador",
+      "taxa_correspondencia": 1.0,
+      "municipios_aproveitados": 5564
+    },
+    {
+      "arquivo": "2008.xls",
+      "ano": 2008,
+      "convencao": "moderno_7_digitos",
+      "taxa_correspondencia": 1.0,
+      "municipios_aproveitados": 5565
+    },
+    {
+      "arquivo": "2009.xls",
+      "ano": 2009,
+      "convencao": "moderno_7_digitos",
+      "taxa_correspondencia": 1.0,
+      "municipios_aproveitados": 5565
+    },
+    {
+      "arquivo": "2011.xls",
+      "ano": 2011,
+      "convencao": "moderno_7_digitos",
+      "taxa_correspondencia": 1.0,
+      "municipios_aproveitados": 5565
+    },
+    {
+      "arquivo": "2012.xls",
+      "ano": 2012,
+      "convencao": "moderno_7_digitos",
+      "taxa_correspondencia": 1.0,
+      "municipios_aproveitados": 5565
+    },
+    {
+      "arquivo": "2013.xls",
+      "ano": 2013,
+      "convencao": "moderno_7_digitos",
+      "taxa_correspondencia": 1.0,
+      "municipios_aproveitados": 5570
+    },
+    {
+      "arquivo": "2014.xls",
+      "ano": 2014,
+      "convencao": "moderno_7_digitos",
+      "taxa_correspondencia": 1.0,
+      "municipios_aproveitados": 5569
+    },
+    {
+      "arquivo": "2015.xls",
+      "ano": 2015,
+      "convencao": "moderno_7_digitos",
+      "taxa_correspondencia": 1.0,
+      "municipios_aproveitados": 5570
+    },
+    {
+      "arquivo": "2016.xlsx",
+      "ano": 2016,
+      "convencao": "moderno_7_digitos",
+      "taxa_correspondencia": 1.0,
+      "municipios_aproveitados": 5570
+    },
+    {
+      "arquivo": "2017.xls",
+      "ano": 2017,
+      "convencao": "moderno_7_digitos",
+      "taxa_correspondencia": 1.0,
+      "municipios_aproveitados": 5570
+    },
+    {
+      "arquivo": "2018.xls",
+      "ano": 2018,
+      "convencao": "moderno_7_digitos",
+      "taxa_correspondencia": 1.0,
+      "municipios_aproveitados": 5570
+    },
+    {
+      "arquivo": "2019.xls",
+      "ano": 2019,
+      "convencao": "moderno_7_digitos",
+      "taxa_correspondencia": 1.0,
+      "municipios_aproveitados": 5570
+    },
+    {
+      "arquivo": "2020.xls",
+      "ano": 2020,
+      "convencao": "moderno_7_digitos",
+      "taxa_correspondencia": 1.0,
+      "municipios_aproveitados": 5570
+    },
+    {
+      "arquivo": "2021.xls",
+      "ano": 2021,
+      "convencao": "moderno_7_digitos",
+      "taxa_correspondencia": 1.0,
+      "municipios_aproveitados": 5570
+    },
+    {
+      "arquivo": "2023.xls",
+      "ano": 2023,
+      "convencao": "moderno_7_digitos",
+      "taxa_correspondencia": 1.0,
+      "municipios_aproveitados": 5570
+    },
+    {
+      "arquivo": "2025.xls",
+      "ano": 2025,
+      "convencao": "moderno_7_digitos",
+      "taxa_correspondencia": 0.9998,
+      "municipios_aproveitados": 5570
+    }
+  ],
+  "anos_com_planilha": [
+    1994,
+    1995,
+    1997,
+    1998,
+    1999,
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2008,
+    2009,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2023,
+    2025
+  ],
+  "anos_interpolados": [
+    1996,
+    2007,
+    2010,
+    2022,
+    2024
+  ],
+  "linhas": 178240,
+  "populacao_observada_pct": 0.8352614452423699,
+  "populacao_ausente_apos_interpolacao": 0,
+  "populacao_total_por_ano": {
+    "1994": 157378566,
+    "2000": 166523987,
+    "2010": 191985785,
+    "2020": 211755692,
+    "2025": 213415160
+  }
+}

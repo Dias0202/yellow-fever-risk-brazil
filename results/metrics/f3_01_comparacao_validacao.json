@@ -1,0 +1,470 @@
+{
+  "prevalencia": 0.00738330341113106,
+  "ano_inicial_teste": 2005,
+  "resultados": [
+    {
+      "rotulo": "prevalencia constante",
+      "esquema": "aleatorio",
+      "n": 35648,
+      "positivos": 261,
+      "prevalencia": 0.007321588868940754,
+      "roc_auc": 0.5,
+      "pr_auc": 0.007321588868940754,
+      "pr_auc_sobre_prevalencia": 1.0,
+      "limiar": 0.007398732046678636,
+      "vp": 261,
+      "fp": 35387,
+      "fn": 0,
+      "tn": 0,
+      "precisao": 0.007321588868940754,
+      "recall": 1.0,
+      "f2": 0.035566335986046006,
+      "municipios_investigados_por_evento": 136.5823754789272,
+      "brier": 0.0072679891564448275,
+      "brier_referencia_prevalencia": 0.007267983205374959
+    },
+    {
+      "rotulo": "historico do proprio municipio",
+      "esquema": "aleatorio",
+      "n": 35648,
+      "positivos": 261,
+      "prevalencia": 0.007321588868940754,
+      "roc_auc": 0.5715355672640785,
+      "pr_auc": 0.015546841002025491,
+      "pr_auc_sobre_prevalencia": 2.1234244752498266,
+      "limiar": 0.04,
+      "vp": 54,
+      "fp": 3247,
+      "fn": 207,
+      "tn": 32140,
+      "precisao": 0.016358679188124812,
+      "recall": 0.20689655172413793,
+      "f2": 0.0621403912543153,
+      "municipios_investigados_por_evento": 61.129629629629626,
+      "brier": 0.007504592207999726,
+      "brier_referencia_prevalencia": 0.007267983205374959
+    },
+    {
+      "rotulo": "floresta aleatoria | so ambiental",
+      "esquema": "A_aleatorio",
+      "n": 35648,
+      "positivos": 261,
+      "prevalencia": 0.007321588868940754,
+      "roc_auc": 0.9647779067296073,
+      "pr_auc": 0.4205350544283187,
+      "pr_auc_sobre_prevalencia": 57.43767670597971,
+      "limiar": 0.20249070492328167,
+      "vp": 152,
+      "fp": 293,
+      "fn": 109,
+      "tn": 35094,
+      "precisao": 0.3415730337078652,
+      "recall": 0.5823754789272031,
+      "f2": 0.5104096709200806,
+      "municipios_investigados_por_evento": 2.9276315789473686,
+      "brier": 0.005683481981863034,
+      "brier_referencia_prevalencia": 0.007267983205374959,
+      "segundos": 19.1,
+      "n_variaveis": 33
+    },
+    {
+      "rotulo": "floresta aleatoria | com historico",
+      "esquema": "A_aleatorio",
+      "n": 35648,
+      "positivos": 261,
+      "prevalencia": 0.007321588868940754,
+      "roc_auc": 0.9675189722138582,
+      "pr_auc": 0.428048001551514,
+      "pr_auc_sobre_prevalencia": 58.4638128709133,
+      "limiar": 0.20627158530204964,
+      "vp": 152,
+      "fp": 281,
+      "fn": 109,
+      "tn": 35106,
+      "precisao": 0.3510392609699769,
+      "recall": 0.5823754789272031,
+      "f2": 0.5145565335138794,
+      "municipios_investigados_por_evento": 2.848684210526316,
+      "brier": 0.005614369819157514,
+      "brier_referencia_prevalencia": 0.007267983205374959,
+      "segundos": 23.2,
+      "n_variaveis": 36
+    },
+    {
+      "rotulo": "floresta aleatoria | so ambiental",
+      "esquema": "B_temporal",
+      "n": 116970,
+      "positivos": 1155,
+      "prevalencia": 0.009874326750448833,
+      "roc_auc": 0.7461726222948863,
+      "pr_auc": 0.033415694302961374,
+      "pr_auc_sobre_prevalencia": 3.384098495772634,
+      "limiar": 0.045820340820785316,
+      "vp": 406,
+      "fp": 8965,
+      "fn": 749,
+      "tn": 106850,
+      "precisao": 0.043325152064881016,
+      "recall": 0.3515151515151515,
+      "f2": 0.14509327424773072,
+      "municipios_investigados_por_evento": 23.08128078817734,
+      "brier": 0.01048231131327104,
+      "brier_referencia_prevalencia": 0.009776824421674199,
+      "segundos": 274.4,
+      "por_ano": [
+        {
+          "ano": 2005,
+          "roc_auc": 0.9956290042512423,
+          "pr_auc": 0.07708207299858842,
+          "positivos": 3
+        },
+        {
+          "ano": 2006,
+          "roc_auc": 0.947826867816092,
+          "pr_auc": 0.04719974615262573,
+          "positivos": 2
+        },
+        {
+          "ano": 2007,
+          "roc_auc": 0.8254917626935542,
+          "pr_auc": 0.1385301750923614,
+          "positivos": 16
+        },
+        {
+          "ano": 2008,
+          "roc_auc": 0.7790689474669177,
+          "pr_auc": 0.043794191689389826,
+          "positivos": 67
+        },
+        {
+          "ano": 2009,
+          "roc_auc": 0.712805275421144,
+          "pr_auc": 0.033673251806839034,
+          "positivos": 61
+        },
+        {
+          "ano": 2010,
+          "roc_auc": 0.9744971264367817,
+          "pr_auc": 0.0190885230255309,
+          "positivos": 2
+        },
+        {
+          "ano": 2011,
+          "roc_auc": 0.6612787356321839,
+          "pr_auc": 0.0007759863276709297,
+          "positivos": 2
+        },
+        {
+          "ano": 2013,
+          "roc_auc": 0.6913657864798515,
+          "pr_auc": 0.0036084279468870835,
+          "positivos": 3
+        },
+        {
+          "ano": 2014,
+          "roc_auc": 0.688757183908046,
+          "pr_auc": 0.0008468354023714738,
+          "positivos": 2
+        },
+        {
+          "ano": 2015,
+          "roc_auc": 0.7809147854626962,
+          "pr_auc": 0.013919815080896288,
+          "positivos": 18
+        },
+        {
+          "ano": 2016,
+          "roc_auc": 0.4912816286161708,
+          "pr_auc": 0.013349393630149767,
+          "positivos": 55
+        },
+        {
+          "ano": 2017,
+          "roc_auc": 0.6808008449611289,
+          "pr_auc": 0.1693885104054772,
+          "positivos": 318
+        },
+        {
+          "ano": 2018,
+          "roc_auc": 0.7162115176883608,
+          "pr_auc": 0.09766758214098703,
+          "positivos": 280
+        },
+        {
+          "ano": 2019,
+          "roc_auc": 0.7332100378218653,
+          "pr_auc": 0.04368551675238966,
+          "positivos": 61
+        },
+        {
+          "ano": 2020,
+          "roc_auc": 0.8214002732240437,
+          "pr_auc": 0.0700199161535353,
+          "positivos": 80
+        },
+        {
+          "ano": 2021,
+          "roc_auc": 0.8592116724738675,
+          "pr_auc": 0.05994621951929933,
+          "positivos": 82
+        },
+        {
+          "ano": 2022,
+          "roc_auc": 0.776115107913669,
+          "pr_auc": 0.010988679334859421,
+          "positivos": 10
+        },
+        {
+          "ano": 2023,
+          "roc_auc": 0.7158225380832433,
+          "pr_auc": 0.006046343445032849,
+          "positivos": 12
+        },
+        {
+          "ano": 2024,
+          "roc_auc": 0.839279788373835,
+          "pr_auc": 0.02204060255791074,
+          "positivos": 19
+        },
+        {
+          "ano": 2025,
+          "roc_auc": 0.7441873404080869,
+          "pr_auc": 0.043050801971050684,
+          "positivos": 62
+        }
+      ],
+      "n_variaveis": 33
+    },
+    {
+      "rotulo": "floresta aleatoria | com historico",
+      "esquema": "B_temporal",
+      "n": 116970,
+      "positivos": 1155,
+      "prevalencia": 0.009874326750448833,
+      "roc_auc": 0.7472449773887412,
+      "pr_auc": 0.035875584281705175,
+      "pr_auc_sobre_prevalencia": 3.63321826271087,
+      "limiar": 0.04594056772661761,
+      "vp": 411,
+      "fp": 8750,
+      "fn": 744,
+      "tn": 107065,
+      "precisao": 0.04486409780591639,
+      "recall": 0.35584415584415585,
+      "f2": 0.14911835135331256,
+      "municipios_investigados_por_evento": 22.289537712895378,
+      "brier": 0.01047119121272549,
+      "brier_referencia_prevalencia": 0.009776824421674199,
+      "segundos": 303.0,
+      "por_ano": [
+        {
+          "ano": 2005,
+          "roc_auc": 0.9973055505658344,
+          "pr_auc": 0.11499999999999999,
+          "positivos": 3
+        },
+        {
+          "ano": 2006,
+          "roc_auc": 0.9110093390804599,
+          "pr_auc": 0.06351419878296147,
+          "positivos": 2
+        },
+        {
+          "ano": 2007,
+          "roc_auc": 0.7841870723802664,
+          "pr_auc": 0.1222047692996806,
+          "positivos": 16
+        },
+        {
+          "ano": 2008,
+          "roc_auc": 0.7865262095844601,
+          "pr_auc": 0.04608962806185752,
+          "positivos": 67
+        },
+        {
+          "ano": 2009,
+          "roc_auc": 0.7136950266181421,
+          "pr_auc": 0.03111957018091384,
+          "positivos": 61
+        },
+        {
+          "ano": 2010,
+          "roc_auc": 0.9752155172413792,
+          "pr_auc": 0.021841206602162776,
+          "positivos": 2
+        },
+        {
+          "ano": 2011,
+          "roc_auc": 0.8020833333333333,
+          "pr_auc": 0.001340177555609306,
+          "positivos": 2
+        },
+        {
+          "ano": 2013,
+          "roc_auc": 0.9073708161187953,
+          "pr_auc": 0.004646225211058436,
+          "positivos": 3
+        },
+        {
+          "ano": 2014,
+          "roc_auc": 0.52887033045977,
+          "pr_auc": 0.0006047032816717351,
+          "positivos": 2
+        },
+        {
+          "ano": 2015,
+          "roc_auc": 0.7850024015369836,
+          "pr_auc": 0.011006814086603093,
+          "positivos": 18
+        },
+        {
+          "ano": 2016,
+          "roc_auc": 0.488021099480755,
+          "pr_auc": 0.014714954823056814,
+          "positivos": 55
+        },
+        {
+          "ano": 2017,
+          "roc_auc": 0.6857531362715372,
+          "pr_auc": 0.14799910339338074,
+          "positivos": 318
+        },
+        {
+          "ano": 2018,
+          "roc_auc": 0.7299517283283824,
+          "pr_auc": 0.10990764914810261,
+          "positivos": 280
+        },
+        {
+          "ano": 2019,
+          "roc_auc": 0.7354507824751748,
+          "pr_auc": 0.030935828878610433,
+          "positivos": 61
+        },
+        {
+          "ano": 2020,
+          "roc_auc": 0.8181967213114753,
+          "pr_auc": 0.09646672854370228,
+          "positivos": 80
+        },
+        {
+          "ano": 2021,
+          "roc_auc": 0.8530741129204296,
+          "pr_auc": 0.06655289160173747,
+          "positivos": 82
+        },
+        {
+          "ano": 2022,
+          "roc_auc": 0.7722661870503597,
+          "pr_auc": 0.019604828082604192,
+          "positivos": 10
+        },
+        {
+          "ano": 2023,
+          "roc_auc": 0.7447223221782415,
+          "pr_auc": 0.0068023184137955914,
+          "positivos": 12
+        },
+        {
+          "ano": 2024,
+          "roc_auc": 0.8175814694365169,
+          "pr_auc": 0.023240918522765497,
+          "positivos": 19
+        },
+        {
+          "ano": 2025,
+          "roc_auc": 0.7419794082507555,
+          "pr_auc": 0.10025622548368861,
+          "positivos": 62
+        }
+      ],
+      "n_variaveis": 36
+    },
+    {
+      "rotulo": "floresta aleatoria | so ambiental",
+      "esquema": "C_espacial",
+      "n": 178240,
+      "positivos": 1316,
+      "prevalencia": 0.00738330341113106,
+      "roc_auc": 0.8640182935519718,
+      "pr_auc": 0.1022029361978436,
+      "pr_auc_sobre_prevalencia": 13.842440233969333,
+      "limiar": 0.08840743592559736,
+      "vp": 523,
+      "fp": 4914,
+      "fn": 793,
+      "tn": 172010,
+      "precisao": 0.0961927533566305,
+      "recall": 0.3974164133738602,
+      "f2": 0.2443696850761611,
+      "municipios_investigados_por_evento": 10.395793499043977,
+      "brier": 0.0072098391272267075,
+      "brier_referencia_prevalencia": 0.007328790241870242,
+      "segundos": 615.3
+    },
+    {
+      "rotulo": "regressao logistica | so ambiental",
+      "esquema": "D_temporal_logistica",
+      "n": 116970,
+      "positivos": 1155,
+      "prevalencia": 0.009874326750448833,
+      "roc_auc": 0.6366081074590335,
+      "pr_auc": 0.013931025562260673,
+      "pr_auc_sobre_prevalencia": 1.4108329523962173,
+      "limiar": 0.4363068306968499,
+      "vp": 757,
+      "fp": 50533,
+      "fn": 398,
+      "tn": 65282,
+      "precisao": 0.014759212322090076,
+      "recall": 0.6554112554112554,
+      "f2": 0.06769808620998033,
+      "municipios_investigados_por_evento": 67.75429326287978,
+      "brier": 0.25390199505478894,
+      "brier_referencia_prevalencia": 0.009776824421674199,
+      "segundos": 20.6
+    },
+    {
+      "rotulo": "desfecho: caso humano",
+      "esquema": "E_desfecho_separado",
+      "n": 116970,
+      "positivos": 601,
+      "prevalencia": 0.005138069590493289,
+      "roc_auc": 0.7798076530007698,
+      "pr_auc": 0.02068959587843572,
+      "pr_auc_sobre_prevalencia": 4.0267255073221735,
+      "limiar": 0.04281078884816291,
+      "vp": 159,
+      "fp": 4863,
+      "fn": 442,
+      "tn": 111506,
+      "precisao": 0.031660692951015534,
+      "recall": 0.26455906821963393,
+      "f2": 0.10705628871532454,
+      "municipios_investigados_por_evento": 31.58490566037736,
+      "brier": 0.005437185938577413,
+      "brier_referencia_prevalencia": 0.005111669831376537
+    },
+    {
+      "rotulo": "desfecho: epizootia",
+      "esquema": "E_desfecho_separado",
+      "n": 116970,
+      "positivos": 735,
+      "prevalencia": 0.0062836624775583485,
+      "roc_auc": 0.6869010499196883,
+      "pr_auc": 0.023803914609465855,
+      "pr_auc_sobre_prevalencia": 3.7882229821349944,
+      "limiar": 0.06948845585839285,
+      "vp": 146,
+      "fp": 2868,
+      "fn": 589,
+      "tn": 113367,
+      "precisao": 0.04844061048440611,
+      "recall": 0.19863945578231293,
+      "f2": 0.12260665099093047,
+      "municipios_investigados_por_evento": 20.643835616438356,
+      "brier": 0.006762277933915536,
+      "brier_referencia_prevalencia": 0.006244178063426477
+    }
+  ]
+}

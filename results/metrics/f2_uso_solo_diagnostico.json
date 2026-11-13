@@ -1,0 +1,82 @@
+{
+  "arquivo": "01-stats-1985--2020-land_use_cover-BR.csv",
+  "classes_no_denominador": 25,
+  "classes_extraidas": [
+    "Forest_formation",
+    "Forest_plantation",
+    "Pasture",
+    "Urban_area",
+    "Wetlands",
+    "Savanna_formation",
+    "Mosaic_agriculture_and_pasture",
+    "Mangrove",
+    "Wooded_restinga"
+  ],
+  "anos_na_fonte": [
+    1985,
+    2020
+  ],
+  "anos_extrapolados": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "codigos_nao_encontrados_na_malha": [],
+  "linhas": 178240,
+  "observado_pct": 0.8435985188509875,
+  "estatisticas_2020": {
+    "floresta_frac": {
+      "mediana": 0.1534,
+      "maximo": 0.7942,
+      "desvio": 0.0884
+    },
+    "silvicultura_frac": {
+      "mediana": 0.0021,
+      "maximo": 0.3059,
+      "desvio": 0.0301
+    },
+    "pastagem_frac": {
+      "mediana": 0.0946,
+      "maximo": 0.6716,
+      "desvio": 0.089
+    },
+    "urbano_frac": {
+      "mediana": 0.0005,
+      "maximo": 1.0,
+      "desvio": 0.0149
+    },
+    "areas_umidas_frac": {
+      "mediana": 0.0004,
+      "maximo": 0.3625,
+      "desvio": 0.0378
+    },
+    "savana_frac": {
+      "mediana": 0.0157,
+      "maximo": 0.7515,
+      "desvio": 0.1307
+    },
+    "mosaico_agropecuario_frac": {
+      "mediana": 0.4223,
+      "maximo": 0.7871,
+      "desvio": 0.19
+    },
+    "manguezal_frac": {
+      "mediana": 0.0,
+      "maximo": 0.4969,
+      "desvio": 0.0129
+    },
+    "restinga_arborea_frac": {
+      "mediana": 0.0,
+      "maximo": 0.3927,
+      "desvio": 0.0227
+    },
+    "interface_floresta_antropico": {
+      "mediana": 0.0766,
+      "maximo": 0.2392,
+      "desvio": 0.0429
+    }
+  },
+  "nota_escala": "As colunas -mean_normalized do conjunto derivado tem mediana da ordem de 1e-4 e amplitude nula. As fracoes por count tem mediana de 0,15 para floresta e 0,09 para pastagem, com amplitude de 0 a 0,8."
+}

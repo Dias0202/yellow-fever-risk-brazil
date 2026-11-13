@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Determinantes ecológicos – Modelagem de risco de febre amarela</title>
+<meta name="description" content="Contribuições SHAP medidas fora da amostra, importância por permutação com intervalo de confiança e curvas de resposta do modelo de risco de febre amarela silvestre.">
+<link rel="stylesheet" href="css/painel.css">
+</head>
+<body>
+
+<header class="site-header">
+  <h1>Modelagem de Risco de Febre Amarela – Brasil</h1>
+  <nav class="site-nav">
+    <a href="index.html">Início</a>
+    <a href="previsao.html">Previsão</a>
+    <a href="validacao.html">Validação</a>
+    <a href="determinantes.html" class="active">Determinantes</a>
+    <a href="vacinacao.html">Vacinação</a>
+    <a href="cenarios.html">Cenários</a>
+    <a href="metodos.html">Dados &amp; documentação</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <section class="section-block">
+    <h2>O que o modelo realmente usa</h2>
+    <p class="lead">
+      A pergunta "quais fatores ecológicos determinam o risco" só tem resposta se
+      a importância das variáveis for medida em dado que o modelo não viu. Medida
+      no próprio treino, ela descreve o que a floresta memorizou.
+    </p>
+    <p>
+      Todas as figuras desta página vêm do modelo treinado até 2019 e avaliado em
+      2020–2025, período que não entrou no ajuste. É o corte com discriminação
+      real: ROC-AUC de <span class="num" id="m-roc">—</span> e PR-AUC de
+      <span class="num" id="m-pr">—</span>, isto é,
+      <span class="num" id="m-vezes">—</span> vezes o acaso.
+    </p>
+
+    <div class="metric-grid">
+      <div class="metric-card">
+        <h4>Correlação Gini × permutação no treino</h4>
+        <span class="value" id="m-rho-treino">—</span>
+        <span class="desc">As duas medidas praticamente coincidem dentro da amostra</span>
+      </div>
+      <div class="metric-card">
+        <h4>Correlação Gini × permutação fora da amostra</h4>
+        <span class="value alerta" id="m-rho-fora">—</span>
+        <span class="desc">Sem relação estatística (<span id="m-rho-p">—</span>)</span>
+      </div>
+      <div class="metric-card">
+        <h4>Variáveis robustas</h4>
+        <span class="value">4</span>
+        <span class="desc">De 32, com intervalo acima de zero nos dois cortes temporais</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <h2>Contribuições individuais, município por município</h2>
+    <p>
+      Cada ponto abaixo é um município-ano de 2020 a 2025. A posição horizontal é
+      quanto aquela variável empurrou a probabilidade prevista daquela linha, para
+      cima ou para baixo; a cor indica se o valor da variável naquele
+      município-ano era baixo ou alto em relação aos demais.
+    </p>
+    <p>
+      Um gráfico de barras de importância informa que uma variável importa. Não
+      informa em que direção ela age, nem que a direção pode inverter conforme o
+      valor, nem que algumas variáveis só atuam numa cauda da distribuição — nuvem
+      concentrada em zero com um punhado de pontos distantes. As três leituras
+      estão na figura ao mesmo tempo.
+    </p>
+
+    <div class="figure-container">
+      <div class="controles" id="ctrl-enxame">
+        <span class="rotulo">Ordenar por:</span>
+        <button class="botao" data-ordem="shap" aria-pressed="true">Contribuição medida (SHAP)</button>
+        <button class="botao" data-ordem="gini" aria-pressed="false">Importância de Gini</button>
+        <span style="flex:1"></span>
+        <div id="legenda-cor" style="width:270px"></div>
+      </div>
+      <div id="fig-enxame"></div>
+      <p class="figure-caption">
+        <strong>Figura 1. Contribuições SHAP por variável, medidas fora da amostra.</strong>
+        <span id="cap-enxame">—</span>
+        Alterne a ordenação para comparar a hierarquia medida fora da amostra com a
+        importância de Gini, que é a ordenação mais usada na literatura. Passe o
+        cursor sobre uma linha para inspecionar o ponto mais próximo.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <h2>Duas ordenações que não conversam</h2>
+    <p>
+      A importância de Gini é calculada durante o próprio treinamento, a partir da
+      redução de impureza que cada variável produz nas divisões das árvores. Ela é
+      barata e vem de graça com o modelo — e é por isso que domina a literatura.
+      Também é conhecida por atribuir importância a variáveis com muitos valores
+      distintos, e por registrar fielmente o que a floresta memorizou.
+    </p>
+    <p>
+      A figura abaixo liga cada variável entre sua posição em uma ordenação e na
+      outra. Linhas paralelas indicariam concordância; o que se vê é o contrário.
+    </p>
+
+    <div class="figure-container">
+      <div id="fig-postos"></div>
+      <p class="figure-caption">
+        <strong>Figura 2. Posição de cada variável nas duas ordenações, corte de 2019.</strong>
+        À esquerda, a ordem por importância de Gini; à direita, por permutação
+        medida em 2020–2025. As variáveis com intervalo de confiança acima de zero
+        na permutação estão em azul; as demais, em cinza. A correlação de posto
+        entre as duas colunas é <span class="num" id="cap-rho">—</span>.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <h2>Importância medida, com intervalo</h2>
+    <p>
+      A permutação embaralha uma variável de cada vez e mede quanto a PR-AUC cai
+      em dado não visto. Repetida vinte vezes por variável, ela produz um
+      intervalo — e é o intervalo que separa o que discrimina do que não
+      discrimina. Das 32 variáveis, <span class="num" id="m-zero">—</span> têm
+      intervalo cruzando zero.
+    </p>
+
+    <div class="figure-container">
+      <div class="controles" id="ctrl-corte">
+        <span class="rotulo">Corte de treino:</span>
+        <button class="botao" data-corte="2019" aria-pressed="true">Até 2019 (pós-onda)</button>
+        <button class="botao" data-corte="2014" aria-pressed="false">Até 2014 (pré-onda)</button>
+      </div>
+      <div id="fig-permutacao"></div>
+      <p class="figure-caption">
+        <strong>Figura 3. Importância por permutação com intervalo de confiança de 95%.</strong>
+        A barra é a queda média na PR-AUC ao embaralhar a variável; o traço é o
+        intervalo por reamostragem. A cor indica a família da variável. No corte de
+        2014, o modelo está em nível de sorteio (ROC-AUC 0,509), de modo que uma
+        importância pequena ali não distingue "a variável não carrega sinal" de
+        "este modelo não aprendeu nada" — a comparação entre os dois cortes é
+        parte do resultado.
+      </p>
+    </div>
+
+    <h3>O que sobrevive aos dois cortes</h3>
+    <p>
+      O critério é exigente e deliberadamente: intervalo inteiramente acima de zero
+      tanto no modelo treinado antes da onda de 2016–2019 quanto no treinado
+      depois dela. Quatro variáveis passam.
+    </p>
+    <table class="tech-table" id="tab-sobreviventes">
+      <thead>
+        <tr>
+          <th>Variável</th><th>Família</th>
+          <th class="n">Posto permutação 2014</th><th class="n">Posto permutação 2019</th>
+          <th class="n">Posto Gini 2019</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section class="section-block">
+    <h2>A forma da resposta</h2>
+    <p>
+      Importância diz quanto uma variável pesa; não diz como. As curvas abaixo são
+      efeitos locais acumulados (ALE), que descrevem como a predição muda ao longo
+      do domínio de cada variável. Foram escolhidas em vez de dependência parcial
+      porque as variáveis são correlacionadas entre si — chuva com déficit de
+      pressão de vapor, floresta com pastagem — e a dependência parcial obrigaria
+      o modelo a avaliar combinações que não existem no território.
+    </p>
+
+    <div class="figure-container">
+      <div class="controles" id="ctrl-ale">
+        <span class="rotulo">Variável:</span>
+      </div>
+      <div id="fig-ale"></div>
+      <p class="figure-caption">
+        <strong>Figura 4. Efeito local acumulado, nos dois cortes de treino.</strong>
+        A linha cheia é o corte de 2019 e a tracejada o de 2014. Onde as duas
+        concordam, a forma da resposta sobreviveu à mudança de regime de 2016–2019.
+        A faixa cinza na base indica a densidade de observações: trechos com poucos
+        municípios sustentam menos a leitura.
+      </p>
+    </div>
+
+    <h3>O ótimo de sazonalidade da chuva</h3>
+    <p>
+      É o resultado ecológico mais defensável desta análise e o tipo de resultado que um
+      gráfico de barras de importância não tem como expressar. O risco é máximo em
+      regime de sazonalidade intermediária — nem chuva uniforme ao longo do ano,
+      nem estação seca muito marcada — e cai de forma pronunciada acima de um
+      coeficiente de variação mensal em torno de 1,0. A forma unimodal aparece nos
+      dois cortes de treino; a posição exata do máximo, não: no corte de 2014 ela
+      fica em 0,60 e no de 2019 há um platô entre 0,59 e 0,91.
+    </p>
+  </section>
+
+  <section class="section-block">
+    <h2>O que a medição sustenta</h2>
+    <table class="tech-table">
+      <thead><tr><th>Afirmação</th><th>O que a medição sustenta</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Ordenação de importância de variáveis como resultado ecológico</td>
+          <td>A ordenação por Gini não tem relação estatística com a importância fora da amostra. A leitura correta é a permutação com intervalo, agrupada por família.</td>
+        </tr>
+        <tr>
+          <td>Determinantes ecológicos do risco</td>
+          <td>Quatro variáveis sustentam a afirmação: sazonalidade da chuva, população, temperatura mínima e chuva anual defasada em dois anos.</td>
+        </tr>
+        <tr>
+          <td>Paradoxo ecológico da cobertura florestal</td>
+          <td>Não se sustenta como paradoxo. O que resta é a perda florestal acumulada, com efeito crescente, mas aprendível apenas depois da onda de 2016–2019.</td>
+        </tr>
+        <tr>
+          <td>Efeito da cobertura vacinal</td>
+          <td>Nenhuma variável de imunização sobrevive, em nenhuma versão testada. Ver <a href="vacinacao.html">Vacinação</a>.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer class="rodape">
+    <p>
+      Valores lidos de <code>dados/shap.json</code>, <code>dados/importancia.json</code>
+      e <code>dados/ale.json</code>, gerados por
+      <code>yfvrisk.viz.exportar_painel</code> a partir das análises <code>f4_*</code> e <code>f5_*</code>.
+    </p>
+  </footer>
+
+</div>
+
+<script type="module" src="js/pagina-determinantes.js"></script>
+</body>
+</html>

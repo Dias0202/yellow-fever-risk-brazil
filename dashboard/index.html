@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modelagem de risco de febre amarela – Brasil</title>
+<meta name="description" content="Modelo de risco de febre amarela silvestre nos municípios brasileiros: previsão da próxima temporada, validação prospectiva e em bloco, determinantes ecológicos e cenários climáticos.">
+<link rel="stylesheet" href="css/painel.css">
+</head>
+<body>
+
+<header class="site-header">
+  <h1>Modelagem de Risco de Febre Amarela – Brasil</h1>
+  <nav class="site-nav">
+    <a href="index.html" class="active">Início</a>
+    <a href="previsao.html">Previsão</a>
+    <a href="validacao.html">Validação</a>
+    <a href="determinantes.html">Determinantes</a>
+    <a href="vacinacao.html">Vacinação</a>
+    <a href="cenarios.html">Cenários</a>
+    <a href="metodos.html">Dados &amp; documentação</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <section class="section-block">
+    <h2>Risco de febre amarela silvestre nos municípios brasileiros</h2>
+    <p class="lead">
+      Este portal apresenta um modelo de risco de febre amarela silvestre para os
+      5.570 municípios brasileiros. A febre amarela silvestre é tratada aqui como o
+      que ela é: uma <strong>onda epizoótica que se propaga</strong> por floresta
+      contígua, temporada a temporada, e não um atributo estático de habitat.
+    </p>
+    <p>
+      Entre 1994 e 2025, <span class="num" id="total-eventos">—</span> municípios-ano
+      registraram caso humano confirmado de febre amarela ou epizootia em primata
+      não humano, sobre <span class="num" id="total-linhas">—</span> municípios-ano
+      observados. É um desfecho raro, com prevalência de
+      <span class="num">0,74%</span>, e essa raridade governa a leitura de todas as
+      métricas que seguem.
+    </p>
+
+    <div class="metric-grid">
+      <div class="metric-card">
+        <h4>PR-AUC sobre o acaso</h4>
+        <span class="value destaque">7,3×</span>
+        <span class="desc">Modelo final, validação prospectiva em 21 temporadas</span>
+      </div>
+      <div class="metric-card">
+        <h4>Surtos em 500 municípios</h4>
+        <span class="value">36%</span>
+        <span class="desc">Lista de prioridade fixa por temporada, sobre 5.570</span>
+      </div>
+      <div class="metric-card">
+        <h4>Calibração por decil</h4>
+        <span class="value">3,87% × 3,90%</span>
+        <span class="desc">Previsto × observado no decil de maior risco</span>
+      </div>
+      <div class="metric-card">
+        <h4>Chegada de onda nova</h4>
+        <span class="value alerta">1,2×</span>
+        <span class="desc">Temporada 2016/17: a emergência de uma onda não é prevista</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <h2>A série observada</h2>
+    <p>
+      O painel analítico tem 178.240 linhas município-ano entre 1994 e 2025,
+      montado a partir de dez fontes públicas com procedência declarada. A figura
+      abaixo mostra o desfecho — caso humano confirmado ou epizootia registrada —
+      por ano e macrorregião.
+    </p>
+
+    <div class="figure-container">
+      <div id="fig-serie"></div>
+      <p class="figure-caption">
+        <strong>Figura 1. Municípios-ano com evento de febre amarela, 1994–2025.</strong>
+        A onda de 2016–2019 na Mata Atlântica domina a série e concentra-se no
+        Sudeste. Os anos hachurados não tiveram nenhum registro nacional de
+        epizootia: são lacunas de vigilância, não ausência de circulação viral, e
+        estão marcados como tais no painel analítico. Passe o cursor sobre uma
+        coluna para ver a composição regional do ano.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <h2>Por que a validação é prospectiva</h2>
+    <p>
+      A pergunta que o modelo existe para responder é qual município terá surto numa
+      temporada que ainda não ocorreu. Quando as linhas de treino e teste são
+      sorteadas ao acaso, porém, o mesmo município e anos adjacentes aparecem dos
+      dois lados da partição: o modelo nunca precisa prever nada que não tenha
+      visto. Ele interpola.
+    </p>
+    <p>
+      A figura abaixo mantém constantes o algoritmo, o painel de dados e o conjunto
+      de variáveis ambientais, e muda apenas a partição. A métrica em destaque é a
+      PR-AUC em múltiplos do acaso, que é a que importa quando o desfecho é raro — a
+      ROC-AUC permanece alta mesmo quando quase todo alerta emitido é falso.
+    </p>
+
+    <div class="figure-container">
+      <div class="controles" id="ctrl-validacao">
+        <span class="rotulo">Métrica:</span>
+        <button class="botao" data-metrica="vezes" aria-pressed="true">PR-AUC / acaso</button>
+        <button class="botao" data-metrica="roc" aria-pressed="false">ROC-AUC</button>
+        <button class="botao" data-metrica="custo" aria-pressed="false">Municípios por surto</button>
+      </div>
+      <div id="fig-validacao"></div>
+      <p class="figure-caption">
+        <strong>Figura 2. A mesma floresta aleatória ambiental sob quatro partições.</strong>
+        Da partição aleatória à espaço-temporal, a PR-AUC cai
+        <span class="num">94%</span> — de 57,4 para 2,4 vezes o acaso. Alternando a
+        métrica vê-se o contraste: a ROC-AUC cai <span class="num">0,441</span>,
+        queda que parece modesta, enquanto a capacidade de detecção cai por um
+        fator de <span class="num">24</span> e o custo operacional passa de 3 para
+        <span class="num">21</span> municípios investigados por surto encontrado.
+        É por isso que todo número deste portal vem de validação em que o período
+        avaliado nunca participa do ajuste.
+      </p>
+    </div>
+
+    <div class="ressalva">
+      <p>
+        <strong>Dois modelos, duas perguntas.</strong> O modelo ambiental
+        (adequabilidade de habitat) é o que sustenta as páginas de determinantes e de
+        cenários climáticos; sob bloco espaço-temporal ele fica perto do acaso e não
+        serve para priorizar municípios. A previsão operacional usa outro modelo,
+        construído sobre a estrutura de propagação da onda — ver
+        <a href="previsao.html">Previsão</a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <h2>O que o modelo sustenta</h2>
+
+    <h3>A previsão funciona para o avanço de uma onda em curso</h3>
+    <p>
+      Uma regressão logística sobre doze variáveis — um representante por
+      mecanismo: força de infecção, distância ao foco, refratariedade, floresta,
+      relevo, população e clima normal — atinge PR-AUC de
+      <span class="num">7,3</span> vezes o acaso em validação prospectiva, com
+      calibração monotônica por decil. Nas temporadas em que a onda avançava
+      chega a 23 vezes o acaso; na temporada em que ela chegou à Mata Atlântica,
+      cai a 1,2. O modelo diz para onde a onda em curso avança, não onde a próxima
+      começa.
+    </p>
+
+    <h3>Uma região transfere; as demais não</h3>
+    <p>
+      Sob o teste mais severo para o modelo ambiental, toda macrorregião fica perto
+      do acaso — exceto o Sul, com ROC-AUC de <span class="num">0,737</span>
+      (IC 95% <span class="num">0,697–0,777</span>). Retirada do treino, cada região
+      perde desempenho: o Norte cai 0,20 de AUC e o Centro-Oeste 0,17.
+      <strong>O Sul cai 0,02.</strong> É a única região cujo risco o modelo prevê a
+      partir de relações aprendidas em outro lugar, sem nenhuma história local.
+    </p>
+
+    <h3>A importância de Gini não sobrevive fora da amostra</h3>
+    <p>
+      A importância de Gini reproduz quase perfeitamente a importância por
+      permutação quando ambas são medidas no próprio conjunto de treino
+      (ρ = <span class="num">+0,91</span>), e não guarda relação estatística com ela
+      em dado não visto (ρ = <span class="num">+0,30</span>; p = 0,09). Das 32
+      variáveis, apenas quatro têm importância distinguível de zero nos dois cortes
+      temporais avaliados.
+    </p>
+
+    <h3>A cobertura vacinal registrada responde ao surto</h3>
+    <p>
+      A cobertura permanece no patamar normal do município até o ano anterior e
+      salta <strong>4,5 vezes no ano do surto</strong>, mantendo-se elevada por três
+      anos. É o bloqueio vacinal disparado pelo próprio surto, registrado pelo
+      sistema no ano em que ocorre. A variável contemporânea está a jusante do
+      desfecho; por isso o painel usa a imunidade defasada em dois anos.
+    </p>
+
+    <div class="home-links-grid">
+      <a class="card-link" href="previsao.html">
+        <h4>Previsão da próxima temporada</h4>
+        <p>Desempenho prospectivo, calibração, coeficientes e a lista de prioridade municipal.</p>
+      </a>
+      <a class="card-link" href="validacao.html">
+        <h4>Validação e calibração</h4>
+        <p>Esquemas de partição, decomposição por macrorregião, calibração por decil e curva de decisão clínica.</p>
+      </a>
+      <a class="card-link" href="determinantes.html">
+        <h4>Determinantes ecológicos</h4>
+        <p>Contribuições SHAP medidas fora da amostra, importância por permutação com intervalo e curvas de resposta.</p>
+      </a>
+      <a class="card-link" href="vacinacao.html">
+        <h4>Vacinação</h4>
+        <p>Estudo de evento da cobertura em torno do ano do surto e o que isso implica para cenários de imunização.</p>
+      </a>
+      <a class="card-link" href="cenarios.html">
+        <h4>Cenários climáticos</h4>
+        <p>Conjunto de cinco modelos climáticos e quatro trajetórias de emissão, e o piso de ruído do próprio modelo.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <h2>O que este portal não apresenta, e por quê</h2>
+    <table class="tech-table">
+      <thead>
+        <tr><th>Não apresentado</th><th>Motivo medido</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Mapa municipal de risco do modelo ambiental</td>
+          <td>Sob bloco espaço-temporal, a calibração do modelo ambiental superestima o decil de topo por fator de 2,4× a 4,7×, e nenhum limiar apresenta benefício líquido positivo.</td>
+        </tr>
+        <tr>
+          <td>Mapa de cenário climático</td>
+          <td>Em 83% dos municípios a dispersão entre cenários é menor que a dispersão entre reajustes do próprio modelo.</td>
+        </tr>
+        <tr>
+          <td>Efeito de aumentar ou reduzir a cobertura vacinal</td>
+          <td>A variável não carrega sinal generalizável nem depois de defasada; a alavanca teria sinal arbitrário.</td>
+        </tr>
+        <tr>
+          <td>Comparação entre trajetórias de emissão</td>
+          <td>SSP5-8.5 menos SSP1-2.6 resulta em +0,0001 com intervalo que inclui zero, enquanto a escolha do modelo climático altera o resultado por um fator de sete.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer class="rodape">
+    <p>
+      Projeto desenvolvido no Laboratório de Vírus da Universidade Federal de Minas
+      Gerais, com financiamento da Fundação de Amparo à Pesquisa do Estado de Minas
+      Gerais (FAPEMIG).
+    </p>
+    <p>
+      Os valores das figuras são lidos de arquivos gerados pela análise. Fontes de
+      dados, decisões metodológicas e limitações em
+      <a href="metodos.html">Dados &amp; documentação</a>.
+    </p>
+  </footer>
+
+</div>
+
+<script type="module" src="js/pagina-inicio.js"></script>
+</body>
+</html>

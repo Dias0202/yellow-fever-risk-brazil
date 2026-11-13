@@ -1,0 +1,4318 @@
+{
+  "raio_onda_km": 200.0,
+  "topos": [
+    50,
+    100,
+    250,
+    500,
+    1000
+  ],
+  "resultados": {
+    "yf_event": {
+      "prevalencia": 0.007262408061620432,
+      "melhor_componente": "base",
+      "componentes": {
+        "base": {
+          "n": 116970,
+          "positivos": 1098,
+          "prevalencia": 0.009387022313413696,
+          "roc_auc": 0.7747560323994758,
+          "pr_auc": 0.11121591154443432,
+          "pr_auc_sobre_prevalencia": 8.139416117039104,
+          "rotulo": "base",
+          "n_temporadas": 21,
+          "recall_top50": 0.039162112932604735,
+          "investigados_por_surto_top50": 24.41860465116279,
+          "recall_top100": 0.08287795992714025,
+          "investigados_por_surto_top100": 23.076923076923077,
+          "recall_top250": 0.17577413479052822,
+          "investigados_por_surto_top250": 27.202072538860104,
+          "recall_top500": 0.36156648451730417,
+          "investigados_por_surto_top500": 26.448362720403022,
+          "recall_top1000": 0.5409836065573771,
+          "investigados_por_surto_top1000": 35.35353535353536,
+          "limiares_uteis": 19
+        },
+        "logistica": {
+          "n": 116970,
+          "positivos": 1098,
+          "prevalencia": 0.009387022313413696,
+          "roc_auc": 0.6055009756449898,
+          "pr_auc": 0.10229480385426806,
+          "pr_auc_sobre_prevalencia": 9.905271175153638,
+          "rotulo": "logistica",
+          "n_temporadas": 21,
+          "recall_top50": 0.0883424408014572,
+          "investigados_por_surto_top50": 10.824742268041238,
+          "recall_top100": 0.1493624772313297,
+          "investigados_por_surto_top100": 12.804878048780488,
+          "recall_top250": 0.22586520947176686,
+          "investigados_por_surto_top250": 21.169354838709676,
+          "recall_top500": 0.319672131147541,
+          "investigados_por_surto_top500": 29.914529914529915,
+          "recall_top1000": 0.40710382513661203,
+          "investigados_por_surto_top1000": 46.97986577181208,
+          "limiares_uteis": 27
+        },
+        "floresta": {
+          "n": 116970,
+          "positivos": 1098,
+          "prevalencia": 0.009387022313413696,
+          "roc_auc": 0.7629294616214014,
+          "pr_auc": 0.09930979171424228,
+          "pr_auc_sobre_prevalencia": 7.463461078436948,
+          "rotulo": "floresta",
+          "n_temporadas": 21,
+          "recall_top50": 0.056466302367941715,
+          "investigados_por_surto_top50": 16.93548387096774,
+          "recall_top100": 0.10837887067395265,
+          "investigados_por_surto_top100": 17.647058823529413,
+          "recall_top250": 0.23224043715846995,
+          "investigados_por_surto_top250": 20.58823529411765,
+          "recall_top500": 0.3469945355191257,
+          "investigados_por_surto_top500": 27.559055118110237,
+          "recall_top1000": 0.48451730418943534,
+          "investigados_por_surto_top1000": 39.473684210526315,
+          "limiares_uteis": 28
+        },
+        "conjunto": {
+          "n": 116970,
+          "positivos": 1098,
+          "prevalencia": 0.009387022313413696,
+          "roc_auc": 0.7515012818319088,
+          "pr_auc": 0.11029711010460713,
+          "pr_auc_sobre_prevalencia": 10.45814557892576,
+          "rotulo": "conjunto",
+          "n_temporadas": 21,
+          "recall_top50": 0.075591985428051,
+          "investigados_por_surto_top50": 12.650602409638553,
+          "recall_top100": 0.12112932604735883,
+          "investigados_por_surto_top100": 15.789473684210526,
+          "recall_top250": 0.22131147540983606,
+          "investigados_por_surto_top250": 21.604938271604937,
+          "recall_top500": 0.3214936247723133,
+          "investigados_por_surto_top500": 29.745042492917847,
+          "recall_top1000": 0.47176684881602915,
+          "investigados_por_surto_top1000": 40.54054054054054,
+          "limiares_uteis": 0
+        },
+        "conjunto_2": {
+          "n": 116970,
+          "positivos": 1098,
+          "prevalencia": 0.009387022313413696,
+          "roc_auc": 0.6958707487856898,
+          "pr_auc": 0.1090147731231988,
+          "pr_auc_sobre_prevalencia": 10.8716433129496,
+          "rotulo": "conjunto_2",
+          "n_temporadas": 21,
+          "recall_top50": 0.08287795992714025,
+          "investigados_por_surto_top50": 11.538461538461538,
+          "recall_top100": 0.13296903460837886,
+          "investigados_por_surto_top100": 14.383561643835616,
+          "recall_top250": 0.22404371584699453,
+          "investigados_por_surto_top250": 21.341463414634145,
+          "recall_top500": 0.31693989071038253,
+          "investigados_por_surto_top500": 30.17241379310345,
+          "recall_top1000": 0.424408014571949,
+          "investigados_por_surto_top1000": 45.06437768240343,
+          "limiares_uteis": 0
+        }
+      },
+      "por_temporada_do_melhor": [
+        {
+          "n": 5570,
+          "positivos": 5,
+          "prevalencia": 0.0008976660682226212,
+          "roc_auc": 0.6454267744833783,
+          "pr_auc": 0.011560681001584904,
+          "pr_auc_sobre_prevalencia": 12.878598635765583,
+          "recall_top50": 0.2,
+          "precisao_top50": 0.02,
+          "investigados_por_surto_top50": 50.0,
+          "recall_top100": 0.2,
+          "precisao_top100": 0.01,
+          "investigados_por_surto_top100": 100.0,
+          "recall_top250": 0.2,
+          "precisao_top250": 0.004,
+          "investigados_por_surto_top250": 250.0,
+          "recall_top500": 0.4,
+          "precisao_top500": 0.004,
+          "investigados_por_surto_top500": 250.0,
+          "recall_top1000": 0.6,
+          "precisao_top1000": 0.003,
+          "investigados_por_surto_top1000": 333.3333333333333,
+          "temporada": 2003
+        },
+        {
+          "n": 5570,
+          "positivos": 3,
+          "prevalencia": 0.0005385996409335727,
+          "roc_auc": 0.7178312675887671,
+          "pr_auc": 0.0424567004908118,
+          "pr_auc_sobre_prevalencia": 78.82794057794058,
+          "recall_top50": 0.3333333333333333,
+          "precisao_top50": 0.02,
+          "investigados_por_surto_top50": 50.0,
+          "recall_top100": 0.3333333333333333,
+          "precisao_top100": 0.01,
+          "investigados_por_surto_top100": 100.0,
+          "recall_top250": 0.3333333333333333,
+          "precisao_top250": 0.004,
+          "investigados_por_surto_top250": 250.0,
+          "recall_top500": 0.3333333333333333,
+          "precisao_top500": 0.002,
+          "investigados_por_surto_top500": 500.0,
+          "recall_top1000": 0.3333333333333333,
+          "precisao_top1000": 0.001,
+          "investigados_por_surto_top1000": 1000.0,
+          "temporada": 2004
+        },
+        {
+          "n": 5570,
+          "positivos": 3,
+          "prevalencia": 0.0005385996409335727,
+          "roc_auc": 0.8300700556852882,
+          "pr_auc": 0.37795731099142227,
+          "pr_auc_sobre_prevalencia": 701.7407407407408,
+          "recall_top50": 0.6666666666666666,
+          "precisao_top50": 0.04,
+          "investigados_por_surto_top50": 25.0,
+          "recall_top100": 0.6666666666666666,
+          "precisao_top100": 0.02,
+          "investigados_por_surto_top100": 50.0,
+          "recall_top250": 0.6666666666666666,
+          "precisao_top250": 0.008,
+          "investigados_por_surto_top250": 125.0,
+          "recall_top500": 0.6666666666666666,
+          "precisao_top500": 0.004,
+          "investigados_por_surto_top500": 250.0,
+          "recall_top1000": 0.6666666666666666,
+          "precisao_top1000": 0.002,
+          "investigados_por_surto_top1000": 500.0,
+          "temporada": 2005
+        },
+        {
+          "n": 5570,
+          "positivos": 5,
+          "prevalencia": 0.0008976660682226212,
+          "roc_auc": 0.8844025157232704,
+          "pr_auc": 0.21823925669593763,
+          "pr_auc_sobre_prevalencia": 243.11853195927452,
+          "recall_top50": 0.2,
+          "precisao_top50": 0.02,
+          "investigados_por_surto_top50": 50.0,
+          "recall_top100": 0.6,
+          "precisao_top100": 0.03,
+          "investigados_por_surto_top100": 33.333333333333336,
+          "recall_top250": 0.8,
+          "precisao_top250": 0.016,
+          "investigados_por_surto_top250": 62.5,
+          "recall_top500": 0.8,
+          "precisao_top500": 0.008,
+          "investigados_por_surto_top500": 125.0,
+          "recall_top1000": 0.8,
+          "precisao_top1000": 0.004,
+          "investigados_por_surto_top1000": 250.0,
+          "temporada": 2006
+        },
+        {
+          "n": 5570,
+          "positivos": 50,
+          "prevalencia": 0.008976660682226212,
+          "roc_auc": 0.7611920289855073,
+          "pr_auc": 0.02749756428324447,
+          "pr_auc_sobre_prevalencia": 3.063228661153434,
+          "recall_top50": 0.02,
+          "precisao_top50": 0.02,
+          "investigados_por_surto_top50": 50.0,
+          "recall_top100": 0.02,
+          "precisao_top100": 0.01,
+          "investigados_por_surto_top100": 100.0,
+          "recall_top250": 0.12,
+          "precisao_top250": 0.024,
+          "investigados_por_surto_top250": 41.666666666666664,
+          "recall_top500": 0.44,
+          "precisao_top500": 0.044,
+          "investigados_por_surto_top500": 22.727272727272727,
+          "recall_top1000": 0.68,
+          "precisao_top1000": 0.034,
+          "investigados_por_surto_top1000": 29.41176470588235,
+          "temporada": 2007
+        },
+        {
+          "n": 5570,
+          "positivos": 79,
+          "prevalencia": 0.014183123877917415,
+          "roc_auc": 0.4973639257795841,
+          "pr_auc": 0.01321399610433006,
+          "pr_auc_sobre_prevalencia": 0.9316703582420055,
+          "recall_top50": 0.0,
+          "precisao_top50": 0.0,
+          "investigados_por_surto_top50": NaN,
+          "recall_top100": 0.012658227848101266,
+          "precisao_top100": 0.01,
+          "investigados_por_surto_top100": 100.0,
+          "recall_top250": 0.02531645569620253,
+          "precisao_top250": 0.008,
+          "investigados_por_surto_top250": 125.0,
+          "recall_top500": 0.02531645569620253,
+          "precisao_top500": 0.004,
+          "investigados_por_surto_top500": 250.0,
+          "recall_top1000": 0.05063291139240506,
+          "precisao_top1000": 0.004,
+          "investigados_por_surto_top1000": 250.0,
+          "temporada": 2008
+        },
+        {
+          "n": 5570,
+          "positivos": 4,
+          "prevalencia": 0.000718132854578097,
+          "roc_auc": 0.40792310456342074,
+          "pr_auc": 0.0007020094506869635,
+          "pr_auc_sobre_prevalencia": 0.9775481600815966,
+          "recall_top50": 0.0,
+          "precisao_top50": 0.0,
+          "investigados_por_surto_top50": NaN,
+          "recall_top100": 0.0,
+          "precisao_top100": 0.0,
+          "investigados_por_surto_top100": NaN,
+          "recall_top250": 0.0,
+          "precisao_top250": 0.0,
+          "investigados_por_surto_top250": NaN,
+          "recall_top500": 0.0,
+          "precisao_top500": 0.0,
+          "investigados_por_surto_top500": NaN,
+          "recall_top1000": 0.0,
+          "precisao_top1000": 0.0,
+          "investigados_por_surto_top1000": NaN,
+          "temporada": 2009
+        },
+        {
+          "n": 5570,
+          "positivos": 2,
+          "prevalencia": 0.0003590664272890485,
+          "roc_auc": 0.916846264367816,
+          "pr_auc": 0.003521719778170751,
+          "pr_auc_sobre_prevalencia": 9.80798958220554,
+          "recall_top50": 0.0,
+          "precisao_top50": 0.0,
+          "investigados_por_surto_top50": NaN,
+          "recall_top100": 0.0,
+          "precisao_top100": 0.0,
+          "investigados_por_surto_top100": NaN,
+          "recall_top250": 0.5,
+          "precisao_top250": 0.004,
+          "investigados_por_surto_top250": 250.0,
+          "recall_top500": 0.5,
+          "precisao_top500": 0.002,
+          "investigados_por_surto_top500": 500.0,
+          "recall_top1000": 1.0,
+          "precisao_top1000": 0.002,
+          "investigados_por_surto_top1000": 500.0,
+          "temporada": 2010
+        },
+        {
+          "n": 5570,
+          "positivos": 2,
+          "prevalencia": 0.0003590664272890485,
+          "roc_auc": 0.5,
+          "pr_auc": 0.0003590664272890485,
+          "pr_auc_sobre_prevalencia": 1.0,
+          "recall_top50": 0.0,
+          "precisao_top50": 0.0,
+          "investigados_por_surto_top50": NaN,
+          "recall_top100": 0.5,
+          "precisao_top100": 0.01,
+          "investigados_por_surto_top100": 100.0,
+          "recall_top250": 1.0,
+          "precisao_top250": 0.008,
+          "investigados_por_surto_top250": 125.0,
+          "recall_top500": 1.0,
+          "precisao_top500": 0.004,
+          "investigados_por_surto_top500": 250.0,
+          "recall_top1000": 1.0,
+          "precisao_top1000": 0.002,
+          "investigados_por_surto_top1000": 500.0,
+          "temporada": 2012
+        },
+        {
+          "n": 5570,
+          "positivos": 2,
+          "prevalencia": 0.0003590664272890485,
+          "roc_auc": 0.4944324712643678,
+          "pr_auc": 0.0003590664272890485,
+          "pr_auc_sobre_prevalencia": 1.0,
+          "recall_top50": 0.0,
+          "precisao_top50": 0.0,
+          "investigados_por_surto_top50": NaN,
+          "recall_top100": 0.0,
+          "precisao_top100": 0.0,
+          "investigados_por_surto_top100": NaN,
+          "recall_top250": 1.0,
+          "precisao_top250": 0.008,
+          "investigados_por_surto_top250": 125.0,
+          "recall_top500": 1.0,
+          "precisao_top500": 0.004,
+          "investigados_por_surto_top500": 250.0,
+          "recall_top1000": 1.0,
+          "precisao_top1000": 0.002,
+          "investigados_por_surto_top1000": 500.0,
+          "temporada": 2013
+        },
+        {
+          "n": 5570,
+          "positivos": 11,
+          "prevalencia": 0.0019748653500897668,
+          "roc_auc": 0.5151188081571243,
+          "pr_auc": 0.0027423018334149394,
+          "pr_auc_sobre_prevalencia": 1.3886019283746556,
+          "recall_top50": 0.0,
+          "precisao_top50": 0.0,
+          "investigados_por_surto_top50": NaN,
+          "recall_top100": 0.09090909090909091,
+          "precisao_top100": 0.01,
+          "investigados_por_surto_top100": 100.0,
+          "recall_top250": 0.09090909090909091,
+          "precisao_top250": 0.004,
+          "investigados_por_surto_top250": 250.0,
+          "recall_top500": 0.2727272727272727,
+          "precisao_top500": 0.006,
+          "investigados_por_surto_top500": 166.66666666666666,
+          "recall_top1000": 0.2727272727272727,
+          "precisao_top1000": 0.003,
+          "investigados_por_surto_top1000": 333.3333333333333,
+          "temporada": 2014
+        },
+        {
+          "n": 5570,
+          "positivos": 20,
+          "prevalencia": 0.003590664272890485,
+          "roc_auc": 0.919436936936937,
+          "pr_auc": 0.04047286584468379,
+          "pr_auc_sobre_prevalencia": 11.271693137744435,
+          "recall_top50": 0.1,
+          "precisao_top50": 0.04,
+          "investigados_por_surto_top50": 25.0,
+          "recall_top100": 0.2,
+          "precisao_top100": 0.04,
+          "investigados_por_surto_top100": 25.0,
+          "recall_top250": 0.4,
+          "precisao_top250": 0.032,
+          "investigados_por_surto_top250": 31.25,
+          "recall_top500": 0.9,
+          "precisao_top500": 0.036,
+          "investigados_por_surto_top500": 27.77777777777778,
+          "recall_top1000": 0.9,
+          "precisao_top1000": 0.018,
+          "investigados_por_surto_top1000": 55.55555555555556,
+          "temporada": 2015
+        },
+        {
+          "n": 5570,
+          "positivos": 280,
+          "prevalencia": 0.05026929982046679,
+          "roc_auc": 0.6740406427221172,
+          "pr_auc": 0.07676908295032125,
+          "pr_auc_sobre_prevalencia": 1.5271564001188906,
+          "recall_top50": 0.010714285714285714,
+          "precisao_top50": 0.06,
+          "investigados_por_surto_top50": 16.666666666666668,
+          "recall_top100": 0.014285714285714285,
+          "precisao_top100": 0.04,
+          "investigados_por_surto_top100": 25.0,
+          "recall_top250": 0.05714285714285714,
+          "precisao_top250": 0.064,
+          "investigados_por_surto_top250": 15.625,
+          "recall_top500": 0.13214285714285715,
+          "precisao_top500": 0.074,
+          "investigados_por_surto_top500": 13.513513513513514,
+          "recall_top1000": 0.30357142857142855,
+          "precisao_top1000": 0.085,
+          "investigados_por_surto_top1000": 11.764705882352942,
+          "temporada": 2016
+        },
+        {
+          "n": 5570,
+          "positivos": 296,
+          "prevalencia": 0.05314183123877918,
+          "roc_auc": 0.88109984984985,
+          "pr_auc": 0.18427059116636718,
+          "pr_auc_sobre_prevalencia": 3.4675242999887335,
+          "recall_top50": 0.0,
+          "precisao_top50": 0.0,
+          "investigados_por_surto_top50": NaN,
+          "recall_top100": 0.0033783783783783786,
+          "precisao_top100": 0.01,
+          "investigados_por_surto_top100": 100.0,
+          "recall_top250": 0.08108108108108109,
+          "precisao_top250": 0.096,
+          "investigados_por_surto_top250": 10.416666666666666,
+          "recall_top500": 0.3918918918918919,
+          "precisao_top500": 0.232,
+          "investigados_por_surto_top500": 4.310344827586207,
+          "recall_top1000": 0.6824324324324325,
+          "precisao_top1000": 0.202,
+          "investigados_por_surto_top1000": 4.9504950495049505,
+          "temporada": 2017
+        },
+        {
+          "n": 5570,
+          "positivos": 62,
+          "prevalencia": 0.011131059245960502,
+          "roc_auc": 0.7540586126923888,
+          "pr_auc": 0.024529686686610645,
+          "pr_auc_sobre_prevalencia": 2.2037154007164728,
+          "recall_top50": 0.0,
+          "precisao_top50": 0.0,
+          "investigados_por_surto_top50": NaN,
+          "recall_top100": 0.0,
+          "precisao_top100": 0.0,
+          "investigados_por_surto_top100": NaN,
+          "recall_top250": 0.03225806451612903,
+          "precisao_top250": 0.008,
+          "investigados_por_surto_top250": 125.0,
+          "recall_top500": 0.1935483870967742,
+          "precisao_top500": 0.024,
+          "investigados_por_surto_top500": 41.666666666666664,
+          "recall_top1000": 0.46774193548387094,
+          "precisao_top1000": 0.029,
+          "investigados_por_surto_top1000": 34.48275862068966,
+          "temporada": 2018
+        },
+        {
+          "n": 5570,
+          "positivos": 70,
+          "prevalencia": 0.012567324955116697,
+          "roc_auc": 0.9439766233766234,
+          "pr_auc": 0.15546038774904494,
+          "pr_auc_sobre_prevalencia": 12.370205139459719,
+          "recall_top50": 0.05714285714285714,
+          "precisao_top50": 0.08,
+          "investigados_por_surto_top50": 12.5,
+          "recall_top100": 0.3142857142857143,
+          "precisao_top100": 0.22,
+          "investigados_por_surto_top100": 4.545454545454546,
+          "recall_top250": 0.5857142857142857,
+          "precisao_top250": 0.164,
+          "investigados_por_surto_top250": 6.097560975609756,
+          "recall_top500": 0.8285714285714286,
+          "precisao_top500": 0.116,
+          "investigados_por_surto_top500": 8.620689655172415,
+          "recall_top1000": 0.9571428571428572,
+          "precisao_top1000": 0.067,
+          "investigados_por_surto_top1000": 14.925373134328359,
+          "temporada": 2019
+        },
+        {
+          "n": 5570,
+          "positivos": 94,
+          "prevalencia": 0.01687612208258528,
+          "roc_auc": 0.8227691823508385,
+          "pr_auc": 0.07147108043462087,
+          "pr_auc_sobre_prevalencia": 4.235041681072747,
+          "recall_top50": 0.02127659574468085,
+          "precisao_top50": 0.04,
+          "investigados_por_surto_top50": 25.0,
+          "recall_top100": 0.07446808510638298,
+          "precisao_top100": 0.07,
+          "investigados_por_surto_top100": 14.285714285714286,
+          "recall_top250": 0.2765957446808511,
+          "precisao_top250": 0.104,
+          "investigados_por_surto_top250": 9.615384615384615,
+          "recall_top500": 0.5,
+          "precisao_top500": 0.094,
+          "investigados_por_surto_top500": 10.638297872340425,
+          "recall_top1000": 0.6595744680851063,
+          "precisao_top1000": 0.062,
+          "investigados_por_surto_top1000": 16.129032258064516,
+          "temporada": 2020
+        },
+        {
+          "n": 5570,
+          "positivos": 18,
+          "prevalencia": 0.003231597845601436,
+          "roc_auc": 0.7038504642971501,
+          "pr_auc": 0.008684325318507373,
+          "pr_auc_sobre_prevalencia": 2.687316223560337,
+          "recall_top50": 0.05555555555555555,
+          "precisao_top50": 0.02,
+          "investigados_por_surto_top50": 50.0,
+          "recall_top100": 0.05555555555555555,
+          "precisao_top100": 0.01,
+          "investigados_por_surto_top100": 100.0,
+          "recall_top250": 0.16666666666666666,
+          "precisao_top250": 0.012,
+          "investigados_por_surto_top250": 83.33333333333333,
+          "recall_top500": 0.2222222222222222,
+          "precisao_top500": 0.008,
+          "investigados_por_surto_top500": 125.0,
+          "recall_top1000": 0.2777777777777778,
+          "precisao_top1000": 0.005,
+          "investigados_por_surto_top1000": 200.0,
+          "temporada": 2021
+        },
+        {
+          "n": 5570,
+          "positivos": 11,
+          "prevalencia": 0.0019748653500897668,
+          "roc_auc": 0.5907210256913441,
+          "pr_auc": 0.009117999687379745,
+          "pr_auc_sobre_prevalencia": 4.617023478064107,
+          "recall_top50": 0.09090909090909091,
+          "precisao_top50": 0.02,
+          "investigados_por_surto_top50": 50.0,
+          "recall_top100": 0.09090909090909091,
+          "precisao_top100": 0.01,
+          "investigados_por_surto_top100": 100.0,
+          "recall_top250": 0.18181818181818182,
+          "precisao_top250": 0.008,
+          "investigados_por_surto_top250": 125.0,
+          "recall_top500": 0.18181818181818182,
+          "precisao_top500": 0.004,
+          "investigados_por_surto_top500": 250.0,
+          "recall_top1000": 0.18181818181818182,
+          "precisao_top1000": 0.002,
+          "investigados_por_surto_top1000": 500.0,
+          "temporada": 2022
+        },
+        {
+          "n": 5570,
+          "positivos": 15,
+          "prevalencia": 0.0026929982046678637,
+          "roc_auc": 0.7798139813981397,
+          "pr_auc": 0.02156818388894258,
+          "pr_auc_sobre_prevalencia": 8.008985617427344,
+          "recall_top50": 0.13333333333333333,
+          "precisao_top50": 0.04,
+          "investigados_por_surto_top50": 25.0,
+          "recall_top100": 0.26666666666666666,
+          "precisao_top100": 0.04,
+          "investigados_por_surto_top100": 25.0,
+          "recall_top250": 0.3333333333333333,
+          "precisao_top250": 0.02,
+          "investigados_por_surto_top250": 50.0,
+          "recall_top500": 0.4666666666666667,
+          "precisao_top500": 0.014,
+          "investigados_por_surto_top500": 71.42857142857143,
+          "recall_top1000": 0.6,
+          "precisao_top1000": 0.009,
+          "investigados_por_surto_top1000": 111.11111111111111,
+          "temporada": 2023
+        },
+        {
+          "n": 5570,
+          "positivos": 66,
+          "prevalencia": 0.0118491921005386,
+          "roc_auc": 0.9235900061663143,
+          "pr_auc": 0.3135486176742474,
+          "pr_auc_sobre_prevalencia": 26.46160303705391,
+          "recall_top50": 0.3333333333333333,
+          "precisao_top50": 0.44,
+          "investigados_por_surto_top50": 2.272727272727273,
+          "recall_top100": 0.5454545454545454,
+          "precisao_top100": 0.36,
+          "investigados_por_surto_top100": 2.7777777777777777,
+          "recall_top250": 0.6666666666666666,
+          "precisao_top250": 0.176,
+          "investigados_por_surto_top250": 5.681818181818182,
+          "recall_top500": 0.8333333333333334,
+          "precisao_top500": 0.11,
+          "investigados_por_surto_top500": 9.090909090909092,
+          "recall_top1000": 0.8787878787878788,
+          "precisao_top1000": 0.058,
+          "investigados_por_surto_top1000": 17.24137931034483,
+          "temporada": 2024
+        }
+      ],
+      "calibrado": {
+        "n": 116970,
+        "positivos": 1098,
+        "prevalencia": 0.009387022313413696,
+        "roc_auc": 0.6531071999823723,
+        "pr_auc": 0.0965882922591954,
+        "pr_auc_sobre_prevalencia": 4.329148020684434,
+        "rotulo": "calibrado",
+        "n_temporadas": 21,
+        "recall_top50": 0.030054644808743168,
+        "investigados_por_surto_top50": 31.818181818181817,
+        "recall_top100": 0.07285974499089254,
+        "investigados_por_surto_top100": 26.25,
+        "recall_top250": 0.1657559198542805,
+        "investigados_por_surto_top250": 28.846153846153847,
+        "recall_top500": 0.31785063752276865,
+        "investigados_por_surto_top500": 30.08595988538682,
+        "recall_top1000": 0.4444444444444444,
+        "investigados_por_surto_top1000": 43.032786885245905,
+        "limiares_uteis": 8
+      },
+      "curva_de_decisao": [
+        {
+          "limiar": 0.0001,
+          "beneficio_liquido": 0.008448799911195702,
+          "beneficio_tratar_todos": 0.009287951108524548,
+          "sinalizados": 48427
+        },
+        {
+          "limiar": 0.000116,
+          "beneficio_liquido": 0.008442310144943557,
+          "beneficio_tratar_todos": 0.009272097876767402,
+          "sinalizados": 48427
+        },
+        {
+          "limiar": 0.000133,
+          "beneficio_liquido": 0.008435414540722955,
+          "beneficio_tratar_todos": 0.009255253262097555,
+          "sinalizados": 48427
+        },
+        {
+          "limiar": 0.000154,
+          "beneficio_liquido": 0.008426896117653994,
+          "beneficio_tratar_todos": 0.009234444417854046,
+          "sinalizados": 48427
+        },
+        {
+          "limiar": 0.000178,
+          "beneficio_liquido": 0.00841716033883543,
+          "beneficio_tratar_todos": 0.009210661811216093,
+          "sinalizados": 48427
+        },
+        {
+          "limiar": 0.000206,
+          "beneficio_liquido": 0.008405801339454828,
+          "beneficio_tratar_todos": 0.009182913993696397,
+          "sinalizados": 48427
+        },
+        {
+          "limiar": 0.000238,
+          "beneficio_liquido": 0.008392818846788759,
+          "beneficio_tratar_todos": 0.009151200299084878,
+          "sinalizados": 48427
+        },
+        {
+          "limiar": 0.000275,
+          "beneficio_liquido": 0.00837780680359921,
+          "beneficio_tratar_todos": 0.009114528808836127,
+          "sinalizados": 48427
+        },
+        {
+          "limiar": 0.000317,
+          "beneficio_liquido": 0.008360764759282586,
+          "beneficio_tratar_todos": 0.009072898422213538,
+          "sinalizados": 48427
+        },
+        {
+          "limiar": 0.000367,
+          "beneficio_liquido": 0.00834047474409173,
+          "beneficio_tratar_todos": 0.009023333876946536,
+          "sinalizados": 48427
+        },
+        {
+          "limiar": 0.000424,
+          "beneficio_liquido": 0.008317341650748263,
+          "beneficio_tratar_todos": 0.00896682424689438,
+          "sinalizados": 48427
+        },
+        {
+          "limiar": 0.000489,
+          "beneficio_liquido": 0.008290958587546438,
+          "beneficio_tratar_todos": 0.008902375575069905,
+          "sinalizados": 48427
+        },
+        {
+          "limiar": 0.000565,
+          "beneficio_liquido": 0.008260106346253026,
+          "beneficio_tratar_todos": 0.008827009573822906,
+          "sinalizados": 48427
+        },
+        {
+          "limiar": 0.000653,
+          "beneficio_liquido": 0.008224376835933144,
+          "beneficio_tratar_todos": 0.008739729356683611,
+          "sinalizados": 48427
+        },
+        {
+          "limiar": 0.000755,
+          "beneficio_liquido": 0.008182955210777195,
+          "beneficio_tratar_todos": 0.008638544414446604,
+          "sinalizados": 48427
+        },
+        {
+          "limiar": 0.000872,
+          "beneficio_liquido": 0.00813543175571985,
+          "beneficio_tratar_todos": 0.008522453893208574,
+          "sinalizados": 48427
+        },
+        {
+          "limiar": 0.001007,
+          "beneficio_liquido": 0.008080583167596867,
+          "beneficio_tratar_todos": 0.008388469502202414,
+          "sinalizados": 48427
+        },
+        {
+          "limiar": 0.001164,
+          "beneficio_liquido": 0.008016777643565414,
+          "beneficio_tratar_todos": 0.008232605065710183,
+          "sinalizados": 48427
+        },
+        {
+          "limiar": 0.001344,
+          "beneficio_liquido": 0.00794360012778436,
+          "beneficio_tratar_todos": 0.008053846683356127,
+          "sinalizados": 48427
+        },
+        {
+          "limiar": 0.001553,
+          "beneficio_liquido": 0.007858599797466314,
+          "beneficio_tratar_todos": 0.007846207473620229,
+          "sinalizados": 48427
+        },
+        {
+          "limiar": 0.001794,
+          "beneficio_liquido": 0.007760540876606034,
+          "beneficio_tratar_todos": 0.00760666867702027,
+          "sinalizados": 48427
+        },
+        {
+          "limiar": 0.002073,
+          "beneficio_liquido": 0.007646961229880632,
+          "beneficio_tratar_todos": 0.007329215777720911,
+          "sinalizados": 48427
+        },
+        {
+          "limiar": 0.002395,
+          "beneficio_liquido": 0.007515797505239633,
+          "beneficio_tratar_todos": 0.0070088084095545795,
+          "sinalizados": 48427
+        },
+        {
+          "limiar": 0.002767,
+          "beneficio_liquido": 0.007369631361324996,
+          "beneficio_tratar_todos": 0.006638390740592917,
+          "sinalizados": 47835
+        },
+        {
+          "limiar": 0.003196,
+          "beneficio_liquido": 0.0071724198478835925,
+          "beneficio_tratar_todos": 0.006210872261160365,
+          "sinalizados": 47160
+        },
+        {
+          "limiar": 0.003693,
+          "beneficio_liquido": 0.006935089270484225,
+          "beneficio_tratar_todos": 0.005715128282159712,
+          "sinalizados": 46520
+        },
+        {
+          "limiar": 0.004266,
+          "beneficio_liquido": 0.006695835100230153,
+          "beneficio_tratar_todos": 0.005142962190116734,
+          "sinalizados": 45975
+        },
+        {
+          "limiar": 0.004929,
+          "beneficio_liquido": 0.006426449552815822,
+          "beneficio_tratar_todos": 0.0044801047497250905,
+          "sinalizados": 45446
+        },
+        {
+          "limiar": 0.005694,
+          "beneficio_liquido": 0.006109373280822377,
+          "beneficio_tratar_todos": 0.0037141708019600567,
+          "sinalizados": 44864
+        },
+        {
+          "limiar": 0.006579,
+          "beneficio_liquido": 0.005764009862365222,
+          "beneficio_tratar_todos": 0.002826618637429344,
+          "sinalizados": 44265
+        },
+        {
+          "limiar": 0.0076,
+          "beneficio_liquido": 0.005389683489019412,
+          "beneficio_tratar_todos": 0.001800707691871922,
+          "sinalizados": 43600
+        },
+        {
+          "limiar": 0.008781,
+          "beneficio_liquido": 0.0049769370831421,
+          "beneficio_tratar_todos": 0.0006113909372335424,
+          "sinalizados": 42929
+        },
+        {
+          "limiar": 0.010144,
+          "beneficio_liquido": 0.004446681834899295,
+          "beneficio_tratar_todos": -0.0007647351600498509,
+          "sinalizados": 42207
+        },
+        {
+          "limiar": 0.01172,
+          "beneficio_liquido": 0.003879609054019754,
+          "beneficio_tratar_todos": -0.0023606444394162606,
+          "sinalizados": 41512
+        },
+        {
+          "limiar": 0.01354,
+          "beneficio_liquido": 0.003263543772956846,
+          "beneficio_tratar_todos": -0.004209980826983662,
+          "sinalizados": 40800
+        },
+        {
+          "limiar": 0.015642,
+          "beneficio_liquido": 0.0025425994156342852,
+          "beneficio_tratar_todos": -0.006354372785700228,
+          "sinalizados": 40100
+        },
+        {
+          "limiar": 0.018072,
+          "beneficio_liquido": 0.0017003929013858646,
+          "beneficio_tratar_todos": -0.008844821297066895,
+          "sinalizados": 39326
+        },
+        {
+          "limiar": 0.020878,
+          "beneficio_liquido": 0.0008255798431587658,
+          "beneficio_tratar_todos": -0.011736001934984919,
+          "sinalizados": 38483
+        },
+        {
+          "limiar": 0.024121,
+          "beneficio_liquido": -0.00023810873673166862,
+          "beneficio_tratar_todos": -0.015098160413930722,
+          "sinalizados": 37651
+        },
+        {
+          "limiar": 0.027866,
+          "beneficio_liquido": -0.0013930980210665649,
+          "beneficio_tratar_todos": -0.019008673378964527,
+          "sinalizados": 36762
+        },
+        {
+          "limiar": 0.032194,
+          "beneficio_liquido": -0.0027121251160617263,
+          "beneficio_tratar_todos": -0.023565650230093955,
+          "sinalizados": 35877
+        },
+        {
+          "limiar": 0.037194,
+          "beneficio_liquido": -0.00424904881647345,
+          "beneficio_tratar_todos": -0.0288811844614453,
+          "sinalizados": 34966
+        },
+        {
+          "limiar": 0.04297,
+          "beneficio_liquido": -0.0058695010825302605,
+          "beneficio_tratar_todos": -0.03509083068094658,
+          "sinalizados": 34025
+        },
+        {
+          "limiar": 0.049643,
+          "beneficio_liquido": -0.007653547665726668,
+          "beneficio_tratar_todos": -0.04235879536488531,
+          "sinalizados": 33072
+        },
+        {
+          "limiar": 0.057353,
+          "beneficio_liquido": -0.009641982254112209,
+          "beneficio_tratar_todos": -0.05088434767902121,
+          "sinalizados": 32067
+        },
+        {
+          "limiar": 0.06626,
+          "beneficio_liquido": -0.011964395999010714,
+          "beneficio_tratar_todos": -0.06090879440378082,
+          "sinalizados": 31116
+        },
+        {
+          "limiar": 0.07655,
+          "beneficio_liquido": -0.014390505294512234,
+          "beneficio_tratar_todos": -0.07273049725116283,
+          "sinalizados": 30051
+        },
+        {
+          "limiar": 0.088438,
+          "beneficio_liquido": -0.017158309403666208,
+          "beneficio_tratar_todos": -0.08672035219391144,
+          "sinalizados": 29077
+        },
+        {
+          "limiar": 0.102172,
+          "beneficio_liquido": -0.0203340193341557,
+          "beneficio_tratar_todos": -0.10334382274398471,
+          "sinalizados": 28065
+        },
+        {
+          "limiar": 0.118039,
+          "beneficio_liquido": -0.023988568786003285,
+          "beneficio_tratar_todos": -0.123193630655535,
+          "sinalizados": 27082
+        },
+        {
+          "limiar": 0.13637,
+          "beneficio_liquido": -0.02801397481641662,
+          "beneficio_tratar_todos": -0.1470340049402942,
+          "sinalizados": 25995
+        },
+        {
+          "limiar": 0.157549,
+          "beneficio_liquido": -0.0326053173730126,
+          "beneficio_tratar_todos": -0.17587014281731075,
+          "sinalizados": 24881
+        },
+        {
+          "limiar": 0.182016,
+          "beneficio_liquido": -0.03792466946864527,
+          "beneficio_tratar_todos": -0.21104199799334253,
+          "sinalizados": 23798
+        },
+        {
+          "limiar": 0.210283,
+          "beneficio_liquido": -0.04403205736642732,
+          "beneficio_tratar_todos": -0.25438983545572186,
+          "sinalizados": 22657
+        },
+        {
+          "limiar": 0.242939,
+          "beneficio_liquido": -0.05121606482519754,
+          "beneficio_tratar_todos": -0.3084982289228824,
+          "sinalizados": 21476
+        },
+        {
+          "limiar": 0.280668,
+          "beneficio_liquido": -0.05977298875136736,
+          "beneficio_tratar_todos": -0.3771290276069829,
+          "sinalizados": 20292
+        },
+        {
+          "limiar": 0.324255,
+          "beneficio_liquido": -0.07051741074421249,
+          "beneficio_tratar_todos": -0.4659567998084873,
+          "sinalizados": 19222
+        },
+        {
+          "limiar": 0.374612,
+          "beneficio_liquido": -0.08381708107608163,
+          "beneficio_tratar_todos": -0.5839974187010084,
+          "sinalizados": 18089
+        },
+        {
+          "limiar": 0.432788,
+          "beneficio_liquido": -0.10133312238838031,
+          "beneficio_tratar_todos": -0.7464598380968426,
+          "sinalizados": 17004
+        },
+        {
+          "limiar": 0.5,
+          "beneficio_liquido": -0.12479268188424382,
+          "beneficio_tratar_todos": -0.9812259553731726,
+          "sinalizados": 15849
+        }
+      ],
+      "chegada_x_continuacao": {
+        "continuacao (perto de foco)": {
+          "n": 17781,
+          "positivos": 627,
+          "prevalencia": 0.03526235869748608,
+          "roc_auc": 0.7271689669657307,
+          "pr_auc": 0.06885699868897899,
+          "pr_auc_sobre_prevalencia": 1.952705412581715,
+          "recall_top100": 0.0,
+          "precisao_top100": 0.0,
+          "investigados_por_surto_top100": NaN,
+          "recall_top500": 0.01594896331738437,
+          "precisao_top500": 0.02,
+          "investigados_por_surto_top500": 50.0
+        },
+        "chegada (longe de foco)": {
+          "n": 99189,
+          "positivos": 471,
+          "prevalencia": 0.004748510419502162,
+          "roc_auc": 0.7420323128494563,
+          "pr_auc": 0.01500424515667382,
+          "pr_auc_sobre_prevalencia": 3.1597793478669205,
+          "recall_top100": 0.014861995753715499,
+          "precisao_top100": 0.07,
+          "investigados_por_surto_top100": 14.285714285714286,
+          "recall_top500": 0.05307855626326964,
+          "precisao_top500": 0.05,
+          "investigados_por_surto_top500": 20.0
+        }
+      },
+      "calibracao": [
+        {
+          "faixa": 0,
+          "n": 11697,
+          "previsto": 0.0006896355190789663,
+          "observado": 0.0011113960844661025
+        },
+        {
+          "faixa": 1,
+          "n": 11697,
+          "previsto": 0.0009425318609105382,
+          "observado": 0.004103616311874839
+        },
+        {
+          "faixa": 2,
+          "n": 11697,
+          "previsto": 0.0026521995636496223,
+          "observado": 0.028126870137642132
+        },
+        {
+          "faixa": 3,
+          "n": 11697,
+          "previsto": 0.002913100293982405,
+          "observado": 0.0047875523638539795
+        },
+        {
+          "faixa": 4,
+          "n": 11697,
+          "previsto": 0.003568321886965806,
+          "observado": 0.0007694280584765325
+        },
+        {
+          "faixa": 5,
+          "n": 11697,
+          "previsto": 0.005208408977176451,
+          "observado": 0.006411900487304437
+        },
+        {
+          "faixa": 6,
+          "n": 11697,
+          "previsto": 0.007997084906836486,
+          "observado": 0.010771992818671455
+        },
+        {
+          "faixa": 7,
+          "n": 11697,
+          "previsto": 0.008501990625832621,
+          "observado": 0.0052150123963409425
+        },
+        {
+          "faixa": 8,
+          "n": 11697,
+          "previsto": 0.008880555001126724,
+          "observado": 0.010771992818671455
+        },
+        {
+          "faixa": 9,
+          "n": 11697,
+          "previsto": 0.053780427180876306,
+          "observado": 0.021800461656835086
+        }
+      ],
+      "curva_de_decisao_calibrada": [
+        {
+          "limiar": 0.0001,
+          "beneficio_liquido": 0.009287951108524548,
+          "beneficio_tratar_todos": 0.009287951108524548,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000116,
+          "beneficio_liquido": 0.009272097876767402,
+          "beneficio_tratar_todos": 0.009272097876767402,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000133,
+          "beneficio_liquido": 0.009255253262097555,
+          "beneficio_tratar_todos": 0.009255253262097555,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000154,
+          "beneficio_liquido": 0.009234444417854046,
+          "beneficio_tratar_todos": 0.009234444417854046,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000178,
+          "beneficio_liquido": 0.009210661811216093,
+          "beneficio_tratar_todos": 0.009210661811216093,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000206,
+          "beneficio_liquido": 0.009182913993696397,
+          "beneficio_tratar_todos": 0.009182913993696397,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000238,
+          "beneficio_liquido": 0.009151200299084878,
+          "beneficio_tratar_todos": 0.009151200299084878,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000275,
+          "beneficio_liquido": 0.009114528808836127,
+          "beneficio_tratar_todos": 0.009114528808836127,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000317,
+          "beneficio_liquido": 0.009072898422213538,
+          "beneficio_tratar_todos": 0.009072898422213538,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000367,
+          "beneficio_liquido": 0.009023333876946536,
+          "beneficio_tratar_todos": 0.009023333876946536,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000424,
+          "beneficio_liquido": 0.00896682424689438,
+          "beneficio_tratar_todos": 0.00896682424689438,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000489,
+          "beneficio_liquido": 0.008902375575069905,
+          "beneficio_tratar_todos": 0.008902375575069905,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000565,
+          "beneficio_liquido": 0.008827009573822906,
+          "beneficio_tratar_todos": 0.008827009573822906,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000653,
+          "beneficio_liquido": 0.008739729356683611,
+          "beneficio_tratar_todos": 0.008739729356683611,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000755,
+          "beneficio_liquido": 0.008250254760930465,
+          "beneficio_tratar_todos": 0.008638544414446604,
+          "sinalizados": 100260
+        },
+        {
+          "limiar": 0.000872,
+          "beneficio_liquido": 0.008150847643445333,
+          "beneficio_tratar_todos": 0.008522453893208574,
+          "sinalizados": 100260
+        },
+        {
+          "limiar": 0.001007,
+          "beneficio_liquido": 0.00805844545215945,
+          "beneficio_tratar_todos": 0.008388469502202414,
+          "sinalizados": 94690
+        },
+        {
+          "limiar": 0.001164,
+          "beneficio_liquido": 0.007932468753122522,
+          "beneficio_tratar_todos": 0.008232605065710183,
+          "sinalizados": 94690
+        },
+        {
+          "limiar": 0.001344,
+          "beneficio_liquido": 0.007787988129826088,
+          "beneficio_tratar_todos": 0.008053846683356127,
+          "sinalizados": 94690
+        },
+        {
+          "limiar": 0.001553,
+          "beneficio_liquido": 0.0076201647133890184,
+          "beneficio_tratar_todos": 0.007846207473620229,
+          "sinalizados": 94690
+        },
+        {
+          "limiar": 0.001794,
+          "beneficio_liquido": 0.007426558605632392,
+          "beneficio_tratar_todos": 0.00760666867702027,
+          "sinalizados": 94690
+        },
+        {
+          "limiar": 0.002073,
+          "beneficio_liquido": 0.007202308602369456,
+          "beneficio_tratar_todos": 0.007329215777720911,
+          "sinalizados": 94690
+        },
+        {
+          "limiar": 0.002395,
+          "beneficio_liquido": 0.0064291718685058966,
+          "beneficio_tratar_todos": 0.0070088084095545795,
+          "sinalizados": 91349
+        },
+        {
+          "limiar": 0.002767,
+          "beneficio_liquido": 0.006058292902342633,
+          "beneficio_tratar_todos": 0.006638390740592917,
+          "sinalizados": 85046
+        },
+        {
+          "limiar": 0.003196,
+          "beneficio_liquido": 0.0037262859903963415,
+          "beneficio_tratar_todos": 0.006210872261160365,
+          "sinalizados": 68063
+        },
+        {
+          "limiar": 0.003693,
+          "beneficio_liquido": 0.0035638892964675716,
+          "beneficio_tratar_todos": 0.005715128282159712,
+          "sinalizados": 62191
+        },
+        {
+          "limiar": 0.004266,
+          "beneficio_liquido": 0.0035508710045057687,
+          "beneficio_tratar_todos": 0.005142962190116734,
+          "sinalizados": 53077
+        },
+        {
+          "limiar": 0.004929,
+          "beneficio_liquido": 0.0032864346661694724,
+          "beneficio_tratar_todos": 0.0044801047497250905,
+          "sinalizados": 52035
+        },
+        {
+          "limiar": 0.005694,
+          "beneficio_liquido": 0.0029652043145055487,
+          "beneficio_tratar_todos": 0.0037141708019600567,
+          "sinalizados": 51657
+        },
+        {
+          "limiar": 0.006579,
+          "beneficio_liquido": 0.0027425165738618274,
+          "beneficio_tratar_todos": 0.002826618637429344,
+          "sinalizados": 48232
+        },
+        {
+          "limiar": 0.0076,
+          "beneficio_liquido": 0.001830114736750953,
+          "beneficio_tratar_todos": 0.001800707691871922,
+          "sinalizados": 46784
+        },
+        {
+          "limiar": 0.008781,
+          "beneficio_liquido": 0.001594654011927034,
+          "beneficio_tratar_todos": 0.0006113909372335424,
+          "sinalizados": 19031
+        },
+        {
+          "limiar": 0.010144,
+          "beneficio_liquido": 0.0012338395530806347,
+          "beneficio_tratar_todos": -0.0007647351600498509,
+          "sinalizados": 4943
+        },
+        {
+          "limiar": 0.01172,
+          "beneficio_liquido": 0.0007949355209404569,
+          "beneficio_tratar_todos": -0.0023606444394162606,
+          "sinalizados": 3678
+        },
+        {
+          "limiar": 0.01354,
+          "beneficio_liquido": 0.0004964649758170182,
+          "beneficio_tratar_todos": -0.004209980826983662,
+          "sinalizados": 3007
+        },
+        {
+          "limiar": 0.015642,
+          "beneficio_liquido": 0.0002855400430696917,
+          "beneficio_tratar_todos": -0.006354372785700228,
+          "sinalizados": 2629
+        },
+        {
+          "limiar": 0.018072,
+          "beneficio_liquido": 7.490317571080975e-05,
+          "beneficio_tratar_todos": -0.008844821297066895,
+          "sinalizados": 2346
+        },
+        {
+          "limiar": 0.020878,
+          "beneficio_liquido": 1.3741280468147624e-05,
+          "beneficio_tratar_todos": -0.011736001934984919,
+          "sinalizados": 2080
+        },
+        {
+          "limiar": 0.024121,
+          "beneficio_liquido": -6.277390256880178e-05,
+          "beneficio_tratar_todos": -0.015098160413930722,
+          "sinalizados": 1831
+        },
+        {
+          "limiar": 0.027866,
+          "beneficio_liquido": -0.0001358664688009178,
+          "beneficio_tratar_todos": -0.019008673378964527,
+          "sinalizados": 1631
+        },
+        {
+          "limiar": 0.032194,
+          "beneficio_liquido": -0.00017613162810878913,
+          "beneficio_tratar_todos": -0.023565650230093955,
+          "sinalizados": 1458
+        },
+        {
+          "limiar": 0.037194,
+          "beneficio_liquido": -0.00023439892081658428,
+          "beneficio_tratar_todos": -0.0288811844614453,
+          "sinalizados": 1355
+        },
+        {
+          "limiar": 0.04297,
+          "beneficio_liquido": -0.00028740743353956796,
+          "beneficio_tratar_todos": -0.03509083068094658,
+          "sinalizados": 1284
+        },
+        {
+          "limiar": 0.049643,
+          "beneficio_liquido": -0.00035635967863280587,
+          "beneficio_tratar_todos": -0.04235879536488531,
+          "sinalizados": 1221
+        },
+        {
+          "limiar": 0.057353,
+          "beneficio_liquido": -0.00042251254494301036,
+          "beneficio_tratar_todos": -0.05088434767902121,
+          "sinalizados": 1161
+        },
+        {
+          "limiar": 0.06626,
+          "beneficio_liquido": -0.000483610593448988,
+          "beneficio_tratar_todos": -0.06090879440378082,
+          "sinalizados": 1099
+        },
+        {
+          "limiar": 0.07655,
+          "beneficio_liquido": -0.0005653915183717806,
+          "beneficio_tratar_todos": -0.07273049725116283,
+          "sinalizados": 1046
+        },
+        {
+          "limiar": 0.088438,
+          "beneficio_liquido": -0.0006404506002057925,
+          "beneficio_tratar_todos": -0.08672035219391144,
+          "sinalizados": 987
+        },
+        {
+          "limiar": 0.102172,
+          "beneficio_liquido": -0.0007275537836892814,
+          "beneficio_tratar_todos": -0.10334382274398471,
+          "sinalizados": 924
+        },
+        {
+          "limiar": 0.118039,
+          "beneficio_liquido": -0.0007883301591582968,
+          "beneficio_tratar_todos": -0.123193630655535,
+          "sinalizados": 833
+        },
+        {
+          "limiar": 0.13637,
+          "beneficio_liquido": -0.0008797226757029886,
+          "beneficio_tratar_todos": -0.1470340049402942,
+          "sinalizados": 769
+        },
+        {
+          "limiar": 0.157549,
+          "beneficio_liquido": -0.0010277007018452688,
+          "beneficio_tratar_todos": -0.17587014281731075,
+          "sinalizados": 738
+        },
+        {
+          "limiar": 0.182016,
+          "beneficio_liquido": -0.0011862853697758714,
+          "beneficio_tratar_todos": -0.21104199799334253,
+          "sinalizados": 706
+        },
+        {
+          "limiar": 0.210283,
+          "beneficio_liquido": -0.0013987035905516539,
+          "beneficio_tratar_todos": -0.25438983545572186,
+          "sinalizados": 681
+        },
+        {
+          "limiar": 0.242939,
+          "beneficio_liquido": -0.0016086640999659482,
+          "beneficio_tratar_todos": -0.3084982289228824,
+          "sinalizados": 644
+        },
+        {
+          "limiar": 0.280668,
+          "beneficio_liquido": -0.001903632676073546,
+          "beneficio_tratar_todos": -0.3771290276069829,
+          "sinalizados": 617
+        },
+        {
+          "limiar": 0.324255,
+          "beneficio_liquido": -0.0022476933945229866,
+          "beneficio_tratar_todos": -0.4659567998084873,
+          "sinalizados": 588
+        },
+        {
+          "limiar": 0.374612,
+          "beneficio_liquido": -0.002695186973263409,
+          "beneficio_tratar_todos": -0.5839974187010084,
+          "sinalizados": 561
+        },
+        {
+          "limiar": 0.432788,
+          "beneficio_liquido": -0.003280882341751309,
+          "beneficio_tratar_todos": -0.7464598380968426,
+          "sinalizados": 533
+        },
+        {
+          "limiar": 0.5,
+          "beneficio_liquido": -0.004069419509275882,
+          "beneficio_tratar_todos": -0.9812259553731726,
+          "sinalizados": 500
+        }
+      ],
+      "tabela_operacional": [
+        {
+          "municipios_investigados": 50,
+          "surtos_capturados": 43,
+          "surtos_totais": 1098,
+          "recall": 0.039162112932604735,
+          "investigados_por_surto": 24.41860465116279
+        },
+        {
+          "municipios_investigados": 100,
+          "surtos_capturados": 91,
+          "surtos_totais": 1098,
+          "recall": 0.08287795992714025,
+          "investigados_por_surto": 23.076923076923077
+        },
+        {
+          "municipios_investigados": 250,
+          "surtos_capturados": 193,
+          "surtos_totais": 1098,
+          "recall": 0.17577413479052822,
+          "investigados_por_surto": 27.202072538860104
+        },
+        {
+          "municipios_investigados": 500,
+          "surtos_capturados": 397,
+          "surtos_totais": 1098,
+          "recall": 0.36156648451730417,
+          "investigados_por_surto": 26.448362720403022
+        },
+        {
+          "municipios_investigados": 1000,
+          "surtos_capturados": 594,
+          "surtos_totais": 1098,
+          "recall": 0.5409836065573771,
+          "investigados_por_surto": 35.35353535353536
+        }
+      ]
+    },
+    "caso_humano": {
+      "prevalencia": 0.004100306943881392,
+      "melhor_componente": "floresta",
+      "componentes": {
+        "base": {
+          "n": 116970,
+          "positivos": 562,
+          "prevalencia": 0.0048046507651534585,
+          "roc_auc": 0.7910654628827595,
+          "pr_auc": 0.09619559166788763,
+          "pr_auc_sobre_prevalencia": 11.682177487858448,
+          "rotulo": "base",
+          "n_temporadas": 21,
+          "recall_top50": 0.037366548042704624,
+          "investigados_por_surto_top50": 50.0,
+          "recall_top100": 0.06761565836298933,
+          "investigados_por_surto_top100": 55.26315789473684,
+          "recall_top250": 0.14412811387900357,
+          "investigados_por_surto_top250": 64.81481481481481,
+          "recall_top500": 0.33807829181494664,
+          "investigados_por_surto_top500": 55.26315789473684,
+          "recall_top1000": 0.5516014234875445,
+          "investigados_por_surto_top1000": 67.74193548387096,
+          "limiares_uteis": 20
+        },
+        "logistica": {
+          "n": 116970,
+          "positivos": 562,
+          "prevalencia": 0.0048046507651534585,
+          "roc_auc": 0.4998365944111191,
+          "pr_auc": 0.04770301673310055,
+          "pr_auc_sobre_prevalencia": 11.865986668822197,
+          "rotulo": "logistica",
+          "n_temporadas": 21,
+          "recall_top50": 0.06583629893238434,
+          "investigados_por_surto_top50": 28.37837837837838,
+          "recall_top100": 0.11743772241992882,
+          "investigados_por_surto_top100": 31.818181818181817,
+          "recall_top250": 0.18149466192170818,
+          "investigados_por_surto_top250": 51.470588235294116,
+          "recall_top500": 0.24555160142348753,
+          "investigados_por_surto_top500": 76.08695652173913,
+          "recall_top1000": 0.30071174377224197,
+          "investigados_por_surto_top1000": 124.2603550295858,
+          "limiares_uteis": 19
+        },
+        "floresta": {
+          "n": 116970,
+          "positivos": 562,
+          "prevalencia": 0.0048046507651534585,
+          "roc_auc": 0.7757652008283837,
+          "pr_auc": 0.07044039450407798,
+          "pr_auc_sobre_prevalencia": 12.284916729437292,
+          "rotulo": "floresta",
+          "n_temporadas": 21,
+          "recall_top50": 0.0711743772241993,
+          "investigados_por_surto_top50": 26.25,
+          "recall_top100": 0.13167259786476868,
+          "investigados_por_surto_top100": 28.37837837837838,
+          "recall_top250": 0.24733096085409254,
+          "investigados_por_surto_top250": 37.76978417266187,
+          "recall_top500": 0.35765124555160144,
+          "investigados_por_surto_top500": 52.23880597014925,
+          "recall_top1000": 0.4804270462633452,
+          "investigados_por_surto_top1000": 77.77777777777777,
+          "limiares_uteis": 36
+        },
+        "conjunto": {
+          "n": 116970,
+          "positivos": 562,
+          "prevalencia": 0.0048046507651534585,
+          "roc_auc": 0.735034292074592,
+          "pr_auc": 0.06896608219220236,
+          "pr_auc_sobre_prevalencia": 14.634166613006531,
+          "rotulo": "conjunto",
+          "n_temporadas": 21,
+          "recall_top50": 0.06761565836298933,
+          "investigados_por_surto_top50": 27.63157894736842,
+          "recall_top100": 0.09786476868327403,
+          "investigados_por_surto_top100": 38.18181818181818,
+          "recall_top250": 0.18327402135231316,
+          "investigados_por_surto_top250": 50.970873786407765,
+          "recall_top500": 0.2704626334519573,
+          "investigados_por_surto_top500": 69.07894736842105,
+          "recall_top1000": 0.4234875444839858,
+          "investigados_por_surto_top1000": 88.23529411764706,
+          "limiares_uteis": 0
+        },
+        "conjunto_2": {
+          "n": 116970,
+          "positivos": 562,
+          "prevalencia": 0.0048046507651534585,
+          "roc_auc": 0.650822797817031,
+          "pr_auc": 0.064519155203457,
+          "pr_auc_sobre_prevalencia": 15.30862758226555,
+          "rotulo": "conjunto_2",
+          "n_temporadas": 21,
+          "recall_top50": 0.07473309608540925,
+          "investigados_por_surto_top50": 25.0,
+          "recall_top100": 0.10676156583629894,
+          "investigados_por_surto_top100": 35.0,
+          "recall_top250": 0.18327402135231316,
+          "investigados_por_surto_top250": 50.970873786407765,
+          "recall_top500": 0.2508896797153025,
+          "investigados_por_surto_top500": 74.46808510638297,
+          "recall_top1000": 0.32562277580071175,
+          "investigados_por_surto_top1000": 114.75409836065573,
+          "limiares_uteis": 0
+        }
+      },
+      "por_temporada_do_melhor": [
+        {
+          "n": 5570,
+          "positivos": 5,
+          "prevalencia": 0.0008976660682226212,
+          "roc_auc": 0.8645462713387242,
+          "pr_auc": 0.04349353923586414,
+          "pr_auc_sobre_prevalencia": 48.45180270875265,
+          "recall_top50": 0.4,
+          "precisao_top50": 0.04,
+          "investigados_por_surto_top50": 25.0,
+          "recall_top100": 0.4,
+          "precisao_top100": 0.02,
+          "investigados_por_surto_top100": 50.0,
+          "recall_top250": 0.6,
+          "precisao_top250": 0.012,
+          "investigados_por_surto_top250": 83.33333333333333,
+          "recall_top500": 0.6,
+          "precisao_top500": 0.006,
+          "investigados_por_surto_top500": 166.66666666666666,
+          "recall_top1000": 0.8,
+          "precisao_top1000": 0.004,
+          "investigados_por_surto_top1000": 250.0,
+          "temporada": 2003
+        },
+        {
+          "n": 5570,
+          "positivos": 3,
+          "prevalencia": 0.0005385996409335727,
+          "roc_auc": 0.998203700377223,
+          "pr_auc": 0.18724696356275305,
+          "pr_auc_sobre_prevalencia": 347.65519568151154,
+          "recall_top50": 1.0,
+          "precisao_top50": 0.06,
+          "investigados_por_surto_top50": 16.666666666666668,
+          "recall_top100": 1.0,
+          "precisao_top100": 0.03,
+          "investigados_por_surto_top100": 33.333333333333336,
+          "recall_top250": 1.0,
+          "precisao_top250": 0.012,
+          "investigados_por_surto_top250": 83.33333333333333,
+          "recall_top500": 1.0,
+          "precisao_top500": 0.006,
+          "investigados_por_surto_top500": 166.66666666666666,
+          "recall_top1000": 1.0,
+          "precisao_top1000": 0.003,
+          "investigados_por_surto_top1000": 333.3333333333333,
+          "temporada": 2004
+        },
+        {
+          "n": 5570,
+          "positivos": 3,
+          "prevalencia": 0.0005385996409335727,
+          "roc_auc": 0.9672474702113645,
+          "pr_auc": 0.03653337470999394,
+          "pr_auc_sobre_prevalencia": 67.83029904488875,
+          "recall_top50": 0.3333333333333333,
+          "precisao_top50": 0.02,
+          "investigados_por_surto_top50": 50.0,
+          "recall_top100": 0.3333333333333333,
+          "precisao_top100": 0.01,
+          "investigados_por_surto_top100": 100.0,
+          "recall_top250": 0.6666666666666666,
+          "precisao_top250": 0.008,
+          "investigados_por_surto_top250": 125.0,
+          "recall_top500": 1.0,
+          "precisao_top500": 0.006,
+          "investigados_por_surto_top500": 166.66666666666666,
+          "recall_top1000": 1.0,
+          "precisao_top1000": 0.003,
+          "investigados_por_surto_top1000": 333.3333333333333,
+          "temporada": 2005
+        },
+        {
+          "n": 5570,
+          "positivos": 5,
+          "prevalencia": 0.0008976660682226212,
+          "roc_auc": 0.9532434860736747,
+          "pr_auc": 0.1644320880355852,
+          "pr_auc_sobre_prevalencia": 183.17734607164192,
+          "recall_top50": 0.4,
+          "precisao_top50": 0.04,
+          "investigados_por_surto_top50": 25.0,
+          "recall_top100": 0.4,
+          "precisao_top100": 0.02,
+          "investigados_por_surto_top100": 50.0,
+          "recall_top250": 0.8,
+          "precisao_top250": 0.016,
+          "investigados_por_surto_top250": 62.5,
+          "recall_top500": 0.8,
+          "precisao_top500": 0.008,
+          "investigados_por_surto_top500": 125.0,
+          "recall_top1000": 1.0,
+          "precisao_top1000": 0.005,
+          "investigados_por_surto_top1000": 200.0,
+          "temporada": 2006
+        },
+        {
+          "n": 5570,
+          "positivos": 31,
+          "prevalencia": 0.005565529622980251,
+          "roc_auc": 0.8991986442178337,
+          "pr_auc": 0.06650378043205459,
+          "pr_auc_sobre_prevalencia": 11.949227645372389,
+          "recall_top50": 0.06451612903225806,
+          "precisao_top50": 0.04,
+          "investigados_por_surto_top50": 25.0,
+          "recall_top100": 0.3225806451612903,
+          "precisao_top100": 0.1,
+          "investigados_por_surto_top100": 10.0,
+          "recall_top250": 0.5806451612903226,
+          "precisao_top250": 0.072,
+          "investigados_por_surto_top250": 13.88888888888889,
+          "recall_top500": 0.8064516129032258,
+          "precisao_top500": 0.05,
+          "investigados_por_surto_top500": 20.0,
+          "recall_top1000": 0.8709677419354839,
+          "precisao_top1000": 0.027,
+          "investigados_por_surto_top1000": 37.03703703703704,
+          "temporada": 2007
+        },
+        {
+          "n": 5570,
+          "positivos": 15,
+          "prevalencia": 0.0026929982046678637,
+          "roc_auc": 0.6237563756375637,
+          "pr_auc": 0.004614442325294047,
+          "pr_auc_sobre_prevalencia": 1.713496250125856,
+          "recall_top50": 0.0,
+          "precisao_top50": 0.0,
+          "investigados_por_surto_top50": NaN,
+          "recall_top100": 0.0,
+          "precisao_top100": 0.0,
+          "investigados_por_surto_top100": NaN,
+          "recall_top250": 0.13333333333333333,
+          "precisao_top250": 0.008,
+          "investigados_por_surto_top250": 125.0,
+          "recall_top500": 0.2,
+          "precisao_top500": 0.006,
+          "investigados_por_surto_top500": 166.66666666666666,
+          "recall_top1000": 0.2,
+          "precisao_top1000": 0.003,
+          "investigados_por_surto_top1000": 333.3333333333333,
+          "temporada": 2008
+        },
+        {
+          "n": 5570,
+          "positivos": 4,
+          "prevalencia": 0.000718132854578097,
+          "roc_auc": 0.7953197987782968,
+          "pr_auc": 0.005787318909636972,
+          "pr_auc_sobre_prevalencia": 8.058841581669483,
+          "recall_top50": 0.0,
+          "precisao_top50": 0.0,
+          "investigados_por_surto_top50": NaN,
+          "recall_top100": 0.25,
+          "precisao_top100": 0.01,
+          "investigados_por_surto_top100": 100.0,
+          "recall_top250": 0.25,
+          "precisao_top250": 0.004,
+          "investigados_por_surto_top250": 250.0,
+          "recall_top500": 0.5,
+          "precisao_top500": 0.004,
+          "investigados_por_surto_top500": 250.0,
+          "recall_top1000": 0.75,
+          "precisao_top1000": 0.003,
+          "investigados_por_surto_top1000": 333.3333333333333,
+          "temporada": 2009
+        },
+        {
+          "n": 5570,
+          "positivos": 2,
+          "prevalencia": 0.0003590664272890485,
+          "roc_auc": 0.9818606321839081,
+          "pr_auc": 0.014978761457634698,
+          "pr_auc_sobre_prevalencia": 41.71585065951263,
+          "recall_top50": 0.0,
+          "precisao_top50": 0.0,
+          "investigados_por_surto_top50": NaN,
+          "recall_top100": 0.5,
+          "precisao_top100": 0.01,
+          "investigados_por_surto_top100": 100.0,
+          "recall_top250": 1.0,
+          "precisao_top250": 0.008,
+          "investigados_por_surto_top250": 125.0,
+          "recall_top500": 1.0,
+          "precisao_top500": 0.004,
+          "investigados_por_surto_top500": 250.0,
+          "recall_top1000": 1.0,
+          "precisao_top1000": 0.002,
+          "investigados_por_surto_top1000": 500.0,
+          "temporada": 2010
+        },
+        {
+          "n": 5570,
+          "positivos": 2,
+          "prevalencia": 0.0003590664272890485,
+          "roc_auc": 0.9885057471264368,
+          "pr_auc": 0.0329004329004329,
+          "pr_auc_sobre_prevalencia": 91.62770562770562,
+          "recall_top50": 0.5,
+          "precisao_top50": 0.02,
+          "investigados_por_surto_top50": 50.0,
+          "recall_top100": 0.5,
+          "precisao_top100": 0.01,
+          "investigados_por_surto_top100": 100.0,
+          "recall_top250": 1.0,
+          "precisao_top250": 0.008,
+          "investigados_por_surto_top250": 125.0,
+          "recall_top500": 1.0,
+          "precisao_top500": 0.004,
+          "investigados_por_surto_top500": 250.0,
+          "recall_top1000": 1.0,
+          "precisao_top1000": 0.002,
+          "investigados_por_surto_top1000": 500.0,
+          "temporada": 2012
+        },
+        {
+          "n": 5570,
+          "positivos": 2,
+          "prevalencia": 0.0003590664272890485,
+          "roc_auc": 0.9436063218390804,
+          "pr_auc": 0.004780125642490005,
+          "pr_auc_sobre_prevalencia": 13.312649914334663,
+          "recall_top50": 0.0,
+          "precisao_top50": 0.0,
+          "investigados_por_surto_top50": NaN,
+          "recall_top100": 0.0,
+          "precisao_top100": 0.0,
+          "investigados_por_surto_top100": NaN,
+          "recall_top250": 0.5,
+          "precisao_top250": 0.004,
+          "investigados_por_surto_top250": 250.0,
+          "recall_top500": 1.0,
+          "precisao_top500": 0.004,
+          "investigados_por_surto_top500": 250.0,
+          "recall_top1000": 1.0,
+          "precisao_top1000": 0.002,
+          "investigados_por_surto_top1000": 500.0,
+          "temporada": 2013
+        },
+        {
+          "n": 5570,
+          "positivos": 6,
+          "prevalencia": 0.0010771992818671453,
+          "roc_auc": 0.769560268392044,
+          "pr_auc": 0.01799067713574609,
+          "pr_auc_sobre_prevalencia": 16.701345274350956,
+          "recall_top50": 0.16666666666666666,
+          "precisao_top50": 0.02,
+          "investigados_por_surto_top50": 50.0,
+          "recall_top100": 0.3333333333333333,
+          "precisao_top100": 0.02,
+          "investigados_por_surto_top100": 50.0,
+          "recall_top250": 0.5,
+          "precisao_top250": 0.012,
+          "investigados_por_surto_top250": 83.33333333333333,
+          "recall_top500": 0.5,
+          "precisao_top500": 0.006,
+          "investigados_por_surto_top500": 166.66666666666666,
+          "recall_top1000": 0.6666666666666666,
+          "precisao_top1000": 0.004,
+          "investigados_por_surto_top1000": 250.0,
+          "temporada": 2014
+        },
+        {
+          "n": 5570,
+          "positivos": 7,
+          "prevalencia": 0.0012567324955116697,
+          "roc_auc": 0.7994016589199044,
+          "pr_auc": 0.011737220961439834,
+          "pr_auc_sobre_prevalencia": 9.339474393602838,
+          "recall_top50": 0.14285714285714285,
+          "precisao_top50": 0.02,
+          "investigados_por_surto_top50": 50.0,
+          "recall_top100": 0.2857142857142857,
+          "precisao_top100": 0.02,
+          "investigados_por_surto_top100": 50.0,
+          "recall_top250": 0.2857142857142857,
+          "precisao_top250": 0.008,
+          "investigados_por_surto_top250": 125.0,
+          "recall_top500": 0.42857142857142855,
+          "precisao_top500": 0.006,
+          "investigados_por_surto_top500": 166.66666666666666,
+          "recall_top1000": 0.42857142857142855,
+          "precisao_top1000": 0.003,
+          "investigados_por_surto_top1000": 333.3333333333333,
+          "temporada": 2015
+        },
+        {
+          "n": 5570,
+          "positivos": 143,
+          "prevalencia": 0.025673249551166965,
+          "roc_auc": 0.7662496891352614,
+          "pr_auc": 0.06997828887336392,
+          "pr_auc_sobre_prevalencia": 2.7257277554170423,
+          "recall_top50": 0.04895104895104895,
+          "precisao_top50": 0.14,
+          "investigados_por_surto_top50": 7.142857142857143,
+          "recall_top100": 0.0979020979020979,
+          "precisao_top100": 0.14,
+          "investigados_por_surto_top100": 7.142857142857143,
+          "recall_top250": 0.17482517482517482,
+          "precisao_top250": 0.1,
+          "investigados_por_surto_top250": 10.0,
+          "recall_top500": 0.2727272727272727,
+          "precisao_top500": 0.078,
+          "investigados_por_surto_top500": 12.820512820512821,
+          "recall_top1000": 0.34965034965034963,
+          "precisao_top1000": 0.05,
+          "investigados_por_surto_top1000": 20.0,
+          "temporada": 2016
+        },
+        {
+          "n": 5570,
+          "positivos": 230,
+          "prevalencia": 0.04129263913824058,
+          "roc_auc": 0.7257962872496337,
+          "pr_auc": 0.08277959122427692,
+          "pr_auc_sobre_prevalencia": 2.004705752692271,
+          "recall_top50": 0.013043478260869565,
+          "precisao_top50": 0.06,
+          "investigados_por_surto_top50": 16.666666666666668,
+          "recall_top100": 0.030434782608695653,
+          "precisao_top100": 0.07,
+          "investigados_por_surto_top100": 14.285714285714286,
+          "recall_top250": 0.10434782608695652,
+          "precisao_top250": 0.096,
+          "investigados_por_surto_top250": 10.416666666666666,
+          "recall_top500": 0.2,
+          "precisao_top500": 0.092,
+          "investigados_por_surto_top500": 10.869565217391305,
+          "recall_top1000": 0.3695652173913043,
+          "precisao_top1000": 0.085,
+          "investigados_por_surto_top1000": 11.764705882352942,
+          "temporada": 2017
+        },
+        {
+          "n": 5570,
+          "positivos": 32,
+          "prevalencia": 0.005745062836624776,
+          "roc_auc": 0.9138960364752619,
+          "pr_auc": 0.06104741015112554,
+          "pr_auc_sobre_prevalencia": 10.62606482943029,
+          "recall_top50": 0.15625,
+          "precisao_top50": 0.1,
+          "investigados_por_surto_top50": 10.0,
+          "recall_top100": 0.28125,
+          "precisao_top100": 0.09,
+          "investigados_por_surto_top100": 11.11111111111111,
+          "recall_top250": 0.46875,
+          "precisao_top250": 0.06,
+          "investigados_por_surto_top250": 16.666666666666668,
+          "recall_top500": 0.625,
+          "precisao_top500": 0.04,
+          "investigados_por_surto_top500": 25.0,
+          "recall_top1000": 0.8125,
+          "precisao_top1000": 0.026,
+          "investigados_por_surto_top1000": 38.46153846153846,
+          "temporada": 2018
+        },
+        {
+          "n": 5570,
+          "positivos": 8,
+          "prevalencia": 0.001436265709156194,
+          "roc_auc": 0.9028901474289823,
+          "pr_auc": 0.03383051032861296,
+          "pr_auc_sobre_prevalencia": 23.55449281629677,
+          "recall_top50": 0.375,
+          "precisao_top50": 0.06,
+          "investigados_por_surto_top50": 16.666666666666668,
+          "recall_top100": 0.5,
+          "precisao_top100": 0.04,
+          "investigados_por_surto_top100": 25.0,
+          "recall_top250": 0.75,
+          "precisao_top250": 0.024,
+          "investigados_por_surto_top250": 41.666666666666664,
+          "recall_top500": 0.875,
+          "precisao_top500": 0.014,
+          "investigados_por_surto_top500": 71.42857142857143,
+          "recall_top1000": 0.875,
+          "precisao_top1000": 0.007,
+          "investigados_por_surto_top1000": 142.85714285714286,
+          "temporada": 2019
+        },
+        {
+          "n": 5570,
+          "positivos": 8,
+          "prevalencia": 0.001436265709156194,
+          "roc_auc": 0.9921565983459187,
+          "pr_auc": 0.2727999723092374,
+          "pr_auc_sobre_prevalencia": 189.93698072030654,
+          "recall_top50": 0.625,
+          "precisao_top50": 0.1,
+          "investigados_por_surto_top50": 10.0,
+          "recall_top100": 0.875,
+          "precisao_top100": 0.07,
+          "investigados_por_surto_top100": 14.285714285714286,
+          "recall_top250": 1.0,
+          "precisao_top250": 0.032,
+          "investigados_por_surto_top250": 31.25,
+          "recall_top500": 1.0,
+          "precisao_top500": 0.016,
+          "investigados_por_surto_top500": 62.5,
+          "recall_top1000": 1.0,
+          "precisao_top1000": 0.008,
+          "investigados_por_surto_top1000": 125.0,
+          "temporada": 2020
+        },
+        {
+          "n": 5570,
+          "positivos": 4,
+          "prevalencia": 0.000718132854578097,
+          "roc_auc": 0.8072224218469278,
+          "pr_auc": 0.0640430679791463,
+          "pr_auc_sobre_prevalencia": 89.17997216096121,
+          "recall_top50": 0.25,
+          "precisao_top50": 0.02,
+          "investigados_por_surto_top50": 50.0,
+          "recall_top100": 0.25,
+          "precisao_top100": 0.01,
+          "investigados_por_surto_top100": 100.0,
+          "recall_top250": 0.25,
+          "precisao_top250": 0.004,
+          "investigados_por_surto_top250": 250.0,
+          "recall_top500": 0.25,
+          "precisao_top500": 0.002,
+          "investigados_por_surto_top500": 500.0,
+          "recall_top1000": 0.25,
+          "precisao_top1000": 0.001,
+          "investigados_por_surto_top1000": 1000.0,
+          "temporada": 2021
+        },
+        {
+          "n": 5570,
+          "positivos": 5,
+          "prevalencia": 0.0008976660682226212,
+          "roc_auc": 0.6405929919137466,
+          "pr_auc": 0.018587335101690795,
+          "pr_auc_sobre_prevalencia": 20.706291303283546,
+          "recall_top50": 0.2,
+          "precisao_top50": 0.02,
+          "investigados_por_surto_top50": 50.0,
+          "recall_top100": 0.2,
+          "precisao_top100": 0.01,
+          "investigados_por_surto_top100": 100.0,
+          "recall_top250": 0.2,
+          "precisao_top250": 0.004,
+          "investigados_por_surto_top250": 250.0,
+          "recall_top500": 0.4,
+          "precisao_top500": 0.004,
+          "investigados_por_surto_top500": 250.0,
+          "recall_top1000": 0.4,
+          "precisao_top1000": 0.002,
+          "investigados_por_surto_top1000": 500.0,
+          "temporada": 2022
+        },
+        {
+          "n": 5570,
+          "positivos": 6,
+          "prevalencia": 0.0010771992818671453,
+          "roc_auc": 0.7919662113587347,
+          "pr_auc": 0.0068108721256609096,
+          "pr_auc_sobre_prevalencia": 6.322759623321878,
+          "recall_top50": 0.0,
+          "precisao_top50": 0.0,
+          "investigados_por_surto_top50": NaN,
+          "recall_top100": 0.16666666666666666,
+          "precisao_top100": 0.01,
+          "investigados_por_surto_top100": 100.0,
+          "recall_top250": 0.3333333333333333,
+          "precisao_top250": 0.008,
+          "investigados_por_surto_top250": 125.0,
+          "recall_top500": 0.5,
+          "precisao_top500": 0.006,
+          "investigados_por_surto_top500": 166.66666666666666,
+          "recall_top1000": 0.5,
+          "precisao_top1000": 0.003,
+          "investigados_por_surto_top1000": 333.3333333333333,
+          "temporada": 2023
+        },
+        {
+          "n": 5570,
+          "positivos": 41,
+          "prevalencia": 0.007360861759425494,
+          "roc_auc": 0.79134849948608,
+          "pr_auc": 0.03864365244064532,
+          "pr_auc_sobre_prevalencia": 5.2498815632779126,
+          "recall_top50": 0.04878048780487805,
+          "precisao_top50": 0.04,
+          "investigados_por_surto_top50": 25.0,
+          "recall_top100": 0.12195121951219512,
+          "precisao_top100": 0.05,
+          "investigados_por_surto_top100": 20.0,
+          "recall_top250": 0.34146341463414637,
+          "precisao_top250": 0.056,
+          "investigados_por_surto_top250": 17.857142857142858,
+          "recall_top500": 0.4878048780487805,
+          "precisao_top500": 0.04,
+          "investigados_por_surto_top500": 25.0,
+          "recall_top1000": 0.6585365853658537,
+          "precisao_top1000": 0.027,
+          "investigados_por_surto_top1000": 37.03703703703704,
+          "temporada": 2024
+        }
+      ],
+      "calibrado": {
+        "n": 116970,
+        "positivos": 562,
+        "prevalencia": 0.0048046507651534585,
+        "roc_auc": 0.7413167807512474,
+        "pr_auc": 0.06405628808877796,
+        "pr_auc_sobre_prevalencia": 7.430772408401485,
+        "rotulo": "calibrado",
+        "n_temporadas": 21,
+        "recall_top50": 0.05516014234875445,
+        "investigados_por_surto_top50": 33.87096774193548,
+        "recall_top100": 0.10854092526690391,
+        "investigados_por_surto_top100": 34.42622950819672,
+        "recall_top250": 0.22241992882562278,
+        "investigados_por_surto_top250": 42.0,
+        "recall_top500": 0.3220640569395018,
+        "investigados_por_surto_top500": 58.011049723756905,
+        "recall_top1000": 0.4377224199288256,
+        "investigados_por_surto_top1000": 85.36585365853658,
+        "limiares_uteis": 13
+      },
+      "curva_de_decisao": [
+        {
+          "limiar": 0.0001,
+          "beneficio_liquido": 0.004689571291060883,
+          "beneficio_tratar_todos": 0.004705121277281186,
+          "sinalizados": 75157
+        },
+        {
+          "limiar": 0.000116,
+          "beneficio_liquido": 0.004679384460302961,
+          "beneficio_tratar_todos": 0.00468919471174002,
+          "sinalizados": 75137
+        },
+        {
+          "limiar": 0.000133,
+          "beneficio_liquido": 0.004668598148483217,
+          "beneficio_tratar_todos": 0.004672272177353046,
+          "sinalizados": 75088
+        },
+        {
+          "limiar": 0.000154,
+          "beneficio_liquido": 0.004655242306990407,
+          "beneficio_tratar_todos": 0.004651367075683113,
+          "sinalizados": 75066
+        },
+        {
+          "limiar": 0.000178,
+          "beneficio_liquido": 0.004640171423711676,
+          "beneficio_tratar_todos": 0.004627474455606556,
+          "sinalizados": 74920
+        },
+        {
+          "limiar": 0.000206,
+          "beneficio_liquido": 0.004622803883476716,
+          "beneficio_tratar_todos": 0.004599598282399633,
+          "sinalizados": 74670
+        },
+        {
+          "limiar": 0.000238,
+          "beneficio_liquido": 0.004578145613018556,
+          "beneficio_tratar_todos": 0.00456773788677051,
+          "sinalizados": 74041
+        },
+        {
+          "limiar": 0.000275,
+          "beneficio_liquido": 0.004555807433690414,
+          "beneficio_tratar_todos": 0.004530896761762943,
+          "sinalizados": 73650
+        },
+        {
+          "limiar": 0.000317,
+          "beneficio_liquido": 0.004525192569313686,
+          "beneficio_tratar_todos": 0.004489073801548549,
+          "sinalizados": 72101
+        },
+        {
+          "limiar": 0.000367,
+          "beneficio_liquido": 0.004490218860137863,
+          "beneficio_tratar_todos": 0.0044392799809064515,
+          "sinalizados": 70768
+        },
+        {
+          "limiar": 0.000424,
+          "beneficio_liquido": 0.004453307540689122,
+          "beneficio_tratar_todos": 0.004382508948947812,
+          "sinalizados": 69145
+        },
+        {
+          "limiar": 0.000489,
+          "beneficio_liquido": 0.004408997856838375,
+          "beneficio_tratar_todos": 0.004317762150845222,
+          "sinalizados": 68572
+        },
+        {
+          "limiar": 0.000565,
+          "beneficio_liquido": 0.004374710062899653,
+          "beneficio_tratar_todos": 0.004242047522003391,
+          "sinalizados": 66512
+        },
+        {
+          "limiar": 0.000653,
+          "beneficio_liquido": 0.0043278425127244585,
+          "beneficio_tratar_todos": 0.004154363564561117,
+          "sinalizados": 64476
+        },
+        {
+          "limiar": 0.000755,
+          "beneficio_liquido": 0.004259198553760787,
+          "beneficio_tratar_todos": 0.004052710561627487,
+          "sinalizados": 62487
+        },
+        {
+          "limiar": 0.000872,
+          "beneficio_liquido": 0.004203080594528408,
+          "beneficio_tratar_todos": 0.003936083029555231,
+          "sinalizados": 60544
+        },
+        {
+          "limiar": 0.001007,
+          "beneficio_liquido": 0.004149687643724307,
+          "beneficio_tratar_todos": 0.0038014788543597987,
+          "sinalizados": 58689
+        },
+        {
+          "limiar": 0.001164,
+          "beneficio_liquido": 0.004038700055156928,
+          "beneficio_tratar_todos": 0.003644893421095614,
+          "sinalizados": 56824
+        },
+        {
+          "limiar": 0.001344,
+          "beneficio_liquido": 0.0039666735020824125,
+          "beneficio_tratar_todos": 0.003465308139292668,
+          "sinalizados": 54793
+        },
+        {
+          "limiar": 0.001553,
+          "beneficio_liquido": 0.003889023486936784,
+          "beneficio_tratar_todos": 0.003256708433350452,
+          "sinalizados": 52677
+        },
+        {
+          "limiar": 0.001794,
+          "beneficio_liquido": 0.0037576044235190027,
+          "beneficio_tratar_todos": 0.00301606157962731,
+          "sinalizados": 50313
+        },
+        {
+          "limiar": 0.002073,
+          "beneficio_liquido": 0.0036662373760461752,
+          "beneficio_tratar_todos": 0.0027373252403767594,
+          "sinalizados": 48263
+        },
+        {
+          "limiar": 0.002395,
+          "beneficio_liquido": 0.003536628685134941,
+          "beneficio_tratar_todos": 0.002415435733735756,
+          "sinalizados": 46059
+        },
+        {
+          "limiar": 0.002767,
+          "beneficio_liquido": 0.003402517073025236,
+          "beneficio_tratar_todos": 0.0020433045889510864,
+          "sinalizados": 43769
+        },
+        {
+          "limiar": 0.003196,
+          "beneficio_liquido": 0.003305682684352136,
+          "beneficio_tratar_todos": 0.0016138084971102228,
+          "sinalizados": 41480
+        },
+        {
+          "limiar": 0.003693,
+          "beneficio_liquido": 0.0031779229807416846,
+          "beneficio_tratar_todos": 0.0011157713085961037,
+          "sinalizados": 39169
+        },
+        {
+          "limiar": 0.004266,
+          "beneficio_liquido": 0.003020366305245164,
+          "beneficio_tratar_todos": 0.0005409584940892437,
+          "sinalizados": 36853
+        },
+        {
+          "limiar": 0.004929,
+          "beneficio_liquido": 0.0028555547077043298,
+          "beneficio_tratar_todos": -0.00012496518825947257,
+          "sinalizados": 34618
+        },
+        {
+          "limiar": 0.005694,
+          "beneficio_liquido": 0.002709599529224405,
+          "beneficio_tratar_todos": -0.0008944421886688215,
+          "sinalizados": 32115
+        },
+        {
+          "limiar": 0.006579,
+          "beneficio_liquido": 0.002529644153232238,
+          "beneficio_tratar_todos": -0.0017860999866587696,
+          "sinalizados": 29800
+        },
+        {
+          "limiar": 0.0076,
+          "beneficio_liquido": 0.002357997725519798,
+          "beneficio_tratar_todos": -0.0028167565848917185,
+          "sinalizados": 27537
+        },
+        {
+          "limiar": 0.008781,
+          "beneficio_liquido": 0.0021867937551569884,
+          "beneficio_tratar_todos": -0.004011574873813499,
+          "sinalizados": 25220
+        },
+        {
+          "limiar": 0.010144,
+          "beneficio_liquido": 0.001935806229350608,
+          "beneficio_tratar_todos": -0.005394066646912827,
+          "sinalizados": 22956
+        },
+        {
+          "limiar": 0.01172,
+          "beneficio_liquido": 0.001655112027694857,
+          "beneficio_tratar_todos": -0.00699735827381566,
+          "sinalizados": 20791
+        },
+        {
+          "limiar": 0.01354,
+          "beneficio_liquido": 0.0013289763002925906,
+          "beneficio_tratar_todos": -0.00885524931051086,
+          "sinalizados": 18586
+        },
+        {
+          "limiar": 0.015642,
+          "beneficio_liquido": 0.0010001563721074107,
+          "beneficio_tratar_todos": -0.011009560784639879,
+          "sinalizados": 16420
+        },
+        {
+          "limiar": 0.018072,
+          "beneficio_liquido": 0.0006113826683762616,
+          "beneficio_tratar_todos": -0.01351152959773684,
+          "sinalizados": 14430
+        },
+        {
+          "limiar": 0.020878,
+          "beneficio_liquido": 0.00027579796631413585,
+          "beneficio_tratar_todos": -0.016416084241643574,
+          "sinalizados": 12521
+        },
+        {
+          "limiar": 0.024121,
+          "beneficio_liquido": 3.146537101637219e-05,
+          "beneficio_tratar_todos": -0.019793795373039626,
+          "sinalizados": 10713
+        },
+        {
+          "limiar": 0.027866,
+          "beneficio_liquido": -0.0002262157218331129,
+          "beneficio_tratar_todos": -0.023722397565404087,
+          "sinalizados": 9141
+        },
+        {
+          "limiar": 0.032194,
+          "beneficio_liquido": -0.0004834697936214262,
+          "beneficio_tratar_todos": -0.02830045405261648,
+          "sinalizados": 7726
+        },
+        {
+          "limiar": 0.037194,
+          "beneficio_liquido": -0.0005961421156279246,
+          "beneficio_tratar_todos": -0.03364057685021338,
+          "sinalizados": 6537
+        },
+        {
+          "limiar": 0.04297,
+          "beneficio_liquido": -0.0007153337714442458,
+          "beneficio_tratar_todos": -0.03987894761381204,
+          "sinalizados": 5494
+        },
+        {
+          "limiar": 0.049643,
+          "beneficio_liquido": -0.0008945684440138948,
+          "beneficio_tratar_todos": -0.047180532405029424,
+          "sinalizados": 4501
+        },
+        {
+          "limiar": 0.057353,
+          "beneficio_liquido": -0.0009531112005520661,
+          "beneficio_tratar_todos": -0.0557455221677325,
+          "sinalizados": 3698
+        },
+        {
+          "limiar": 0.06626,
+          "beneficio_liquido": -0.0009213552299004792,
+          "beneficio_tratar_todos": -0.06581633991779995,
+          "sinalizados": 2877
+        },
+        {
+          "limiar": 0.07655,
+          "beneficio_liquido": -0.000828546644267937,
+          "beneficio_tratar_todos": -0.07769272752704158,
+          "sinalizados": 2175
+        },
+        {
+          "limiar": 0.088438,
+          "beneficio_liquido": -0.0007444594129031152,
+          "beneficio_tratar_todos": -0.09174729665655933,
+          "sinalizados": 1576
+        },
+        {
+          "limiar": 0.102172,
+          "beneficio_liquido": -0.0007109682422549384,
+          "beneficio_tratar_todos": -0.10844766395662259,
+          "sinalizados": 1181
+        },
+        {
+          "limiar": 0.118039,
+          "beneficio_liquido": -0.000631076536901804,
+          "beneficio_tratar_todos": -0.12838929299010562,
+          "sinalizados": 865
+        },
+        {
+          "limiar": 0.13637,
+          "beneficio_liquido": -0.0005300934025834523,
+          "beneficio_tratar_todos": -0.15233994793470182,
+          "sinalizados": 620
+        },
+        {
+          "limiar": 0.157549,
+          "beneficio_liquido": -0.00035113796007703215,
+          "beneficio_tratar_todos": -0.18130947584470375,
+          "sinalizados": 391
+        },
+        {
+          "limiar": 0.182016,
+          "beneficio_liquido": -0.00027130083241762705,
+          "beneficio_tratar_todos": -0.2166440287766589,
+          "sinalizados": 247
+        },
+        {
+          "limiar": 0.210283,
+          "beneficio_liquido": -0.00022521844610014918,
+          "beneficio_tratar_todos": -0.2601923844045988,
+          "sinalizados": 156
+        },
+        {
+          "limiar": 0.242939,
+          "beneficio_liquido": -0.00011815877228817528,
+          "beneficio_tratar_todos": -0.3145510721525036,
+          "sinalizados": 76
+        },
+        {
+          "limiar": 0.280668,
+          "beneficio_liquido": -5.920323708078536e-05,
+          "beneficio_tratar_todos": -0.3834993427719697,
+          "sinalizados": 32
+        },
+        {
+          "limiar": 0.324255,
+          "beneficio_liquido": -1.1962390680431155e-05,
+          "beneficio_tratar_todos": -0.47273801394734183,
+          "sinalizados": 6
+        },
+        {
+          "limiar": 0.374612,
+          "beneficio_liquido": 0.0,
+          "beneficio_tratar_todos": -0.5913246644240799,
+          "sinalizados": 0
+        },
+        {
+          "limiar": 0.432788,
+          "beneficio_liquido": 0.0,
+          "beneficio_tratar_todos": -0.7545386015014607,
+          "sinalizados": 0
+        },
+        {
+          "limiar": 0.5,
+          "beneficio_liquido": 0.0,
+          "beneficio_tratar_todos": -0.9903906984696931,
+          "sinalizados": 0
+        }
+      ],
+      "chegada_x_continuacao": {
+        "continuacao (perto de foco)": {
+          "n": 17781,
+          "positivos": 335,
+          "prevalencia": 0.018840335189246948,
+          "roc_auc": 0.6709193913500251,
+          "pr_auc": 0.03538617515832737,
+          "pr_auc_sobre_prevalencia": 1.8782136731051313,
+          "recall_top100": 0.029850746268656716,
+          "precisao_top100": 0.1,
+          "investigados_por_surto_top100": 10.0,
+          "recall_top500": 0.08358208955223881,
+          "precisao_top500": 0.056,
+          "investigados_por_surto_top500": 17.857142857142858
+        },
+        "chegada (longe de foco)": {
+          "n": 99189,
+          "positivos": 227,
+          "prevalencia": 0.0022885602234118704,
+          "roc_auc": 0.8731292267480946,
+          "pr_auc": 0.02565738501386856,
+          "pr_auc_sobre_prevalencia": 11.211146969782416,
+          "recall_top100": 0.02643171806167401,
+          "precisao_top100": 0.06,
+          "investigados_por_surto_top100": 16.666666666666668,
+          "recall_top500": 0.12334801762114538,
+          "precisao_top500": 0.056,
+          "investigados_por_surto_top500": 17.857142857142858
+        }
+      },
+      "calibracao": [
+        {
+          "faixa": 0,
+          "n": 11697,
+          "previsto": 0.0006896355190789663,
+          "observado": 0.0010259040779687098
+        },
+        {
+          "faixa": 1,
+          "n": 11697,
+          "previsto": 0.0008653429589085585,
+          "observado": 0.0026502522014191674
+        },
+        {
+          "faixa": 2,
+          "n": 11697,
+          "previsto": 0.0013698644722206538,
+          "observado": 0.012738308968111482
+        },
+        {
+          "faixa": 3,
+          "n": 11697,
+          "previsto": 0.001469036612113171,
+          "observado": 0.00068393605197914
+        },
+        {
+          "faixa": 4,
+          "n": 11697,
+          "previsto": 0.001702368272950579,
+          "observado": 0.0014533641104556723
+        },
+        {
+          "faixa": 5,
+          "n": 11697,
+          "previsto": 0.002220770352945389,
+          "observado": 0.006924852526288792
+        },
+        {
+          "faixa": 6,
+          "n": 11697,
+          "previsto": 0.003507596763668856,
+          "observado": 0.014619133111054117
+        },
+        {
+          "faixa": 7,
+          "n": 11697,
+          "previsto": 0.0039571563339891565,
+          "observado": 0.00034196802598957
+        },
+        {
+          "faixa": 8,
+          "n": 11697,
+          "previsto": 0.004554275019776011,
+          "observado": 0.0011113960844661025
+        },
+        {
+          "faixa": 9,
+          "n": 11697,
+          "previsto": 0.024261500723198038,
+          "observado": 0.0064973924938018296
+        }
+      ],
+      "curva_de_decisao_calibrada": [
+        {
+          "limiar": 0.0001,
+          "beneficio_liquido": 0.004705121277281186,
+          "beneficio_tratar_todos": 0.004705121277281186,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000116,
+          "beneficio_liquido": 0.00468919471174002,
+          "beneficio_tratar_todos": 0.00468919471174002,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000133,
+          "beneficio_liquido": 0.004672272177353046,
+          "beneficio_tratar_todos": 0.004672272177353046,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000154,
+          "beneficio_liquido": 0.004651367075683113,
+          "beneficio_tratar_todos": 0.004651367075683113,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000178,
+          "beneficio_liquido": 0.004627474455606556,
+          "beneficio_tratar_todos": 0.004627474455606556,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000206,
+          "beneficio_liquido": 0.004599598282399633,
+          "beneficio_tratar_todos": 0.004599598282399633,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000238,
+          "beneficio_liquido": 0.00456773788677051,
+          "beneficio_tratar_todos": 0.00456773788677051,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000275,
+          "beneficio_liquido": 0.004530896761762943,
+          "beneficio_tratar_todos": 0.004530896761762943,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000317,
+          "beneficio_liquido": 0.004489073801548549,
+          "beneficio_tratar_todos": 0.004489073801548549,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000367,
+          "beneficio_liquido": 0.0044392799809064515,
+          "beneficio_tratar_todos": 0.0044392799809064515,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000424,
+          "beneficio_liquido": 0.004382508948947812,
+          "beneficio_tratar_todos": 0.004382508948947812,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000489,
+          "beneficio_liquido": 0.004317762150845222,
+          "beneficio_tratar_todos": 0.004317762150845222,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000565,
+          "beneficio_liquido": 0.004242047522003391,
+          "beneficio_tratar_todos": 0.004242047522003391,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000653,
+          "beneficio_liquido": 0.004154363564561117,
+          "beneficio_tratar_todos": 0.004154363564561117,
+          "sinalizados": 116970
+        },
+        {
+          "limiar": 0.000755,
+          "beneficio_liquido": 0.003826978451401578,
+          "beneficio_tratar_todos": 0.004052710561627487,
+          "sinalizados": 100260
+        },
+        {
+          "limiar": 0.000872,
+          "beneficio_liquido": 0.003727053358914029,
+          "beneficio_tratar_todos": 0.003936083029555231,
+          "sinalizados": 100260
+        },
+        {
+          "limiar": 0.001007,
+          "beneficio_liquido": 0.0036340533534008086,
+          "beneficio_tratar_todos": 0.0038014788543597987,
+          "sinalizados": 94690
+        },
+        {
+          "limiar": 0.001164,
+          "beneficio_liquido": 0.00350738121531332,
+          "beneficio_tratar_todos": 0.003644893421095614,
+          "sinalizados": 94690
+        },
+        {
+          "limiar": 0.001344,
+          "beneficio_liquido": 0.0033621030043021922,
+          "beneficio_tratar_todos": 0.003465308139292668,
+          "sinalizados": 94690
+        },
+        {
+          "limiar": 0.001553,
+          "beneficio_liquido": 0.002136748052550266,
+          "beneficio_tratar_todos": 0.003256708433350452,
+          "sinalizados": 72410
+        },
+        {
+          "limiar": 0.001794,
+          "beneficio_liquido": 0.002081824902449843,
+          "beneficio_tratar_todos": 0.00301606157962731,
+          "sinalizados": 55700
+        },
+        {
+          "limiar": 0.002073,
+          "beneficio_liquido": 0.0020139253160131295,
+          "beneficio_tratar_todos": 0.0027373252403767594,
+          "sinalizados": 50130
+        },
+        {
+          "limiar": 0.002395,
+          "beneficio_liquido": 0.0018762440533407853,
+          "beneficio_tratar_todos": 0.002415435733735756,
+          "sinalizados": 50130
+        },
+        {
+          "limiar": 0.002767,
+          "beneficio_liquido": 0.0017170730184465043,
+          "beneficio_tratar_todos": 0.0020433045889510864,
+          "sinalizados": 50130
+        },
+        {
+          "limiar": 0.003196,
+          "beneficio_liquido": -0.0002865768382773659,
+          "beneficio_tratar_todos": 0.0016138084971102228,
+          "sinalizados": 44560
+        },
+        {
+          "limiar": 0.003693,
+          "beneficio_liquido": -0.00034302086685380193,
+          "beneficio_tratar_todos": 0.0011157713085961037,
+          "sinalizados": 37632
+        },
+        {
+          "limiar": 0.004266,
+          "beneficio_liquido": -4.1255537887473085e-05,
+          "beneficio_tratar_todos": 0.0005409584940892437,
+          "sinalizados": 21989
+        },
+        {
+          "limiar": 0.004929,
+          "beneficio_liquido": 0.00026079036861568155,
+          "beneficio_tratar_todos": -0.00012496518825947257,
+          "sinalizados": 8652
+        },
+        {
+          "limiar": 0.005694,
+          "beneficio_liquido": 0.0003046844672696023,
+          "beneficio_tratar_todos": -0.0008944421886688215,
+          "sinalizados": 5719
+        },
+        {
+          "limiar": 0.006579,
+          "beneficio_liquido": 0.0002945775142238801,
+          "beneficio_tratar_todos": -0.0017860999866587696,
+          "sinalizados": 4221
+        },
+        {
+          "limiar": 0.0076,
+          "beneficio_liquido": 0.000279835564516193,
+          "beneficio_tratar_todos": -0.0028167565848917185,
+          "sinalizados": 3489
+        },
+        {
+          "limiar": 0.008781,
+          "beneficio_liquido": 0.0002128922589390808,
+          "beneficio_tratar_todos": -0.004011574873813499,
+          "sinalizados": 2997
+        },
+        {
+          "limiar": 0.010144,
+          "beneficio_liquido": 0.00017980406408375557,
+          "beneficio_tratar_todos": -0.005394066646912827,
+          "sinalizados": 2581
+        },
+        {
+          "limiar": 0.01172,
+          "beneficio_liquido": 0.00015862578653242875,
+          "beneficio_tratar_todos": -0.00699735827381566,
+          "sinalizados": 2275
+        },
+        {
+          "limiar": 0.01354,
+          "beneficio_liquido": 0.0001486158319302066,
+          "beneficio_tratar_todos": -0.00885524931051086,
+          "sinalizados": 2057
+        },
+        {
+          "limiar": 0.015642,
+          "beneficio_liquido": 0.00011995818467652698,
+          "beneficio_tratar_todos": -0.011009560784639879,
+          "sinalizados": 1866
+        },
+        {
+          "limiar": 0.018072,
+          "beneficio_liquido": 9.661548882003418e-05,
+          "beneficio_tratar_todos": -0.01351152959773684,
+          "sinalizados": 1710
+        },
+        {
+          "limiar": 0.020878,
+          "beneficio_liquido": 7.616145912135909e-05,
+          "beneficio_tratar_todos": -0.016416084241643574,
+          "sinalizados": 1546
+        },
+        {
+          "limiar": 0.024121,
+          "beneficio_liquido": 5.20475041903731e-05,
+          "beneficio_tratar_todos": -0.019793795373039626,
+          "sinalizados": 1412
+        },
+        {
+          "limiar": 0.027866,
+          "beneficio_liquido": 2.197436202284244e-05,
+          "beneficio_tratar_todos": -0.023722397565404087,
+          "sinalizados": 1274
+        },
+        {
+          "limiar": 0.032194,
+          "beneficio_liquido": -7.728330537777194e-07,
+          "beneficio_tratar_todos": -0.02830045405261648,
+          "sinalizados": 1152
+        },
+        {
+          "limiar": 0.037194,
+          "beneficio_liquido": -2.0509962178030382e-05,
+          "beneficio_tratar_todos": -0.03364057685021338,
+          "sinalizados": 1030
+        },
+        {
+          "limiar": 0.04297,
+          "beneficio_liquido": -3.242725393621203e-05,
+          "beneficio_tratar_todos": -0.03987894761381204,
+          "sinalizados": 899
+        },
+        {
+          "limiar": 0.049643,
+          "beneficio_liquido": -6.93328004104872e-05,
+          "beneficio_tratar_todos": -0.047180532405029424,
+          "sinalizados": 820
+        },
+        {
+          "limiar": 0.057353,
+          "beneficio_liquido": -0.00010792572818533943,
+          "beneficio_tratar_todos": -0.0557455221677325,
+          "sinalizados": 748
+        },
+        {
+          "limiar": 0.06626,
+          "beneficio_liquido": -0.00012566887304602567,
+          "beneficio_tratar_todos": -0.06581633991779995,
+          "sinalizados": 675
+        },
+        {
+          "limiar": 0.07655,
+          "beneficio_liquido": -0.00016812008401000315,
+          "beneficio_tratar_todos": -0.07769272752704158,
+          "sinalizados": 603
+        },
+        {
+          "limiar": 0.088438,
+          "beneficio_liquido": -0.0001979853823421471,
+          "beneficio_tratar_todos": -0.09174729665655933,
+          "sinalizados": 544
+        },
+        {
+          "limiar": 0.102172,
+          "beneficio_liquido": -0.00023206095710744454,
+          "beneficio_tratar_todos": -0.10844766395662259,
+          "sinalizados": 493
+        },
+        {
+          "limiar": 0.118039,
+          "beneficio_liquido": -0.00028278786166803044,
+          "beneficio_tratar_todos": -0.12838929299010562,
+          "sinalizados": 442
+        },
+        {
+          "limiar": 0.13637,
+          "beneficio_liquido": -0.00030149872764625383,
+          "beneficio_tratar_todos": -0.15233994793470182,
+          "sinalizados": 392
+        },
+        {
+          "limiar": 0.157549,
+          "beneficio_liquido": -0.00033952446651506986,
+          "beneficio_tratar_todos": -0.18130947584470375,
+          "sinalizados": 352
+        },
+        {
+          "limiar": 0.182016,
+          "beneficio_liquido": -0.0003892692327767002,
+          "beneficio_tratar_todos": -0.2166440287766589,
+          "sinalizados": 320
+        },
+        {
+          "limiar": 0.210283,
+          "beneficio_liquido": -0.00042089308431927924,
+          "beneficio_tratar_todos": -0.2601923844045988,
+          "sinalizados": 280
+        },
+        {
+          "limiar": 0.242939,
+          "beneficio_liquido": -0.00044902830041486467,
+          "beneficio_tratar_todos": -0.3145510721525036,
+          "sinalizados": 246
+        },
+        {
+          "limiar": 0.280668,
+          "beneficio_liquido": -0.00045613053914062793,
+          "beneficio_tratar_todos": -0.3834993427719697,
+          "sinalizados": 208
+        },
+        {
+          "limiar": 0.324255,
+          "beneficio_liquido": -0.0005390616111467821,
+          "beneficio_tratar_todos": -0.47273801394734183,
+          "sinalizados": 190
+        },
+        {
+          "limiar": 0.374612,
+          "beneficio_liquido": -0.0006091484406309578,
+          "beneficio_tratar_todos": -0.5913246644240799,
+          "sinalizados": 167
+        },
+        {
+          "limiar": 0.432788,
+          "beneficio_liquido": -0.0006851258006136677,
+          "beneficio_tratar_todos": -0.7545386015014607,
+          "sinalizados": 142
+        },
+        {
+          "limiar": 0.5,
+          "beneficio_liquido": -0.0007608788578267932,
+          "beneficio_tratar_todos": -0.9903906984696931,
+          "sinalizados": 115
+        }
+      ],
+      "tabela_operacional": [
+        {
+          "municipios_investigados": 50,
+          "surtos_capturados": 40,
+          "surtos_totais": 562,
+          "recall": 0.0711743772241993,
+          "investigados_por_surto": 26.25
+        },
+        {
+          "municipios_investigados": 100,
+          "surtos_capturados": 74,
+          "surtos_totais": 562,
+          "recall": 0.13167259786476868,
+          "investigados_por_surto": 28.37837837837838
+        },
+        {
+          "municipios_investigados": 250,
+          "surtos_capturados": 139,
+          "surtos_totais": 562,
+          "recall": 0.24733096085409254,
+          "investigados_por_surto": 37.76978417266187
+        },
+        {
+          "municipios_investigados": 500,
+          "surtos_capturados": 201,
+          "surtos_totais": 562,
+          "recall": 0.35765124555160144,
+          "investigados_por_surto": 52.23880597014925
+        },
+        {
+          "municipios_investigados": 1000,
+          "surtos_capturados": 270,
+          "surtos_totais": 562,
+          "recall": 0.4804270462633452,
+          "investigados_por_surto": 77.77777777777777
+        }
+      ]
+    },
+    "epizootia": {
+      "prevalencia": 0.00426825736954885,
+      "melhor_componente": "logistica",
+      "componentes": {
+        "base": {
+          "n": 77980,
+          "positivos": 726,
+          "prevalencia": 0.009310079507566042,
+          "roc_auc": 0.7651821783403052,
+          "pr_auc": 0.07153046250926948,
+          "pr_auc_sobre_prevalencia": 5.417914623706665,
+          "rotulo": "base",
+          "n_temporadas": 14,
+          "recall_top50": 0.03994490358126722,
+          "investigados_por_surto_top50": 24.137931034482758,
+          "recall_top100": 0.09090909090909091,
+          "investigados_por_surto_top100": 21.21212121212121,
+          "recall_top250": 0.18732782369146006,
+          "investigados_por_surto_top250": 25.735294117647058,
+          "recall_top500": 0.37327823691460055,
+          "investigados_por_surto_top500": 25.830258302583026,
+          "recall_top1000": 0.5344352617079889,
+          "investigados_por_surto_top1000": 36.08247422680412,
+          "limiares_uteis": 17
+        },
+        "logistica": {
+          "n": 77980,
+          "positivos": 726,
+          "prevalencia": 0.009310079507566042,
+          "roc_auc": 0.680209993084265,
+          "pr_auc": 0.11421358253620419,
+          "pr_auc_sobre_prevalencia": 9.47898182296182,
+          "rotulo": "logistica",
+          "n_temporadas": 14,
+          "recall_top50": 0.1184573002754821,
+          "investigados_por_surto_top50": 8.13953488372093,
+          "recall_top100": 0.1790633608815427,
+          "investigados_por_surto_top100": 10.76923076923077,
+          "recall_top250": 0.3044077134986226,
+          "investigados_por_surto_top250": 15.83710407239819,
+          "recall_top500": 0.4201101928374656,
+          "investigados_por_surto_top500": 22.950819672131146,
+          "recall_top1000": 0.5523415977961432,
+          "investigados_por_surto_top1000": 34.912718204488776,
+          "limiares_uteis": 23
+        },
+        "floresta": {
+          "n": 77980,
+          "positivos": 726,
+          "prevalencia": 0.009310079507566042,
+          "roc_auc": 0.7514396958673746,
+          "pr_auc": 0.08623659684556614,
+          "pr_auc_sobre_prevalencia": 5.896624256304556,
+          "rotulo": "floresta",
+          "n_temporadas": 14,
+          "recall_top50": 0.06887052341597796,
+          "investigados_por_surto_top50": 14.0,
+          "recall_top100": 0.13636363636363635,
+          "investigados_por_surto_top100": 14.141414141414142,
+          "recall_top250": 0.2548209366391185,
+          "investigados_por_surto_top250": 18.91891891891892,
+          "recall_top500": 0.3787878787878788,
+          "investigados_por_surto_top500": 25.454545454545453,
+          "recall_top1000": 0.5440771349862259,
+          "investigados_por_surto_top1000": 35.44303797468354,
+          "limiares_uteis": 23
+        },
+        "conjunto": {
+          "n": 77980,
+          "positivos": 726,
+          "prevalencia": 0.009310079507566042,
+          "roc_auc": 0.780352779482428,
+          "pr_auc": 0.10699842150968522,
+          "pr_auc_sobre_prevalencia": 10.055583417526389,
+          "rotulo": "conjunto",
+          "n_temporadas": 14,
+          "recall_top50": 0.08953168044077135,
+          "investigados_por_surto_top50": 10.76923076923077,
+          "recall_top100": 0.16115702479338842,
+          "investigados_por_surto_top100": 11.965811965811966,
+          "recall_top250": 0.2644628099173554,
+          "investigados_por_surto_top250": 18.229166666666668,
+          "recall_top500": 0.3856749311294766,
+          "investigados_por_surto_top500": 25.0,
+          "recall_top1000": 0.5606060606060606,
+          "investigados_por_surto_top1000": 34.3980343980344,
+          "limiares_uteis": 16
+        },
+        "conjunto_2": {
+          "n": 77980,
+          "positivos": 726,
+          "prevalencia": 0.009310079507566042,
+          "roc_auc": 0.7412055675156745,
+          "pr_auc": 0.1075482078232449,
+          "pr_auc_sobre_prevalencia": 10.444663100797762,
+          "rotulo": "conjunto_2",
+          "n_temporadas": 14,
+          "recall_top50": 0.09504132231404959,
+          "investigados_por_surto_top50": 10.144927536231885,
+          "recall_top100": 0.1652892561983471,
+          "investigados_por_surto_top100": 11.666666666666666,
+          "recall_top250": 0.2741046831955923,
+          "investigados_por_surto_top250": 17.587939698492463,
+          "recall_top500": 0.3939393939393939,
+          "investigados_por_surto_top500": 24.475524475524477,
+          "recall_top1000": 0.5371900826446281,
+          "investigados_por_surto_top1000": 35.8974358974359,
+          "limiares_uteis": 17
+        }
+      },
+      "por_temporada_do_melhor": [
+        {
+          "n": 5570,
+          "positivos": 1,
+          "prevalencia": 0.00017953321364452425,
+          "roc_auc": 0.8198958520380679,
+          "pr_auc": 0.00099601593625498,
+          "pr_auc_sobre_prevalencia": 5.547808764940239,
+          "recall_top50": 0.0,
+          "precisao_top50": 0.0,
+          "investigados_por_surto_top50": NaN,
+          "recall_top100": 0.0,
+          "precisao_top100": 0.0,
+          "investigados_por_surto_top100": NaN,
+          "recall_top250": 0.0,
+          "precisao_top250": 0.0,
+          "investigados_por_surto_top250": NaN,
+          "recall_top500": 0.0,
+          "precisao_top500": 0.0,
+          "investigados_por_surto_top500": NaN,
+          "recall_top1000": 0.0,
+          "precisao_top1000": 0.0,
+          "investigados_por_surto_top1000": NaN,
+          "temporada": 2006
+        },
+        {
+          "n": 5570,
+          "positivos": 24,
+          "prevalencia": 0.004308797127468581,
+          "roc_auc": 0.6546760427936049,
+          "pr_auc": 0.012538838006151866,
+          "pr_auc_sobre_prevalencia": 2.910055320594412,
+          "recall_top50": 0.041666666666666664,
+          "precisao_top50": 0.02,
+          "investigados_por_surto_top50": 50.0,
+          "recall_top100": 0.041666666666666664,
+          "precisao_top100": 0.01,
+          "investigados_por_surto_top100": 100.0,
+          "recall_top250": 0.125,
+          "precisao_top250": 0.012,
+          "investigados_por_surto_top250": 83.33333333333333,
+          "recall_top500": 0.20833333333333334,
+          "precisao_top500": 0.01,
+          "investigados_por_surto_top500": 100.0,
+          "recall_top1000": 0.375,
+          "precisao_top1000": 0.009,
+          "investigados_por_surto_top1000": 111.11111111111111,
+          "temporada": 2007
+        },
+        {
+          "n": 5570,
+          "positivos": 72,
+          "prevalencia": 0.012926391382405745,
+          "roc_auc": 0.8280384786386968,
+          "pr_auc": 0.054987671328496426,
+          "pr_auc_sobre_prevalencia": 4.253907351385071,
+          "recall_top50": 0.041666666666666664,
+          "precisao_top50": 0.06,
+          "investigados_por_surto_top50": 16.666666666666668,
+          "recall_top100": 0.08333333333333333,
+          "precisao_top100": 0.06,
+          "investigados_por_surto_top100": 16.666666666666668,
+          "recall_top250": 0.2638888888888889,
+          "precisao_top250": 0.076,
+          "investigados_por_surto_top250": 13.157894736842104,
+          "recall_top500": 0.4861111111111111,
+          "precisao_top500": 0.07,
+          "investigados_por_surto_top500": 14.285714285714286,
+          "recall_top1000": 0.6388888888888888,
+          "precisao_top1000": 0.046,
+          "investigados_por_surto_top1000": 21.73913043478261,
+          "temporada": 2008
+        },
+        {
+          "n": 5570,
+          "positivos": 5,
+          "prevalencia": 0.0008976660682226212,
+          "roc_auc": 0.5048697214734951,
+          "pr_auc": 0.001060339925977027,
+          "pr_auc_sobre_prevalencia": 1.1812186775384081,
+          "recall_top50": 0.0,
+          "precisao_top50": 0.0,
+          "investigados_por_surto_top50": NaN,
+          "recall_top100": 0.0,
+          "precisao_top100": 0.0,
+          "investigados_por_surto_top100": NaN,
+          "recall_top250": 0.0,
+          "precisao_top250": 0.0,
+          "investigados_por_surto_top250": NaN,
+          "recall_top500": 0.0,
+          "precisao_top500": 0.0,
+          "investigados_por_surto_top500": NaN,
+          "recall_top1000": 0.2,
+          "precisao_top1000": 0.001,
+          "investigados_por_surto_top1000": 1000.0,
+          "temporada": 2014
+        },
+        {
+          "n": 5570,
+          "positivos": 14,
+          "prevalencia": 0.0025134649910233393,
+          "roc_auc": 0.7940964722822174,
+          "pr_auc": 0.036443256526752996,
+          "pr_auc_sobre_prevalencia": 14.49920991814387,
+          "recall_top50": 0.21428571428571427,
+          "precisao_top50": 0.06,
+          "investigados_por_surto_top50": 16.666666666666668,
+          "recall_top100": 0.2857142857142857,
+          "precisao_top100": 0.04,
+          "investigados_por_surto_top100": 25.0,
+          "recall_top250": 0.35714285714285715,
+          "precisao_top250": 0.02,
+          "investigados_por_surto_top250": 50.0,
+          "recall_top500": 0.42857142857142855,
+          "precisao_top500": 0.012,
+          "investigados_por_surto_top500": 83.33333333333333,
+          "recall_top1000": 0.7142857142857143,
+          "precisao_top1000": 0.01,
+          "investigados_por_surto_top1000": 100.0,
+          "temporada": 2015
+        },
+        {
+          "n": 5570,
+          "positivos": 188,
+          "prevalencia": 0.03375224416517056,
+          "roc_auc": 0.7475884943507514,
+          "pr_auc": 0.14504030744584362,
+          "pr_auc_sobre_prevalencia": 4.297204853581643,
+          "recall_top50": 0.09042553191489362,
+          "precisao_top50": 0.34,
+          "investigados_por_surto_top50": 2.9411764705882355,
+          "recall_top100": 0.13829787234042554,
+          "precisao_top100": 0.26,
+          "investigados_por_surto_top100": 3.8461538461538463,
+          "recall_top250": 0.25,
+          "precisao_top250": 0.188,
+          "investigados_por_surto_top250": 5.319148936170213,
+          "recall_top500": 0.35638297872340424,
+          "precisao_top500": 0.134,
+          "investigados_por_surto_top500": 7.462686567164179,
+          "recall_top1000": 0.48404255319148937,
+          "precisao_top1000": 0.091,
+          "investigados_por_surto_top1000": 10.989010989010989,
+          "temporada": 2016
+        },
+        {
+          "n": 5570,
+          "positivos": 157,
+          "prevalencia": 0.028186714542190305,
+          "roc_auc": 0.11929996316958115,
+          "pr_auc": 0.01800291922037559,
+          "pr_auc_sobre_prevalencia": 0.6387022933598219,
+          "recall_top50": 0.012738853503184714,
+          "precisao_top50": 0.04,
+          "investigados_por_surto_top50": 25.0,
+          "recall_top100": 0.012738853503184714,
+          "precisao_top100": 0.02,
+          "investigados_por_surto_top100": 50.0,
+          "recall_top250": 0.012738853503184714,
+          "precisao_top250": 0.008,
+          "investigados_por_surto_top250": 125.0,
+          "recall_top500": 0.012738853503184714,
+          "precisao_top500": 0.004,
+          "investigados_por_surto_top500": 250.0,
+          "recall_top1000": 0.025477707006369428,
+          "precisao_top1000": 0.004,
+          "investigados_por_surto_top1000": 250.0,
+          "temporada": 2017
+        },
+        {
+          "n": 5570,
+          "positivos": 39,
+          "prevalencia": 0.007001795332136445,
+          "roc_auc": 0.910963381221924,
+          "pr_auc": 0.2059715730696824,
+          "pr_auc_sobre_prevalencia": 29.41696569225977,
+          "recall_top50": 0.358974358974359,
+          "precisao_top50": 0.28,
+          "investigados_por_surto_top50": 3.5714285714285716,
+          "recall_top100": 0.41025641025641024,
+          "precisao_top100": 0.16,
+          "investigados_por_surto_top100": 6.25,
+          "recall_top250": 0.6153846153846154,
+          "precisao_top250": 0.096,
+          "investigados_por_surto_top250": 10.416666666666666,
+          "recall_top500": 0.717948717948718,
+          "precisao_top500": 0.056,
+          "investigados_por_surto_top500": 17.857142857142858,
+          "recall_top1000": 0.8974358974358975,
+          "precisao_top1000": 0.035,
+          "investigados_por_surto_top1000": 28.571428571428573,
+          "temporada": 2018
+        },
+        {
+          "n": 5570,
+          "positivos": 67,
+          "prevalencia": 0.012028725314183124,
+          "roc_auc": 0.9628587934396706,
+          "pr_auc": 0.22055404498691997,
+          "pr_auc_sobre_prevalencia": 18.335612396673792,
+          "recall_top50": 0.2537313432835821,
+          "precisao_top50": 0.34,
+          "investigados_por_surto_top50": 2.9411764705882355,
+          "recall_top100": 0.34328358208955223,
+          "precisao_top100": 0.23,
+          "investigados_por_surto_top100": 4.3478260869565215,
+          "recall_top250": 0.6716417910447762,
+          "precisao_top250": 0.18,
+          "investigados_por_surto_top250": 5.555555555555555,
+          "recall_top500": 0.835820895522388,
+          "precisao_top500": 0.112,
+          "investigados_por_surto_top500": 8.928571428571429,
+          "recall_top1000": 1.0,
+          "precisao_top1000": 0.067,
+          "investigados_por_surto_top1000": 14.925373134328359,
+          "temporada": 2019
+        },
+        {
+          "n": 5570,
+          "positivos": 91,
+          "prevalencia": 0.016337522441651705,
+          "roc_auc": 0.9259289715577359,
+          "pr_auc": 0.18947783687208697,
+          "pr_auc_sobre_prevalencia": 11.597709355796972,
+          "recall_top50": 0.14285714285714285,
+          "precisao_top50": 0.26,
+          "investigados_por_surto_top50": 3.8461538461538463,
+          "recall_top100": 0.2857142857142857,
+          "precisao_top100": 0.26,
+          "investigados_por_surto_top100": 3.8461538461538463,
+          "recall_top250": 0.45054945054945056,
+          "precisao_top250": 0.164,
+          "investigados_por_surto_top250": 6.097560975609756,
+          "recall_top500": 0.6703296703296703,
+          "precisao_top500": 0.122,
+          "investigados_por_surto_top500": 8.19672131147541,
+          "recall_top1000": 0.9120879120879121,
+          "precisao_top1000": 0.083,
+          "investigados_por_surto_top1000": 12.048192771084338,
+          "temporada": 2020
+        },
+        {
+          "n": 5570,
+          "positivos": 15,
+          "prevalencia": 0.0026929982046678637,
+          "roc_auc": 0.7668166816681667,
+          "pr_auc": 0.009496203365950676,
+          "pr_auc_sobre_prevalencia": 3.526256849889684,
+          "recall_top50": 0.06666666666666667,
+          "precisao_top50": 0.02,
+          "investigados_por_surto_top50": 50.0,
+          "recall_top100": 0.06666666666666667,
+          "precisao_top100": 0.01,
+          "investigados_por_surto_top100": 100.0,
+          "recall_top250": 0.06666666666666667,
+          "precisao_top250": 0.004,
+          "investigados_por_surto_top250": 250.0,
+          "recall_top500": 0.2,
+          "precisao_top500": 0.006,
+          "investigados_por_surto_top500": 166.66666666666666,
+          "recall_top1000": 0.6,
+          "precisao_top1000": 0.009,
+          "investigados_por_surto_top1000": 111.11111111111111,
+          "temporada": 2021
+        },
+        {
+          "n": 5570,
+          "positivos": 6,
+          "prevalencia": 0.0010771992818671453,
+          "roc_auc": 0.7181284447639588,
+          "pr_auc": 0.015487931994883138,
+          "pr_auc_sobre_prevalencia": 14.377963535249847,
+          "recall_top50": 0.16666666666666666,
+          "precisao_top50": 0.02,
+          "investigados_por_surto_top50": 50.0,
+          "recall_top100": 0.16666666666666666,
+          "precisao_top100": 0.01,
+          "investigados_por_surto_top100": 100.0,
+          "recall_top250": 0.3333333333333333,
+          "precisao_top250": 0.008,
+          "investigados_por_surto_top250": 125.0,
+          "recall_top500": 0.5,
+          "precisao_top500": 0.006,
+          "investigados_por_surto_top500": 166.66666666666666,
+          "recall_top1000": 0.6666666666666666,
+          "precisao_top1000": 0.004,
+          "investigados_por_surto_top1000": 250.0,
+          "temporada": 2022
+        },
+        {
+          "n": 5570,
+          "positivos": 9,
+          "prevalencia": 0.001615798922800718,
+          "roc_auc": 0.9388199564426861,
+          "pr_auc": 0.1588367253624935,
+          "pr_auc_sobre_prevalencia": 98.3022844743432,
+          "recall_top50": 0.3333333333333333,
+          "precisao_top50": 0.06,
+          "investigados_por_surto_top50": 16.666666666666668,
+          "recall_top100": 0.5555555555555556,
+          "precisao_top100": 0.05,
+          "investigados_por_surto_top100": 20.0,
+          "recall_top250": 0.5555555555555556,
+          "precisao_top250": 0.02,
+          "investigados_por_surto_top250": 50.0,
+          "recall_top500": 0.7777777777777778,
+          "precisao_top500": 0.014,
+          "investigados_por_surto_top500": 71.42857142857143,
+          "recall_top1000": 0.8888888888888888,
+          "precisao_top1000": 0.008,
+          "investigados_por_surto_top1000": 125.0,
+          "temporada": 2023
+        },
+        {
+          "n": 5570,
+          "positivos": 38,
+          "prevalencia": 0.006822262118491921,
+          "roc_auc": 0.9527390874148495,
+          "pr_auc": 0.16660737787380106,
+          "pr_auc_sobre_prevalencia": 24.421134072554523,
+          "recall_top50": 0.2894736842105263,
+          "precisao_top50": 0.22,
+          "investigados_por_surto_top50": 4.545454545454546,
+          "recall_top100": 0.5,
+          "precisao_top100": 0.19,
+          "investigados_por_surto_top100": 5.2631578947368425,
+          "recall_top250": 0.7105263157894737,
+          "precisao_top250": 0.108,
+          "investigados_por_surto_top250": 9.25925925925926,
+          "recall_top500": 0.8421052631578947,
+          "precisao_top500": 0.064,
+          "investigados_por_surto_top500": 15.625,
+          "recall_top1000": 0.8947368421052632,
+          "precisao_top1000": 0.034,
+          "investigados_por_surto_top1000": 29.41176470588235,
+          "temporada": 2024
+        }
+      ],
+      "calibrado": {
+        "n": 77980,
+        "positivos": 726,
+        "prevalencia": 0.009310079507566042,
+        "roc_auc": 0.6095935505388097,
+        "pr_auc": 0.10922347864481954,
+        "pr_auc_sobre_prevalencia": 9.044690260142115,
+        "rotulo": "calibrado",
+        "n_temporadas": 14,
+        "recall_top50": 0.11294765840220386,
+        "investigados_por_surto_top50": 8.536585365853659,
+        "recall_top100": 0.16942148760330578,
+        "investigados_por_surto_top100": 11.382113821138212,
+        "recall_top250": 0.2768595041322314,
+        "investigados_por_surto_top250": 17.412935323383085,
+        "recall_top500": 0.3691460055096419,
+        "investigados_por_surto_top500": 26.119402985074625,
+        "recall_top1000": 0.4807162534435262,
+        "investigados_por_surto_top1000": 40.11461318051576,
+        "limiares_uteis": 22
+      },
+      "curva_de_decisao": [
+        {
+          "limiar": 0.0001,
+          "beneficio_liquido": 0.006916915082121189,
+          "beneficio_tratar_todos": 0.009211000607626805,
+          "sinalizados": 56729
+        },
+        {
+          "limiar": 0.000116,
+          "beneficio_liquido": 0.006844507479153808,
+          "beneficio_tratar_todos": 0.009195146144518806,
+          "sinalizados": 54545
+        },
+        {
+          "limiar": 0.000133,
+          "beneficio_liquido": 0.006797705505450332,
+          "beneficio_tratar_todos": 0.009178300221495501,
+          "sinalizados": 52522
+        },
+        {
+          "limiar": 0.000154,
+          "beneficio_liquido": 0.0066723881787105295,
+          "beneficio_tratar_todos": 0.009157489760989235,
+          "sinalizados": 50437
+        },
+        {
+          "limiar": 0.000178,
+          "beneficio_liquido": 0.006610092497977848,
+          "beneficio_tratar_todos": 0.009133705307110707,
+          "sinalizados": 48521
+        },
+        {
+          "limiar": 0.000206,
+          "beneficio_liquido": 0.00655986302709007,
+          "beneficio_tratar_todos": 0.009105955334364922,
+          "sinalizados": 46443
+        },
+        {
+          "limiar": 0.000238,
+          "beneficio_liquido": 0.006444693108567943,
+          "beneficio_tratar_todos": 0.009074239176490046,
+          "sinalizados": 44380
+        },
+        {
+          "limiar": 0.000275,
+          "beneficio_liquido": 0.006379557661249893,
+          "beneficio_tratar_todos": 0.009037564837896464,
+          "sinalizados": 42396
+        },
+        {
+          "limiar": 0.000317,
+          "beneficio_liquido": 0.006300664391915135,
+          "beneficio_tratar_todos": 0.008995931217762073,
+          "sinalizados": 40473
+        },
+        {
+          "limiar": 0.000367,
+          "beneficio_liquido": 0.006117212662597315,
+          "beneficio_tratar_todos": 0.00894636282272198,
+          "sinalizados": 38569
+        },
+        {
+          "limiar": 0.000424,
+          "beneficio_liquido": 0.006034850030580701,
+          "beneficio_tratar_todos": 0.008889848803458708,
+          "sinalizados": 36797
+        },
+        {
+          "limiar": 0.000489,
+          "beneficio_liquido": 0.005925642702117961,
+          "beneficio_tratar_todos": 0.008825395125782549,
+          "sinalizados": 35060
+        },
+        {
+          "limiar": 0.000565,
+          "beneficio_liquido": 0.005853353695235346,
+          "beneficio_tratar_todos": 0.008750023270713995,
+          "sinalizados": 33298
+        },
+        {
+          "limiar": 0.000653,
+          "beneficio_liquido": 0.005791806940930119,
+          "beneficio_tratar_todos": 0.008662736274353194,
+          "sinalizados": 31623
+        },
+        {
+          "limiar": 0.000755,
+          "beneficio_liquido": 0.005664535701115025,
+          "beneficio_tratar_todos": 0.008561543472888072,
+          "sinalizados": 29951
+        },
+        {
+          "limiar": 0.000872,
+          "beneficio_liquido": 0.005523677482876892,
+          "beneficio_tratar_todos": 0.008445443934677081,
+          "sinalizados": 28256
+        },
+        {
+          "limiar": 0.001007,
+          "beneficio_liquido": 0.005406321685814507,
+          "beneficio_tratar_todos": 0.008311449136846847,
+          "sinalizados": 26653
+        },
+        {
+          "limiar": 0.001164,
+          "beneficio_liquido": 0.005287935459516581,
+          "beneficio_tratar_todos": 0.008155572594065534,
+          "sinalizados": 25023
+        },
+        {
+          "limiar": 0.001344,
+          "beneficio_liquido": 0.005090884621359935,
+          "beneficio_tratar_todos": 0.007976800327205807,
+          "sinalizados": 23472
+        },
+        {
+          "limiar": 0.001553,
+          "beneficio_liquido": 0.004918140154296195,
+          "beneficio_tratar_todos": 0.007769144989735101,
+          "sinalizados": 21944
+        },
+        {
+          "limiar": 0.001794,
+          "beneficio_liquido": 0.004796145115319186,
+          "beneficio_tratar_todos": 0.0075295875876983725,
+          "sinalizados": 20439
+        },
+        {
+          "limiar": 0.002073,
+          "beneficio_liquido": 0.004609613487158469,
+          "beneficio_tratar_todos": 0.007252113138101326,
+          "sinalizados": 18952
+        },
+        {
+          "limiar": 0.002395,
+          "beneficio_liquido": 0.0043831537830873605,
+          "beneficio_tratar_todos": 0.006931680883281501,
+          "sinalizados": 17545
+        },
+        {
+          "limiar": 0.002767,
+          "beneficio_liquido": 0.004193870340746053,
+          "beneficio_tratar_todos": 0.006561234443270572,
+          "sinalizados": 16215
+        },
+        {
+          "limiar": 0.003196,
+          "beneficio_liquido": 0.004067935978478265,
+          "beneficio_tratar_todos": 0.006133682757659522,
+          "sinalizados": 14955
+        },
+        {
+          "limiar": 0.003693,
+          "beneficio_liquido": 0.0039384340702092804,
+          "beneficio_tratar_todos": 0.005637900273275247,
+          "sinalizados": 13814
+        },
+        {
+          "limiar": 0.004266,
+          "beneficio_liquido": 0.003817966387929708,
+          "beneficio_tratar_todos": 0.005065689739996868,
+          "sinalizados": 12786
+        },
+        {
+          "limiar": 0.004929,
+          "beneficio_liquido": 0.003619056758564967,
+          "beneficio_tratar_todos": 0.004402780814199229,
+          "sinalizados": 11803
+        },
+        {
+          "limiar": 0.005694,
+          "beneficio_liquido": 0.0034854600850770835,
+          "beneficio_tratar_todos": 0.003636787374878601,
+          "sinalizados": 10845
+        },
+        {
+          "limiar": 0.006579,
+          "beneficio_liquido": 0.0033377485578931824,
+          "beneficio_tratar_todos": 0.002749166272472639,
+          "sinalizados": 9946
+        },
+        {
+          "limiar": 0.0076,
+          "beneficio_liquido": 0.003197483743855197,
+          "beneficio_tratar_todos": 0.001723175642448651,
+          "sinalizados": 9152
+        },
+        {
+          "limiar": 0.008781,
+          "beneficio_liquido": 0.00302728489696442,
+          "beneficio_tratar_todos": 0.0005337665113017819,
+          "sinalizados": 8314
+        },
+        {
+          "limiar": 0.010144,
+          "beneficio_liquido": 0.0028973842953248607,
+          "beneficio_tratar_todos": -0.0008424664723292678,
+          "sinalizados": 7527
+        },
+        {
+          "limiar": 0.01172,
+          "beneficio_liquido": 0.0027461131457345907,
+          "beneficio_tratar_todos": -0.002438499709023715,
+          "sinalizados": 6772
+        },
+        {
+          "limiar": 0.01354,
+          "beneficio_liquido": 0.002583290396232752,
+          "beneficio_tratar_todos": -0.004287979738087666,
+          "sinalizados": 6077
+        },
+        {
+          "limiar": 0.015642,
+          "beneficio_liquido": 0.0024229436705318014,
+          "beneficio_tratar_todos": -0.0064325382558316786,
+          "sinalizados": 5435
+        },
+        {
+          "limiar": 0.018072,
+          "beneficio_liquido": 0.0022475658426866687,
+          "beneficio_tratar_todos": -0.008923180205100535,
+          "sinalizados": 4864
+        },
+        {
+          "limiar": 0.020878,
+          "beneficio_liquido": 0.0020698173134778694,
+          "beneficio_tratar_todos": -0.011814585406551949,
+          "sinalizados": 4357
+        },
+        {
+          "limiar": 0.024121,
+          "beneficio_liquido": 0.0018381289681902687,
+          "beneficio_tratar_todos": -0.015177005030781435,
+          "sinalizados": 3902
+        },
+        {
+          "limiar": 0.027866,
+          "beneficio_liquido": 0.0016896224920220878,
+          "beneficio_tratar_todos": -0.019087821732841313,
+          "sinalizados": 3442
+        },
+        {
+          "limiar": 0.032194,
+          "beneficio_liquido": 0.001520827459206299,
+          "beneficio_tratar_todos": -0.023645152533084066,
+          "sinalizados": 3051
+        },
+        {
+          "limiar": 0.037194,
+          "beneficio_liquido": 0.0012577537314781336,
+          "beneficio_tratar_todos": -0.028961099632152223,
+          "sinalizados": 2677
+        },
+        {
+          "limiar": 0.04297,
+          "beneficio_liquido": 0.0011547851336054934,
+          "beneficio_tratar_todos": -0.03517122816675962,
+          "sinalizados": 2323
+        },
+        {
+          "limiar": 0.049643,
+          "beneficio_liquido": 0.0009764894459716002,
+          "beneficio_tratar_todos": -0.04243975736742504,
+          "sinalizados": 2007
+        },
+        {
+          "limiar": 0.057353,
+          "beneficio_liquido": 0.0008536116653493197,
+          "beneficio_tratar_todos": -0.05096597187752569,
+          "sinalizados": 1748
+        },
+        {
+          "limiar": 0.06626,
+          "beneficio_liquido": 0.00069779776220649,
+          "beneficio_tratar_todos": -0.06099119722024755,
+          "sinalizados": 1497
+        },
+        {
+          "limiar": 0.07655,
+          "beneficio_liquido": 0.0006081213203089414,
+          "beneficio_tratar_todos": -0.07281381828191452,
+          "sinalizados": 1296
+        },
+        {
+          "limiar": 0.088438,
+          "beneficio_liquido": 0.0005119553253224744,
+          "beneficio_tratar_todos": -0.08680475984347083,
+          "sinalizados": 1115
+        },
+        {
+          "limiar": 0.102172,
+          "beneficio_liquido": 0.0003931849582932893,
+          "beneficio_tratar_todos": -0.10342952157031632,
+          "sinalizados": 954
+        },
+        {
+          "limiar": 0.118039,
+          "beneficio_liquido": 0.00023728564679144338,
+          "beneficio_tratar_todos": -0.12328087125443637,
+          "sinalizados": 836
+        },
+        {
+          "limiar": 0.13637,
+          "beneficio_liquido": 0.00013761972869028656,
+          "beneficio_tratar_todos": -0.14712309726669284,
+          "sinalizados": 724
+        },
+        {
+          "limiar": 0.157549,
+          "beneficio_liquido": 1.8421803202654796e-05,
+          "beneficio_tratar_todos": -0.17596147490172595,
+          "sinalizados": 608
+        },
+        {
+          "limiar": 0.182016,
+          "beneficio_liquido": -0.0001341728178804139,
+          "beneficio_tratar_todos": -0.21113606194306242,
+          "sinalizados": 525
+        },
+        {
+          "limiar": 0.210283,
+          "beneficio_liquido": -0.00024526520263036967,
+          "beneficio_tratar_todos": -0.2544872663149381,
+          "sinalizados": 438
+        },
+        {
+          "limiar": 0.242939,
+          "beneficio_liquido": -0.00035160921715028453,
+          "beneficio_tratar_todos": -0.3085998624845739,
+          "sinalizados": 353
+        },
+        {
+          "limiar": 0.280668,
+          "beneficio_liquido": -0.0004292426748605195,
+          "beneficio_tratar_todos": -0.37723599185415624,
+          "sinalizados": 296
+        },
+        {
+          "limiar": 0.324255,
+          "beneficio_liquido": -0.0005156637022911671,
+          "beneficio_tratar_todos": -0.46607066347872933,
+          "sinalizados": 238
+        },
+        {
+          "limiar": 0.374612,
+          "beneficio_liquido": -0.0004189912674973622,
+          "beneficio_tratar_todos": -0.5841204508120301,
+          "sinalizados": 172
+        },
+        {
+          "limiar": 0.432788,
+          "beneficio_liquido": -0.0003798255333285643,
+          "beneficio_tratar_todos": -0.7465954889749052,
+          "sinalizados": 122
+        },
+        {
+          "limiar": 0.5,
+          "beneficio_liquido": -0.0003975378302128751,
+          "beneficio_tratar_todos": -0.981379840984868,
+          "sinalizados": 89
+        }
+      ],
+      "chegada_x_continuacao": {
+        "continuacao (perto de foco)": {
+          "n": 14983,
+          "positivos": 419,
+          "prevalencia": 0.02796502703063472,
+          "roc_auc": 0.5272658774144112,
+          "pr_auc": 0.08369541992529334,
+          "pr_auc_sobre_prevalencia": 2.9928603263500477,
+          "recall_top100": 0.06921241050119331,
+          "precisao_top100": 0.29,
+          "investigados_por_surto_top100": 3.4482758620689653,
+          "recall_top500": 0.18854415274463007,
+          "precisao_top500": 0.158,
+          "investigados_por_surto_top500": 6.329113924050633
+        },
+        "chegada (longe de foco)": {
+          "n": 62997,
+          "positivos": 307,
+          "prevalencia": 0.004873247932441227,
+          "roc_auc": 0.7565214386700911,
+          "pr_auc": 0.04796632688117285,
+          "pr_auc_sobre_prevalencia": 9.84278402128093,
+          "recall_top100": 0.048859934853420196,
+          "precisao_top100": 0.15,
+          "investigados_por_surto_top100": 6.666666666666667,
+          "recall_top500": 0.1465798045602606,
+          "precisao_top500": 0.09,
+          "investigados_por_surto_top500": 11.11111111111111
+        }
+      },
+      "calibracao": [
+        {
+          "faixa": 0,
+          "n": 7798,
+          "previsto": 0.0007786646399340552,
+          "observado": 0.011413182867401898
+        },
+        {
+          "faixa": 1,
+          "n": 7798,
+          "previsto": 0.003399221631417159,
+          "observado": 0.01231084893562452
+        },
+        {
+          "faixa": 2,
+          "n": 7798,
+          "previsto": 0.004752733303479269,
+          "observado": 0.014490895101308028
+        },
+        {
+          "faixa": 3,
+          "n": 7798,
+          "previsto": 0.00676165336253983,
+          "observado": 0.02026160553988202
+        },
+        {
+          "faixa": 4,
+          "n": 7798,
+          "previsto": 0.008685024386331829,
+          "observado": 0.0
+        },
+        {
+          "faixa": 5,
+          "n": 7798,
+          "previsto": 0.009265248326219108,
+          "observado": 0.00038471402923826624
+        },
+        {
+          "faixa": 6,
+          "n": 7798,
+          "previsto": 0.009784084064187772,
+          "observado": 0.0008976660682226212
+        },
+        {
+          "faixa": 7,
+          "n": 7798,
+          "previsto": 0.010329526163089636,
+          "observado": 0.00307771223390613
+        },
+        {
+          "faixa": 8,
+          "n": 7798,
+          "previsto": 0.010966046518525929,
+          "observado": 0.00307771223390613
+        },
+        {
+          "faixa": 9,
+          "n": 7798,
+          "previsto": 0.036673122264182664,
+          "observado": 0.027186458066170812
+        }
+      ],
+      "curva_de_decisao_calibrada": [
+        {
+          "limiar": 0.0001,
+          "beneficio_liquido": 0.009211000607626805,
+          "beneficio_tratar_todos": 0.009211000607626805,
+          "sinalizados": 77980
+        },
+        {
+          "limiar": 0.000116,
+          "beneficio_liquido": 0.009195146144518806,
+          "beneficio_tratar_todos": 0.009195146144518806,
+          "sinalizados": 77980
+        },
+        {
+          "limiar": 0.000133,
+          "beneficio_liquido": 0.009178300221495501,
+          "beneficio_tratar_todos": 0.009178300221495501,
+          "sinalizados": 77980
+        },
+        {
+          "limiar": 0.000154,
+          "beneficio_liquido": 0.009157489760989235,
+          "beneficio_tratar_todos": 0.009157489760989235,
+          "sinalizados": 77980
+        },
+        {
+          "limiar": 0.000178,
+          "beneficio_liquido": 0.009133705307110707,
+          "beneficio_tratar_todos": 0.009133705307110707,
+          "sinalizados": 77980
+        },
+        {
+          "limiar": 0.000206,
+          "beneficio_liquido": 0.008812838014520707,
+          "beneficio_tratar_todos": 0.009105955334364922,
+          "sinalizados": 72410
+        },
+        {
+          "limiar": 0.000238,
+          "beneficio_liquido": 0.008783398733073901,
+          "beneficio_tratar_todos": 0.009074239176490046,
+          "sinalizados": 72410
+        },
+        {
+          "limiar": 0.000275,
+          "beneficio_liquido": 0.008749357214552288,
+          "beneficio_tratar_todos": 0.009037564837896464,
+          "sinalizados": 72410
+        },
+        {
+          "limiar": 0.000317,
+          "beneficio_liquido": 0.008710712437160867,
+          "beneficio_tratar_todos": 0.008995931217762073,
+          "sinalizados": 72410
+        },
+        {
+          "limiar": 0.000367,
+          "beneficio_liquido": 0.008664702515712983,
+          "beneficio_tratar_todos": 0.00894636282272198,
+          "sinalizados": 72410
+        },
+        {
+          "limiar": 0.000424,
+          "beneficio_liquido": 0.008612245590591556,
+          "beneficio_tratar_todos": 0.008889848803458708,
+          "sinalizados": 72410
+        },
+        {
+          "limiar": 0.000489,
+          "beneficio_liquido": 0.008552418988489373,
+          "beneficio_tratar_todos": 0.008825395125782549,
+          "sinalizados": 72410
+        },
+        {
+          "limiar": 0.000565,
+          "beneficio_liquido": 0.008482458015811507,
+          "beneficio_tratar_todos": 0.008750023270713995,
+          "sinalizados": 72410
+        },
+        {
+          "limiar": 0.000653,
+          "beneficio_liquido": 0.008401437279862038,
+          "beneficio_tratar_todos": 0.008662736274353194,
+          "sinalizados": 72410
+        },
+        {
+          "limiar": 0.000755,
+          "beneficio_liquido": 0.008307509024917815,
+          "beneficio_tratar_todos": 0.008561543472888072,
+          "sinalizados": 72410
+        },
+        {
+          "limiar": 0.000872,
+          "beneficio_liquido": 0.008199744175382077,
+          "beneficio_tratar_todos": 0.008445443934677081,
+          "sinalizados": 72410
+        },
+        {
+          "limiar": 0.001007,
+          "beneficio_liquido": 0.008075368751937203,
+          "beneficio_tratar_todos": 0.008311449136846847,
+          "sinalizados": 72410
+        },
+        {
+          "limiar": 0.001164,
+          "beneficio_liquido": 0.007930682455696718,
+          "beneficio_tratar_todos": 0.008155572594065534,
+          "sinalizados": 72410
+        },
+        {
+          "limiar": 0.001344,
+          "beneficio_liquido": 0.007764744100246161,
+          "beneficio_tratar_todos": 0.007976800327205807,
+          "sinalizados": 72410
+        },
+        {
+          "limiar": 0.001553,
+          "beneficio_liquido": 0.007571996165649255,
+          "beneficio_tratar_todos": 0.007769144989735101,
+          "sinalizados": 72410
+        },
+        {
+          "limiar": 0.001794,
+          "beneficio_liquido": 0.007349636389000154,
+          "beneficio_tratar_todos": 0.0075295875876983725,
+          "sinalizados": 72410
+        },
+        {
+          "limiar": 0.002073,
+          "beneficio_liquido": 0.007092081597899304,
+          "beneficio_tratar_todos": 0.007252113138101326,
+          "sinalizados": 72410
+        },
+        {
+          "limiar": 0.002395,
+          "beneficio_liquido": 0.006040604719449529,
+          "beneficio_tratar_todos": 0.006931680883281501,
+          "sinalizados": 66840
+        },
+        {
+          "limiar": 0.002767,
+          "beneficio_liquido": 0.005723116190789218,
+          "beneficio_tratar_todos": 0.006561234443270572,
+          "sinalizados": 66840
+        },
+        {
+          "limiar": 0.003196,
+          "beneficio_liquido": 0.005356686011066387,
+          "beneficio_tratar_todos": 0.006133682757659522,
+          "sinalizados": 66840
+        },
+        {
+          "limiar": 0.003693,
+          "beneficio_liquido": 0.0049317791028016655,
+          "beneficio_tratar_todos": 0.005637900273275247,
+          "sinalizados": 66840
+        },
+        {
+          "limiar": 0.004266,
+          "beneficio_liquido": 0.0023261863990985342,
+          "beneficio_tratar_todos": 0.005065689739996868,
+          "sinalizados": 61270
+        },
+        {
+          "limiar": 0.004929,
+          "beneficio_liquido": 0.001977620221490036,
+          "beneficio_tratar_todos": 0.004402780814199229,
+          "sinalizados": 55700
+        },
+        {
+          "limiar": 0.005694,
+          "beneficio_liquido": 0.0014295840113503697,
+          "beneficio_tratar_todos": 0.003636787374878601,
+          "sinalizados": 55700
+        },
+        {
+          "limiar": 0.006579,
+          "beneficio_liquido": 0.0012030253733335723,
+          "beneficio_tratar_todos": 0.002749166272472639,
+          "sinalizados": 50130
+        },
+        {
+          "limiar": 0.0076,
+          "beneficio_liquido": 0.0005428794100617368,
+          "beneficio_tratar_todos": 0.001723175642448651,
+          "sinalizados": 50130
+        },
+        {
+          "limiar": 0.008781,
+          "beneficio_liquido": -0.0013540148545014975,
+          "beneficio_tratar_todos": 0.0005337665113017819,
+          "sinalizados": 42667
+        },
+        {
+          "limiar": 0.010144,
+          "beneficio_liquido": 0.0005218614983560715,
+          "beneficio_tratar_todos": -0.0008424664723292678,
+          "sinalizados": 21167
+        },
+        {
+          "limiar": 0.01172,
+          "beneficio_liquido": 0.0016987786262537335,
+          "beneficio_tratar_todos": -0.002438499709023715,
+          "sinalizados": 6065
+        },
+        {
+          "limiar": 0.01354,
+          "beneficio_liquido": 0.0016707764552923736,
+          "beneficio_tratar_todos": -0.004287979738087666,
+          "sinalizados": 3211
+        },
+        {
+          "limiar": 0.015642,
+          "beneficio_liquido": 0.0016016922701303118,
+          "beneficio_tratar_todos": -0.0064325382558316786,
+          "sinalizados": 2241
+        },
+        {
+          "limiar": 0.018072,
+          "beneficio_liquido": 0.0014539732551936352,
+          "beneficio_tratar_todos": -0.008923180205100535,
+          "sinalizados": 1697
+        },
+        {
+          "limiar": 0.020878,
+          "beneficio_liquido": 0.0013572255890358883,
+          "beneficio_tratar_todos": -0.011814585406551949,
+          "sinalizados": 1359
+        },
+        {
+          "limiar": 0.024121,
+          "beneficio_liquido": 0.0012389770688792047,
+          "beneficio_tratar_todos": -0.015177005030781435,
+          "sinalizados": 1149
+        },
+        {
+          "limiar": 0.027866,
+          "beneficio_liquido": 0.0010933867823503792,
+          "beneficio_tratar_todos": -0.019087821732841313,
+          "sinalizados": 973
+        },
+        {
+          "limiar": 0.032194,
+          "beneficio_liquido": 0.0010385325947864074,
+          "beneficio_tratar_todos": -0.023645152533084066,
+          "sinalizados": 858
+        },
+        {
+          "limiar": 0.037194,
+          "beneficio_liquido": 0.0009682437639154189,
+          "beneficio_tratar_todos": -0.028961099632152223,
+          "sinalizados": 761
+        },
+        {
+          "limiar": 0.04297,
+          "beneficio_liquido": 0.0009193254188922734,
+          "beneficio_tratar_todos": -0.03517122816675962,
+          "sinalizados": 684
+        },
+        {
+          "limiar": 0.049643,
+          "beneficio_liquido": 0.0008571069116329695,
+          "beneficio_tratar_todos": -0.04243975736742504,
+          "sinalizados": 614
+        },
+        {
+          "limiar": 0.057353,
+          "beneficio_liquido": 0.0007944550852485538,
+          "beneficio_tratar_todos": -0.05096597187752569,
+          "sinalizados": 551
+        },
+        {
+          "limiar": 0.06626,
+          "beneficio_liquido": 0.0007590337672074179,
+          "beneficio_tratar_todos": -0.06099119722024755,
+          "sinalizados": 494
+        },
+        {
+          "limiar": 0.07655,
+          "beneficio_liquido": 0.0006262019839820594,
+          "beneficio_tratar_todos": -0.07281381828191452,
+          "sinalizados": 456
+        },
+        {
+          "limiar": 0.088438,
+          "beneficio_liquido": 0.0005441362200270047,
+          "beneficio_tratar_todos": -0.08680475984347083,
+          "sinalizados": 422
+        },
+        {
+          "limiar": 0.102172,
+          "beneficio_liquido": 0.0004163951713565344,
+          "beneficio_tratar_todos": -0.10342952157031632,
+          "sinalizados": 390
+        },
+        {
+          "limiar": 0.118039,
+          "beneficio_liquido": 0.00033491380932280425,
+          "beneficio_tratar_todos": -0.12328087125443637,
+          "sinalizados": 364
+        },
+        {
+          "limiar": 0.13637,
+          "beneficio_liquido": 0.0002908684787390533,
+          "beneficio_tratar_todos": -0.14712309726669284,
+          "sinalizados": 333
+        },
+        {
+          "limiar": 0.157549,
+          "beneficio_liquido": 0.00023795748039011344,
+          "beneficio_tratar_todos": -0.17596147490172595,
+          "sinalizados": 307
+        },
+        {
+          "limiar": 0.182016,
+          "beneficio_liquido": 0.00014735983111954125,
+          "beneficio_tratar_todos": -0.21113606194306242,
+          "sinalizados": 278
+        },
+        {
+          "limiar": 0.210283,
+          "beneficio_liquido": 5.2271120099774745e-05,
+          "beneficio_tratar_todos": -0.2544872663149381,
+          "sinalizados": 251
+        },
+        {
+          "limiar": 0.242939,
+          "beneficio_liquido": -0.00012010825645175887,
+          "beneficio_tratar_todos": -0.3085998624845739,
+          "sinalizados": 235
+        },
+        {
+          "limiar": 0.280668,
+          "beneficio_liquido": -0.00021286384353970443,
+          "beneficio_tratar_todos": -0.37723599185415624,
+          "sinalizados": 210
+        },
+        {
+          "limiar": 0.324255,
+          "beneficio_liquido": -0.0003972457698987044,
+          "beneficio_tratar_todos": -0.46607066347872933,
+          "sinalizados": 191
+        },
+        {
+          "limiar": 0.374612,
+          "beneficio_liquido": -0.0005138364758197863,
+          "beneficio_tratar_todos": -0.5841204508120301,
+          "sinalizados": 171
+        },
+        {
+          "limiar": 0.432788,
+          "beneficio_liquido": -0.000627481623163029,
+          "beneficio_tratar_todos": -0.7465954889749052,
+          "sinalizados": 145
+        },
+        {
+          "limiar": 0.5,
+          "beneficio_liquido": -0.0008207232623749679,
+          "beneficio_tratar_todos": -0.981379840984868,
+          "sinalizados": 132
+        }
+      ],
+      "tabela_operacional": [
+        {
+          "municipios_investigados": 50,
+          "surtos_capturados": 86,
+          "surtos_totais": 726,
+          "recall": 0.1184573002754821,
+          "investigados_por_surto": 8.13953488372093
+        },
+        {
+          "municipios_investigados": 100,
+          "surtos_capturados": 130,
+          "surtos_totais": 726,
+          "recall": 0.1790633608815427,
+          "investigados_por_surto": 10.76923076923077
+        },
+        {
+          "municipios_investigados": 250,
+          "surtos_capturados": 221,
+          "surtos_totais": 726,
+          "recall": 0.3044077134986226,
+          "investigados_por_surto": 15.83710407239819
+        },
+        {
+          "municipios_investigados": 500,
+          "surtos_capturados": 305,
+          "surtos_totais": 726,
+          "recall": 0.4201101928374656,
+          "investigados_por_surto": 22.950819672131146
+        },
+        {
+          "municipios_investigados": 1000,
+          "surtos_capturados": 401,
+          "surtos_totais": 726,
+          "recall": 0.5523415977961432,
+          "investigados_por_surto": 34.912718204488776
+        }
+      ]
+    }
+  },
+  "segundos": 679.6
+}

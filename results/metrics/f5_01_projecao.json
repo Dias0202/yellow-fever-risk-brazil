@@ -1,0 +1,314 @@
+{
+  "n_treino": 178240,
+  "n_variaveis": 32,
+  "base_observada": [
+    1995,
+    2024
+  ],
+  "municipios_projetados": 5569,
+  "municipios_fora_da_projecao": [
+    "2605459"
+  ],
+  "linhas_por_cenario": 155932,
+  "variaveis": [
+    "ppt_total",
+    "tmax_medio",
+    "tmin_medio",
+    "vpd_medio",
+    "ws_medio",
+    "ppt_sazonalidade",
+    "ppt_trimestre_seco",
+    "tmax_mes_mais_quente",
+    "amplitude_termica",
+    "ppt_total_lag1",
+    "ppt_total_lag2",
+    "tmax_medio_lag1",
+    "tmax_medio_lag2",
+    "vpd_medio_lag1",
+    "vpd_medio_lag2",
+    "ppt_trimestre_seco_lag1",
+    "ppt_trimestre_seco_lag2",
+    "floresta_frac",
+    "silvicultura_frac",
+    "pastagem_frac",
+    "urbano_frac",
+    "areas_umidas_frac",
+    "savana_frac",
+    "mosaico_agropecuario_frac",
+    "interface_floresta_antropico",
+    "cobertura_florestal",
+    "perda_ano_km2",
+    "perda_acumulada_km2",
+    "imunidade_defasada2",
+    "populacao_log",
+    "densidade_hab_km2",
+    "area_km2"
+  ],
+  "eventos": 1316,
+  "n_cenarios": 20,
+  "n_reamostragens": 30,
+  "risco_linha_de_base_medio": 0.017372371801454144,
+  "delta_medio_nacional": 0.001458193576894881,
+  "dp_entre_cenarios_media": 0.002650817283950749,
+  "dp_entre_ajustes_media": 0.00500037537550479,
+  "razao_sinal_ruido_mediana": 0.46316717171609995,
+  "municipios_com_sinal_acima_do_ruido": 927,
+  "gcm_central_do_piso": "MPI-ESM1-2-HR",
+  "contrastes_pareados": {
+    "futuro_menos_base": {
+      "media": 0.0008261205917727204,
+      "dp_entre_ajustes": 0.000259769333588432,
+      "ic95": [
+        0.0003956974899899861,
+        0.0012983071235848633
+      ],
+      "reajustes_com_sinal_positivo": 30,
+      "n_reajustes": 30
+    },
+    "ssp585_menos_ssp126": {
+      "media": 9.950183283156025e-05,
+      "dp_entre_ajustes": 9.495940114051288e-05,
+      "ic95": [
+        -6.364582020492356e-05,
+        0.0002349477981868973
+      ],
+      "reajustes_com_sinal_positivo": 27,
+      "n_reajustes": 30
+    }
+  },
+  "por_cenario": [
+    {
+      "cenario": "EC-Earth3-Veg|ssp126",
+      "gcm": "EC-Earth3-Veg",
+      "ssp": "ssp126",
+      "risco_medio": 0.01773834274584494,
+      "delta_medio": 0.00036597094439079177,
+      "delta_mediano": 0.0003328755784642012
+    },
+    {
+      "cenario": "INM-CM5-0|ssp126",
+      "gcm": "INM-CM5-0",
+      "ssp": "ssp126",
+      "risco_medio": 0.01849476751720959,
+      "delta_medio": 0.001122395715755447,
+      "delta_mediano": 0.0006110705603317446
+    },
+    {
+      "cenario": "MIROC6|ssp126",
+      "gcm": "MIROC6",
+      "ssp": "ssp126",
+      "risco_medio": 0.0184687664263199,
+      "delta_medio": 0.0010963946248657575,
+      "delta_mediano": 0.0006673079190642577
+    },
+    {
+      "cenario": "MPI-ESM1-2-HR|ssp126",
+      "gcm": "MPI-ESM1-2-HR",
+      "ssp": "ssp126",
+      "risco_medio": 0.018302364487383878,
+      "delta_medio": 0.0009299926859297357,
+      "delta_mediano": 0.00043047475239363017
+    },
+    {
+      "cenario": "UKESM1-0-LL|ssp126",
+      "gcm": "UKESM1-0-LL",
+      "ssp": "ssp126",
+      "risco_medio": 0.020319537902245412,
+      "delta_medio": 0.002947166100791269,
+      "delta_mediano": 0.001618281816920697
+    },
+    {
+      "cenario": "EC-Earth3-Veg|ssp245",
+      "gcm": "EC-Earth3-Veg",
+      "ssp": "ssp245",
+      "risco_medio": 0.01789110081632737,
+      "delta_medio": 0.0005187290148732268,
+      "delta_mediano": 0.0003452745983058889
+    },
+    {
+      "cenario": "INM-CM5-0|ssp245",
+      "gcm": "INM-CM5-0",
+      "ssp": "ssp245",
+      "risco_medio": 0.01849162410954586,
+      "delta_medio": 0.001119252308091717,
+      "delta_mediano": 0.0004243801697182423
+    },
+    {
+      "cenario": "MIROC6|ssp245",
+      "gcm": "MIROC6",
+      "ssp": "ssp245",
+      "risco_medio": 0.01856638861461191,
+      "delta_medio": 0.0011940168131577664,
+      "delta_mediano": 0.0006871700228784873
+    },
+    {
+      "cenario": "MPI-ESM1-2-HR|ssp245",
+      "gcm": "MPI-ESM1-2-HR",
+      "ssp": "ssp245",
+      "risco_medio": 0.01819756383320315,
+      "delta_medio": 0.000825192031749004,
+      "delta_mediano": 0.00045063935791268996
+    },
+    {
+      "cenario": "UKESM1-0-LL|ssp245",
+      "gcm": "UKESM1-0-LL",
+      "ssp": "ssp245",
+      "risco_medio": 0.020874606631433743,
+      "delta_medio": 0.0035022348299795984,
+      "delta_mediano": 0.0020018119793409443
+    },
+    {
+      "cenario": "EC-Earth3-Veg|ssp370",
+      "gcm": "EC-Earth3-Veg",
+      "ssp": "ssp370",
+      "risco_medio": 0.018121323872193548,
+      "delta_medio": 0.0007489520707394055,
+      "delta_mediano": 0.00045564503705079946
+    },
+    {
+      "cenario": "INM-CM5-0|ssp370",
+      "gcm": "INM-CM5-0",
+      "ssp": "ssp370",
+      "risco_medio": 0.01804950578075529,
+      "delta_medio": 0.0006771339793011476,
+      "delta_mediano": 0.00034054142904453306
+    },
+    {
+      "cenario": "MIROC6|ssp370",
+      "gcm": "MIROC6",
+      "ssp": "ssp370",
+      "risco_medio": 0.018616811033358792,
+      "delta_medio": 0.0012444392319046484,
+      "delta_mediano": 0.0006910867577645669
+    },
+    {
+      "cenario": "MPI-ESM1-2-HR|ssp370",
+      "gcm": "MPI-ESM1-2-HR",
+      "ssp": "ssp370",
+      "risco_medio": 0.01832766375636727,
+      "delta_medio": 0.000955291954913128,
+      "delta_mediano": 0.0004458772731334229
+    },
+    {
+      "cenario": "UKESM1-0-LL|ssp370",
+      "gcm": "UKESM1-0-LL",
+      "ssp": "ssp370",
+      "risco_medio": 0.020289446503219975,
+      "delta_medio": 0.0029170747017658286,
+      "delta_mediano": 0.001666207564830861
+    },
+    {
+      "cenario": "EC-Earth3-Veg|ssp585",
+      "gcm": "EC-Earth3-Veg",
+      "ssp": "ssp585",
+      "risco_medio": 0.01824019028853695,
+      "delta_medio": 0.0008678184870828042,
+      "delta_mediano": 0.0004560378516656918
+    },
+    {
+      "cenario": "INM-CM5-0|ssp585",
+      "gcm": "INM-CM5-0",
+      "ssp": "ssp585",
+      "risco_medio": 0.018841961850472596,
+      "delta_medio": 0.0014695900490184518,
+      "delta_mediano": 0.0006687961812793311
+    },
+    {
+      "cenario": "MIROC6|ssp585",
+      "gcm": "MIROC6",
+      "ssp": "ssp585",
+      "risco_medio": 0.01897802150850053,
+      "delta_medio": 0.0016056497070463882,
+      "delta_mediano": 0.0009487561164101654
+    },
+    {
+      "cenario": "MPI-ESM1-2-HR|ssp585",
+      "gcm": "MPI-ESM1-2-HR",
+      "ssp": "ssp585",
+      "risco_medio": 0.01841910852432356,
+      "delta_medio": 0.0010467367228694181,
+      "delta_mediano": 0.00047355225018203863
+    },
+    {
+      "cenario": "UKESM1-0-LL|ssp585",
+      "gcm": "UKESM1-0-LL",
+      "ssp": "ssp585",
+      "risco_medio": 0.021382211365126233,
+      "delta_medio": 0.0040098395636720885,
+      "delta_mediano": 0.0023912008608014974
+    }
+  ],
+  "por_ssp": [
+    {
+      "ssp": "ssp126",
+      "risco_medio": 0.018664755815800745,
+      "dp_entre_gcms": 0.0009740611206646441,
+      "min": 0.01773834274584494,
+      "max": 0.020319537902245412
+    },
+    {
+      "ssp": "ssp245",
+      "risco_medio": 0.018804256801024405,
+      "dp_entre_gcms": 0.0011877077822170766,
+      "min": 0.01789110081632737,
+      "max": 0.020874606631433743
+    },
+    {
+      "ssp": "ssp370",
+      "risco_medio": 0.018680950189178973,
+      "dp_entre_gcms": 0.0009257549868612443,
+      "min": 0.01804950578075529,
+      "max": 0.020289446503219975
+    },
+    {
+      "ssp": "ssp585",
+      "risco_medio": 0.019172298707391976,
+      "dp_entre_gcms": 0.0012714855072152426,
+      "min": 0.01824019028853695,
+      "max": 0.021382211365126233
+    }
+  ],
+  "por_regiao": [
+    {
+      "regiao": "Centro-Oeste",
+      "municipios": 467,
+      "delta_medio": 0.002040631434936651,
+      "dp_entre_cenarios_media": 0.003014820936936157,
+      "dp_entre_ajustes_media": 0.006750698568635052,
+      "razao_sinal_ruido_mediana": 0.4142369550106877
+    },
+    {
+      "regiao": "Nordeste",
+      "municipios": 1793,
+      "delta_medio": 0.0012336260020237542,
+      "dp_entre_cenarios_media": 0.0012246548638076265,
+      "dp_entre_ajustes_media": 0.0020524152401678567,
+      "razao_sinal_ruido_mediana": 0.3882384231214226
+    },
+    {
+      "regiao": "Norte",
+      "municipios": 450,
+      "delta_medio": 0.0012343686744505852,
+      "dp_entre_cenarios_media": 0.004173805851986408,
+      "dp_entre_ajustes_media": 0.008001927057848787,
+      "razao_sinal_ruido_mediana": 0.5174919014867232
+    },
+    {
+      "regiao": "Sudeste",
+      "municipios": 1668,
+      "delta_medio": 0.003072899088714267,
+      "dp_entre_cenarios_media": 0.0039105903770500945,
+      "dp_entre_ajustes_media": 0.007873665253620498,
+      "razao_sinal_ruido_mediana": 0.5114052180907025
+    },
+    {
+      "regiao": "Sul",
+      "municipios": 1191,
+      "delta_medio": -0.0006089402648988867,
+      "dp_entre_cenarios_media": 0.002315362320446702,
+      "dp_entre_ajustes_media": 0.003593948690127365,
+      "razao_sinal_ruido_mediana": 0.5172453789876923
+    }
+  ],
+  "segundos_total": 757.6
+}

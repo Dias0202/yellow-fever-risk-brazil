@@ -1,0 +1,44 @@
+# Raw inputs (downloaded or manually exported) and intermediate products.
+# Rebuilt by the downloaders and ingest modules in src/yfvrisk/ingest/.
+data/raw/
+data/interim/
+data/processed/
+
+# Heavy rasters and vectors
+*.tif
+*.tiff
+*.nc
+*.shp
+*.dbf
+*.shx
+*.prj
+*.cpg
+*.sbn
+*.sbx
+
+# Model artefacts (distributed as release assets, not in git)
+*.joblib
+*.pkl
+*.npz
+
+# Large outputs and run logs
+results/maps/*.svg
+results/metrics/*.log
+release/*.zip
+
+# Environments
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# IDE and OS
+.idea/
+.vscode/
+Thumbs.db
+desktop.ini
+~$*

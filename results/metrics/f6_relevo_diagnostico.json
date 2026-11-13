@@ -1,0 +1,14 @@
+{
+  "fonte": "https://geodata.ucdavis.edu/climate/worldclim/2_1/base/wc2.1_2.5m_elev.zip",
+  "raster": "wc2.1_2.5m_elev.tif",
+  "municipios": 5570,
+  "com_celula_propria": 5565,
+  "amostrados_por_vizinhanca": 5,
+  "ausentes": 0,
+  "altitude_media": {
+    "min": 2.6666666666666665,
+    "mediana": 429.0389036251105,
+    "max": 1587.357142857143
+  },
+  "amplitude_altimetrica_mediana": 177.0
+}

@@ -1,0 +1,15 @@
+# Tool configuration only. Dependencies are pinned in src/requirements.txt.
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "analysis"]
+extend-exclude = ["dashboard"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W"]
+
+[tool.pytest.ini_options]
+testpaths = ["src/tests"]
+pythonpath = ["src"]
+addopts = "-ra"

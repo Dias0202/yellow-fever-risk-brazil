@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software or its derived results, please cite it as below."
+title: "Sylvatic yellow fever risk in Brazil: season-ahead forecasting, ecological drivers and climate scenarios"
+type: software
+authors:
+  - family-names: "Moreira"
+    given-names: "Gabriel Dias"
+    affiliation: "Laboratório de Vírus, Universidade Federal de Minas Gerais"
+  - family-names: "Beirão"
+    given-names: "Marina"
+    affiliation: "Laboratório de Vírus, Universidade Federal de Minas Gerais"
+  - family-names: "Drumond"
+    given-names: "Betania Paiva"
+    affiliation: "Laboratório de Vírus, Universidade Federal de Minas Gerais"
+repository-code: "https://github.com/Dias0202/yellow-fever-risk-brazil"
+license: MIT
+keywords:
+  - yellow fever
+  - epidemiological forecasting
+  - spatio-temporal validation
+  - CMIP6
+  - Brazil

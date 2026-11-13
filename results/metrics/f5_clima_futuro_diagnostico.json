@@ -1,0 +1,257 @@
+{
+  "grade": {
+    "linhas": 1080,
+    "colunas": 2160,
+    "resolucao": "10m"
+  },
+  "municipios": 5570,
+  "com_celula_propria": 4431,
+  "sem_celula_propria": 1139,
+  "metodo": "delta (aditivo em temperatura, multiplicativo em precipitacao)",
+  "base_observada": [
+    1995,
+    2024
+  ],
+  "normal_worldclim": "1970-2000",
+  "periodo_futuro": "2021-2040",
+  "gcms_pedidos": [
+    "INM-CM5-0",
+    "MIROC6",
+    "MPI-ESM1-2-HR",
+    "EC-Earth3-Veg",
+    "UKESM1-0-LL"
+  ],
+  "ssps_pedidos": [
+    "ssp126",
+    "ssp245",
+    "ssp370",
+    "ssp585"
+  ],
+  "combinacoes_ausentes": [],
+  "combinacoes_construidas": 20,
+  "razao_ppt_maxima": 3.0,
+  "razoes_truncadas_total": 0,
+  "vpd": "projetado sob umidade relativa constante, calibrada contra o vpd observado do TerraClimate",
+  "ws": "mantido no observado: sem projecao nesta fonte",
+  "anos_base": [
+    1995,
+    1996,
+    1997,
+    1998,
+    1999,
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "aplicacao_do_delta": "sobre cada ano observado, um por um, e nao sobre a climatologia. A media entre anos reduz ppt_sazonalidade em 20,4% e eleva ppt_trimestre_seco em 27,7%, e a floresta e nao linear.",
+  "municipios_sem_projecao": [
+    "2605459"
+  ],
+  "nota_sem_projecao": "Municipios sem nenhuma celula terrestre do CMIP6 a 10 arc-min num raio de quatro celulas. Sao removidos e declarados, nunca imputados. Fernando de Noronha e ilha oceanica a 350 km da costa, sem ciclo silvestre de febre amarela, de modo que a exclusao nao afeta nenhuma conclusao.",
+  "municipios_projetados": 5569,
+  "linhas_anuais": 3341400,
+  "por_combinacao": [
+    {
+      "gcm": "INM-CM5-0",
+      "ssp": "ssp126",
+      "periodo": "2021-2040",
+      "delta_tmax_medio": 0.9475979845241204,
+      "delta_tmin_medio": 0.7912587112673617,
+      "razao_ppt_mediana": 0.9746753643085431,
+      "razoes_truncadas": 0
+    },
+    {
+      "gcm": "INM-CM5-0",
+      "ssp": "ssp245",
+      "periodo": "2021-2040",
+      "delta_tmax_medio": 0.8803102128982809,
+      "delta_tmin_medio": 0.893449655350724,
+      "razao_ppt_mediana": 0.9880066713636229,
+      "razoes_truncadas": 0
+    },
+    {
+      "gcm": "INM-CM5-0",
+      "ssp": "ssp370",
+      "periodo": "2021-2040",
+      "delta_tmax_medio": 0.870732151662843,
+      "delta_tmin_medio": 0.8300192771383283,
+      "razao_ppt_mediana": 0.9916030068433922,
+      "razoes_truncadas": 0
+    },
+    {
+      "gcm": "INM-CM5-0",
+      "ssp": "ssp585",
+      "periodo": "2021-2040",
+      "delta_tmax_medio": 1.0363497811660183,
+      "delta_tmin_medio": 0.8597035530414715,
+      "razao_ppt_mediana": 0.9754717125082916,
+      "razoes_truncadas": 0
+    },
+    {
+      "gcm": "MIROC6",
+      "ssp": "ssp126",
+      "periodo": "2021-2040",
+      "delta_tmax_medio": 0.9858803416584137,
+      "delta_tmin_medio": 0.7777274813038585,
+      "razao_ppt_mediana": 0.9976158322774169,
+      "razoes_truncadas": 0
+    },
+    {
+      "gcm": "MIROC6",
+      "ssp": "ssp245",
+      "periodo": "2021-2040",
+      "delta_tmax_medio": 1.0246399385904688,
+      "delta_tmin_medio": 0.7873533202187635,
+      "razao_ppt_mediana": 0.98999998304579,
+      "razoes_truncadas": 0
+    },
+    {
+      "gcm": "MIROC6",
+      "ssp": "ssp370",
+      "periodo": "2021-2040",
+      "delta_tmax_medio": 0.9947948613138724,
+      "delta_tmin_medio": 0.7859700606926813,
+      "razao_ppt_mediana": 0.9827586289109855,
+      "razoes_truncadas": 0
+    },
+    {
+      "gcm": "MIROC6",
+      "ssp": "ssp585",
+      "periodo": "2021-2040",
+      "delta_tmax_medio": 1.2018553400184706,
+      "delta_tmin_medio": 0.8750716128919259,
+      "razao_ppt_mediana": 0.9885713948831929,
+      "razoes_truncadas": 0
+    },
+    {
+      "gcm": "MPI-ESM1-2-HR",
+      "ssp": "ssp126",
+      "periodo": "2021-2040",
+      "delta_tmax_medio": 0.7778300060494858,
+      "delta_tmin_medio": 0.8396555788264842,
+      "razao_ppt_mediana": 1.0090795981150302,
+      "razoes_truncadas": 0
+    },
+    {
+      "gcm": "MPI-ESM1-2-HR",
+      "ssp": "ssp245",
+      "periodo": "2021-2040",
+      "delta_tmax_medio": 0.8186616776818665,
+      "delta_tmin_medio": 0.8419098347062783,
+      "razao_ppt_mediana": 1.0025641123453777,
+      "razoes_truncadas": 0
+    },
+    {
+      "gcm": "MPI-ESM1-2-HR",
+      "ssp": "ssp370",
+      "periodo": "2021-2040",
+      "delta_tmax_medio": 0.879492974889211,
+      "delta_tmin_medio": 0.8900170471016019,
+      "razao_ppt_mediana": 0.9969135802469136,
+      "razoes_truncadas": 0
+    },
+    {
+      "gcm": "MPI-ESM1-2-HR",
+      "ssp": "ssp585",
+      "periodo": "2021-2040",
+      "delta_tmax_medio": 1.0716115952156677,
+      "delta_tmin_medio": 1.0557446041753573,
+      "razao_ppt_mediana": 0.9880000305175781,
+      "razoes_truncadas": 0
+    },
+    {
+      "gcm": "EC-Earth3-Veg",
+      "ssp": "ssp126",
+      "periodo": "2021-2040",
+      "delta_tmax_medio": 1.0427629329746788,
+      "delta_tmin_medio": 1.1595645499246705,
+      "razao_ppt_mediana": 0.9860702799868132,
+      "razoes_truncadas": 0
+    },
+    {
+      "gcm": "EC-Earth3-Veg",
+      "ssp": "ssp245",
+      "periodo": "2021-2040",
+      "delta_tmax_medio": 1.0412460031133013,
+      "delta_tmin_medio": 1.1743052134928103,
+      "razao_ppt_mediana": 0.981205526100625,
+      "razoes_truncadas": 0
+    },
+    {
+      "gcm": "EC-Earth3-Veg",
+      "ssp": "ssp370",
+      "periodo": "2021-2040",
+      "delta_tmax_medio": 1.111436963083202,
+      "delta_tmin_medio": 1.2839351950964264,
+      "razao_ppt_mediana": 0.9862069097058527,
+      "razoes_truncadas": 0
+    },
+    {
+      "gcm": "EC-Earth3-Veg",
+      "ssp": "ssp585",
+      "periodo": "2021-2040",
+      "delta_tmax_medio": 1.238112778081529,
+      "delta_tmin_medio": 1.3771420074747522,
+      "razao_ppt_mediana": 0.9794719372945782,
+      "razoes_truncadas": 0
+    },
+    {
+      "gcm": "UKESM1-0-LL",
+      "ssp": "ssp126",
+      "periodo": "2021-2040",
+      "delta_tmax_medio": 1.8511464883033395,
+      "delta_tmin_medio": 1.5192886390681222,
+      "razao_ppt_mediana": 0.9937499707395381,
+      "razoes_truncadas": 0
+    },
+    {
+      "gcm": "UKESM1-0-LL",
+      "ssp": "ssp245",
+      "periodo": "2021-2040",
+      "delta_tmax_medio": 2.058265172481439,
+      "delta_tmin_medio": 1.6270451170041482,
+      "razao_ppt_mediana": 0.9855705550387724,
+      "razoes_truncadas": 0
+    },
+    {
+      "gcm": "UKESM1-0-LL",
+      "ssp": "ssp370",
+      "periodo": "2021-2040",
+      "delta_tmax_medio": 1.9479132573221634,
+      "delta_tmin_medio": 1.5994470585870972,
+      "razao_ppt_mediana": 0.9845161684097782,
+      "razoes_truncadas": 0
+    },
+    {
+      "gcm": "UKESM1-0-LL",
+      "ssp": "ssp585",
+      "periodo": "2021-2040",
+      "delta_tmax_medio": 2.18115074811182,
+      "delta_tmin_medio": 1.5716218760911413,
+      "razao_ppt_mediana": 0.9622262317404378,
+      "razoes_truncadas": 0
+    }
+  ]
+}

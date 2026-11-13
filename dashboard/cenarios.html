@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cenários climáticos – Modelagem de risco de febre amarela</title>
+<meta name="description" content="Projeção do risco para 2021–2040 sob cinco modelos climáticos e quatro trajetórias de emissão, com o piso de ruído do próprio modelo.">
+<link rel="stylesheet" href="css/painel.css">
+</head>
+<body>
+
+<header class="site-header">
+  <h1>Modelagem de Risco de Febre Amarela – Brasil</h1>
+  <nav class="site-nav">
+    <a href="index.html">Início</a>
+    <a href="previsao.html">Previsão</a>
+    <a href="validacao.html">Validação</a>
+    <a href="determinantes.html">Determinantes</a>
+    <a href="vacinacao.html">Vacinação</a>
+    <a href="cenarios.html" class="active">Cenários</a>
+    <a href="metodos.html">Dados &amp; documentação</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <section class="section-block">
+    <h2>Projeção climática para 2021–2040</h2>
+    <p class="lead">
+      O risco é projetado sob quatro trajetórias de emissão e cinco modelos
+      climáticos, escolhidos por cobrirem a faixa de sensibilidade climática do
+      CMIP6 — e a escolha do modelo revelou-se mais determinante que a escolha do
+      cenário.
+    </p>
+    <p>
+      A anomalia projetada é aplicada sobre a climatologia observada do
+      TerraClimate ano a ano, e não sobre uma média. O que se transporta para o
+      futuro é a <em>mudança</em> projetada, não o nível, o que cancela o viés
+      sistemático de cada modelo climático e preserva a estrutura espacial fina do
+      dado observado.
+    </p>
+
+    <div class="metric-grid">
+      <div class="metric-card">
+        <h4>Modelos climáticos</h4>
+        <span class="value" id="m-gcms">—</span>
+        <span class="desc">Sensibilidade de equilíbrio de ~1,9 K a ~5,3 K</span>
+      </div>
+      <div class="metric-card">
+        <h4>Dispersão entre modelos</h4>
+        <span class="value destaque" id="m-disp-gcm">—</span>
+        <span class="desc">Desvio do aquecimento projetado entre GCMs</span>
+      </div>
+      <div class="metric-card">
+        <h4>Dispersão entre cenários</h4>
+        <span class="value" id="m-disp-ssp">—</span>
+        <span class="desc">Desvio entre as quatro trajetórias de emissão</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <h2>A escolha do modelo domina a escolha do cenário</h2>
+    <p>
+      Cada célula abaixo é uma combinação de modelo climático e trajetória de
+      emissão. Leia primeiro por linha, comparando cenários dentro de um mesmo
+      modelo; depois por coluna, comparando modelos dentro de um mesmo cenário. A
+      variação vertical é muito maior que a horizontal.
+    </p>
+
+    <div class="figure-container">
+      <div class="controles" id="ctrl-matriz">
+        <span class="rotulo">Mostrar:</span>
+        <button class="botao" data-campo="risco" aria-pressed="true">Aumento do risco previsto</button>
+        <button class="botao" data-campo="aquecimento" aria-pressed="false">Aquecimento projetado</button>
+      </div>
+      <div id="fig-matriz"></div>
+      <p class="figure-caption">
+        <strong>Figura 1. Projeção por modelo climático e trajetória de emissão, 2021–2040.</strong>
+        <span id="cap-matriz">—</span>
+        O UKESM1-0-LL sob o cenário mais brando projeta aumento maior que qualquer
+        outro modelo sob o cenário mais severo. Passe o cursor sobre uma célula
+        para os valores.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <h2>O sinal sobrevive; a separação entre cenários, não</h2>
+    <p>
+      Uma tabela de quatro cenários com valores distintos parece resultado mesmo
+      quando os quatro estão dentro do erro. Para separar as duas coisas, a
+      floresta foi reajustada trinta vezes sobre reamostragens de municípios, e os
+      cenários preditos <em>dentro de cada reajuste</em> — o que permite formar os
+      contrastes de forma pareada, já descontada a incerteza do ajuste.
+    </p>
+
+    <div class="figure-container">
+      <div id="fig-contrastes"></div>
+      <p class="figure-caption">
+        <strong>Figura 2. Contrastes pareados, com intervalo de confiança de 95%.</strong>
+        O efeito do clima projetado sobre a linha de base observada é positivo em
+        todos os trinta reajustes e tem intervalo que exclui zero. A diferença
+        entre a trajetória mais severa e a mais branda tem intervalo que inclui
+        zero, e é oito vezes menor.
+      </p>
+    </div>
+
+    <div class="ressalva">
+      <p>
+        Em <strong>83% dos municípios</strong> a dispersão entre cenários é menor
+        que a dispersão entre reajustes do próprio modelo. Para esses municípios,
+        qual trajetória de emissão se escolhe importa menos que qual semente de
+        reamostragem se usou — e é por isso que este portal não apresenta mapa
+        municipal de cenário.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <h2>Por região, e o desconforto que isso traz</h2>
+    <div class="figure-container">
+      <div id="fig-regiao-clima"></div>
+      <p class="figure-caption">
+        <strong>Figura 3. Variação projetada do risco médio por macrorregião.</strong>
+        A barra é a mudança média entre a linha de base observada e a média do
+        conjunto de cenários. A razão sinal/ruído indicada é a mediana municipal
+        entre dispersão de cenários e dispersão de reajustes: valores abaixo de 1
+        significam que o cenário importa menos que o ajuste.
+      </p>
+    </div>
+
+    <div class="ressalva">
+      <p>
+        O <strong>Sul é a única macrorregião com sinal negativo</strong> — o modelo
+        projeta redução de risco. E o Sul é a única região em que o modelo
+        transfere, com ROC-AUC de 0,737 sob bloco espaço-temporal contra 0,45–0,56
+        nas demais. A única região em que há evidência de que o modelo generaliza é
+        a única em que ele projeta queda, e os aumentos concentram-se exatamente
+        onde ele não demonstrou capacidade de transferir.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <h2>Limitações declaradas</h2>
+    <table class="tech-table">
+      <thead><tr><th>Limitação</th><th>Consequência e tratamento</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Uso do solo mantido fixo</td>
+          <td>O desmatamento é o candidato mais provável a dominar o efeito climático em 2021–2040, e a perda florestal acumulada é a 2ª variável mais importante do corte de 2019. Projetá-lo exigiria um modelo de uso do solo que este trabalho não possui. É limitação declarada, não hipótese de estabilidade.</td>
+        </tr>
+        <tr>
+          <td>Velocidade do vento sem projeção</td>
+          <td>Mantida na climatologia observada. A fonte climática usada não projeta vento, e a mudança esperada sobre o Brasil é pequena frente à variabilidade interanual.</td>
+        </tr>
+        <tr>
+          <td>Déficit de pressão de vapor derivado</td>
+          <td>Projetado sob umidade relativa constante, calibrada contra o valor observado. É a hipótese de primeira ordem padrão e provavelmente conservadora: sobre continente em aquecimento a umidade relativa tende a cair, o que elevaria o déficit acima do projetado.</td>
+        </tr>
+        <tr>
+          <td>Apenas o período 2021–2040</td>
+          <td>As trajetórias de emissão só divergem de fato depois de 2040. É plausível que a separação entre cenários se torne detectável em 2041–2060.</td>
+        </tr>
+        <tr>
+          <td>Um município sem projeção</td>
+          <td>Fernando de Noronha não tem célula terrestre na grade climática usada. Fica declarado e excluído, nunca imputado. Sem ciclo silvestre de febre amarela, a exclusão não afeta nenhuma conclusão.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="ressalva">
+      <p>
+        Todos os números desta página descrevem o <strong>risco previsto pelo
+        modelo</strong>, e não o risco. Que a resposta do modelo ao aquecimento seja
+        consistentemente positiva é uma propriedade do modelo, robusta a reajuste;
+        não é evidência de que a incidência de febre amarela vá subir na magnitude
+        indicada. O modelo tem ROC-AUC de 0,524 sob o esquema de validação que
+        corresponde exatamente a este uso.
+      </p>
+    </div>
+  </section>
+
+  <footer class="rodape">
+    <p>
+      Valores lidos de <code>dados/clima.json</code>, gerado por
+      <code>yfvrisk.viz.exportar_painel</code> a partir de <code>yfvrisk.scenarios.projetar</code>.
+      Dados climáticos: WorldClim 2.1 (CMIP6) e TerraClimate.
+    </p>
+  </footer>
+
+</div>
+
+<script type="module" src="js/pagina-cenarios.js"></script>
+</body>
+</html>

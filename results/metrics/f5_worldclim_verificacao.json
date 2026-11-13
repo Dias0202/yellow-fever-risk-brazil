@@ -1,0 +1,28 @@
+{
+  "resolucao": "10m",
+  "gcms": [
+    "INM-CM5-0",
+    "MIROC6",
+    "MPI-ESM1-2-HR",
+    "EC-Earth3-Veg",
+    "UKESM1-0-LL"
+  ],
+  "ssps": [
+    "ssp126",
+    "ssp245",
+    "ssp370",
+    "ssp585"
+  ],
+  "periodos": [
+    "2021-2040"
+  ],
+  "variaveis": [
+    "tmin",
+    "tmax",
+    "prec"
+  ],
+  "arquivos_esperados": 96,
+  "ausentes": [],
+  "truncados": [],
+  "completo": true
+}

@@ -1,0 +1,30 @@
+{
+  "grade": {
+    "n_lat": 972,
+    "n_lon": 1116,
+    "res_graus": 0.041667
+  },
+  "municipios": 5570,
+  "com_media_zonal": 5565,
+  "amostrados_por_vizinhanca": 5,
+  "celulas_por_municipio": {
+    "min": 0,
+    "mediana": 21.0,
+    "max": 7522
+  },
+  "linhas_mensais": 2072040,
+  "anos": [
+    1994,
+    2024
+  ],
+  "na_por_variavel": {
+    "ppt": 0,
+    "tmax": 0,
+    "tmin": 0,
+    "vpd": 0,
+    "ws": 0
+  },
+  "arquivos_substituidos_por_versao_recuperada": [
+    "tmax_1994.nc"
+  ]
+}

@@ -1,0 +1,2244 @@
+{
+  "prevalencia": 0.00738330341113106,
+  "n_variaveis": 33,
+  "variaveis": [
+    "ppt_total",
+    "tmax_medio",
+    "tmin_medio",
+    "vpd_medio",
+    "ws_medio",
+    "ppt_sazonalidade",
+    "ppt_trimestre_seco",
+    "tmax_mes_mais_quente",
+    "amplitude_termica",
+    "ppt_total_lag1",
+    "ppt_total_lag2",
+    "tmax_medio_lag1",
+    "tmax_medio_lag2",
+    "vpd_medio_lag1",
+    "vpd_medio_lag2",
+    "ppt_trimestre_seco_lag1",
+    "ppt_trimestre_seco_lag2",
+    "floresta_frac",
+    "silvicultura_frac",
+    "pastagem_frac",
+    "urbano_frac",
+    "areas_umidas_frac",
+    "savana_frac",
+    "mosaico_agropecuario_frac",
+    "interface_floresta_antropico",
+    "cobertura_florestal",
+    "perda_ano_km2",
+    "perda_acumulada_km2",
+    "imunidade_acumulada",
+    "suscetivel_pct",
+    "populacao_log",
+    "densidade_hab_km2",
+    "area_km2"
+  ],
+  "ano_inicial_teste": 2005,
+  "n_reamostragens": 500,
+  "macrorregioes": [
+    "Centro-Oeste",
+    "Nordeste",
+    "Norte",
+    "Sudeste",
+    "Sul"
+  ],
+  "resultados": {
+    "temporal": {
+      "metricas": {
+        "n": 116970,
+        "positivos": 1155,
+        "prevalencia": 0.009874326750448833,
+        "roc_auc": 0.7461726222948863,
+        "pr_auc": 0.033415694302961374,
+        "pr_auc_sobre_prevalencia": 3.384098495772634,
+        "limiar": 0.045820340820785316,
+        "vp": 406,
+        "fp": 8965,
+        "fn": 749,
+        "tn": 106850,
+        "precisao": 0.043325152064881016,
+        "recall": 0.3515151515151515,
+        "f2": 0.14509327424773072,
+        "municipios_investigados_por_evento": 23.08128078817734,
+        "brier": 0.010482311313271035,
+        "brier_referencia_prevalencia": 0.009776824421674199
+      },
+      "ic_roc_auc": {
+        "mediana": 0.7463138443102179,
+        "ic_inferior": 0.7323666687038011,
+        "ic_superior": 0.7604900571948882,
+        "n_replicas": 500
+      },
+      "ic_pr_auc": {
+        "mediana": 0.03376691451500245,
+        "ic_inferior": 0.030499868465716822,
+        "ic_superior": 0.0374814003580096,
+        "n_replicas": 500
+      },
+      "calibracao": [
+        {
+          "faixa": 0,
+          "n": 46788,
+          "probabilidade_media_prevista": 4.097048139973936e-05,
+          "frequencia_observada": 0.002778490211165256,
+          "eventos": 130
+        },
+        {
+          "faixa": 1,
+          "n": 11697,
+          "probabilidade_media_prevista": 0.003265577645334564,
+          "frequencia_observada": 0.005727964435325297,
+          "eventos": 67
+        },
+        {
+          "faixa": 2,
+          "n": 11697,
+          "probabilidade_media_prevista": 0.0053823629388167,
+          "frequencia_observada": 0.008121740617252286,
+          "eventos": 95
+        },
+        {
+          "faixa": 3,
+          "n": 11697,
+          "probabilidade_media_prevista": 0.00961816224861994,
+          "frequencia_observada": 0.00889116867572882,
+          "eventos": 104
+        },
+        {
+          "faixa": 4,
+          "n": 11697,
+          "probabilidade_media_prevista": 0.016331605706012272,
+          "frequencia_observada": 0.011968880909634948,
+          "eventos": 140
+        },
+        {
+          "faixa": 5,
+          "n": 11697,
+          "probabilidade_media_prevista": 0.02866154715869891,
+          "frequencia_observada": 0.01376421304608019,
+          "eventos": 161
+        },
+        {
+          "faixa": 6,
+          "n": 11697,
+          "probabilidade_media_prevista": 0.09371054967465044,
+          "frequencia_observada": 0.03915533897580576,
+          "eventos": 458
+        }
+      ],
+      "curva_de_decisao": [
+        {
+          "limiar": 0.001,
+          "beneficio_liquido": 0.008191469232761872,
+          "beneficio_tratar_todos": 0.008883209960409241,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 70802
+        },
+        {
+          "limiar": 0.009457627118644066,
+          "beneficio_liquido": 0.0035972102437791358,
+          "beneficio_tratar_todos": 0.0004206782498285683,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 44114
+        },
+        {
+          "limiar": 0.017915254237288136,
+          "beneficio_liquido": 0.0017031327336870915,
+          "beneficio_tratar_todos": -0.008187610612559218,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 26980
+        },
+        {
+          "limiar": 0.0263728813559322,
+          "beneficio_liquido": 0.0006926805132523124,
+          "beneficio_tratar_todos": -0.01694545508188007,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 18129
+        },
+        {
+          "limiar": 0.03483050847457627,
+          "beneficio_liquido": 8.796691338493201e-05,
+          "beneficio_tratar_todos": -0.02585678675429834,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 13783
+        },
+        {
+          "limiar": 0.04328813559322034,
+          "beneficio_liquido": -0.00013278871808187955,
+          "beneficio_tratar_todos": -0.03492567625205539,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 9884
+        },
+        {
+          "limiar": 0.0517457627118644,
+          "beneficio_liquido": -0.0005689442834671231,
+          "beneficio_tratar_todos": -0.04415633942344573,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 8080
+        },
+        {
+          "limiar": 0.06020338983050847,
+          "beneficio_liquido": -0.0008020805530083311,
+          "beneficio_tratar_todos": -0.053553143877570306,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 6348
+        },
+        {
+          "limiar": 0.06866101694915254,
+          "beneficio_liquido": -0.0009588204924157536,
+          "beneficio_tratar_todos": -0.0631206158751482,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 5308
+        },
+        {
+          "limiar": 0.0771186440677966,
+          "beneficio_liquido": -0.0010172371197342631,
+          "beneficio_tratar_todos": -0.07286344759822808,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 4536
+        },
+        {
+          "limiar": 0.08557627118644068,
+          "beneficio_liquido": -0.0010127548746190897,
+          "beneficio_tratar_todos": -0.08278650482333078,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 3860
+        },
+        {
+          "limiar": 0.09403389830508474,
+          "beneficio_liquido": -0.0011459108510494132,
+          "beneficio_tratar_todos": -0.09289483502438672,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 3397
+        },
+        {
+          "limiar": 0.1024915254237288,
+          "beneficio_liquido": -0.0011756801707823953,
+          "beneficio_tratar_todos": -0.103193675933819,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 2980
+        },
+        {
+          "limiar": 0.11094915254237288,
+          "beneficio_liquido": -0.0012523452727433452,
+          "beneficio_tratar_todos": -0.11368846459228121,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 2670
+        },
+        {
+          "limiar": 0.11940677966101694,
+          "beneficio_liquido": -0.0013485489852536527,
+          "beneficio_tratar_todos": -0.12438484691990218,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 2386
+        },
+        {
+          "limiar": 0.12786440677966102,
+          "beneficio_liquido": -0.001363947074493311,
+          "beneficio_tratar_todos": -0.13528868784444026,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 2144
+        },
+        {
+          "limiar": 0.13632203389830508,
+          "beneficio_liquido": -0.001377353786057305,
+          "beneficio_tratar_todos": -0.14640608202452102,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 1945
+        },
+        {
+          "limiar": 0.14477966101694914,
+          "beneficio_liquido": -0.001443271723006658,
+          "beneficio_tratar_todos": -0.15774336520915452,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 1757
+        },
+        {
+          "limiar": 0.1532372881355932,
+          "beneficio_liquido": -0.001455606352616515,
+          "beneficio_tratar_todos": -0.16930712627801833,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 1613
+        },
+        {
+          "limiar": 0.1616949152542373,
+          "beneficio_liquido": -0.001421303743765142,
+          "beneficio_tratar_todos": -0.1811042200105847,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 1468
+        },
+        {
+          "limiar": 0.17015254237288135,
+          "beneficio_liquido": -0.0014732507235150217,
+          "beneficio_tratar_todos": -0.1931417806360883,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 1340
+        },
+        {
+          "limiar": 0.17861016949152542,
+          "beneficio_liquido": -0.0015089418531468333,
+          "beneficio_tratar_todos": -0.20542723622061654,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 1226
+        },
+        {
+          "limiar": 0.18706779661016948,
+          "beneficio_liquido": -0.00150724512537147,
+          "beneficio_tratar_todos": -0.2179683239522865,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 1135
+        },
+        {
+          "limiar": 0.19552542372881354,
+          "beneficio_liquido": -0.0015568349432646773,
+          "beneficio_tratar_todos": -0.23077310639060167,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 1051
+        },
+        {
+          "limiar": 0.2039830508474576,
+          "beneficio_liquido": -0.001555616846215808,
+          "beneficio_tratar_todos": -0.24384998875169847,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 965
+        },
+        {
+          "limiar": 0.2124406779661017,
+          "beneficio_liquido": -0.0015780654969742552,
+          "beneficio_tratar_todos": -0.2572077373073541,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 882
+        },
+        {
+          "limiar": 0.22089830508474576,
+          "beneficio_liquido": -0.0015780622560390687,
+          "beneficio_tratar_todos": -0.2708554989823899,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 814
+        },
+        {
+          "limiar": 0.22935593220338982,
+          "beneficio_liquido": -0.0015361906496263577,
+          "beneficio_tratar_todos": -0.28480282224253356,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 752
+        },
+        {
+          "limiar": 0.23781355932203388,
+          "beneficio_liquido": -0.0015360694376156572,
+          "beneficio_tratar_todos": -0.2990596793729795,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 702
+        },
+        {
+          "limiar": 0.24627118644067794,
+          "beneficio_liquido": -0.0014533871800324197,
+          "beneficio_tratar_todos": -0.31363649025688134,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 634
+        },
+        {
+          "limiar": 0.25472881355932203,
+          "beneficio_liquido": -0.0013848542372177195,
+          "beneficio_tratar_todos": -0.3285441477729303,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 576
+        },
+        {
+          "limiar": 0.2631864406779661,
+          "beneficio_liquido": -0.0013265703712646924,
+          "beneficio_tratar_todos": -0.3437940449421125,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 518
+        },
+        {
+          "limiar": 0.27164406779661016,
+          "beneficio_liquido": -0.0012829574316075732,
+          "beneficio_tratar_todos": -0.3593981039658277,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 476
+        },
+        {
+          "limiar": 0.2801016949152542,
+          "beneficio_liquido": -0.001273592177783729,
+          "beneficio_tratar_todos": -0.37536880731090816,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 440
+        },
+        {
+          "limiar": 0.2885593220338983,
+          "beneficio_liquido": -0.0012171688927430724,
+          "beneficio_tratar_todos": -0.39171923101187645,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 403
+        },
+        {
+          "limiar": 0.29701694915254234,
+          "beneficio_liquido": -0.0011616507742146706,
+          "beneficio_tratar_todos": -0.4084630803771703,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 362
+        },
+        {
+          "limiar": 0.3054745762711864,
+          "beneficio_liquido": -0.0011157185663232734,
+          "beneficio_tratar_todos": -0.4256147283042564,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 336
+        },
+        {
+          "limiar": 0.31393220338983047,
+          "beneficio_liquido": -0.0011030183831722497,
+          "beneficio_tratar_todos": -0.44318925642876406,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 317
+        },
+        {
+          "limiar": 0.3223898305084746,
+          "beneficio_liquido": -0.00106560881626229,
+          "beneficio_tratar_todos": -0.4612024993552495,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 293
+        },
+        {
+          "limiar": 0.33084745762711865,
+          "beneficio_liquido": -0.0010177446585036094,
+          "beneficio_tratar_todos": -0.47967109224223703,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 271
+        },
+        {
+          "limiar": 0.3393050847457627,
+          "beneficio_liquido": -0.0010248432410598879,
+          "beneficio_tratar_todos": -0.4986125220421107,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 257
+        },
+        {
+          "limiar": 0.34776271186440677,
+          "beneficio_liquido": -0.0009845736847855023,
+          "beneficio_tratar_todos": -0.5180451827276004,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 239
+        },
+        {
+          "limiar": 0.35622033898305083,
+          "beneficio_liquido": -0.000953394215985328,
+          "beneficio_tratar_todos": -0.5379884348714824,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 224
+        },
+        {
+          "limiar": 0.3646779661016949,
+          "beneficio_liquido": -0.0008934338900330853,
+          "beneficio_tratar_todos": -0.558462669985154,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 204
+        },
+        {
+          "limiar": 0.37313559322033896,
+          "beneficio_liquido": -0.0008730413191292936,
+          "beneficio_tratar_todos": -0.579489380065527,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 193
+        },
+        {
+          "limiar": 0.381593220338983,
+          "beneficio_liquido": -0.0008442432882155512,
+          "beneficio_tratar_todos": -0.6010912328488602,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 181
+        },
+        {
+          "limiar": 0.3900508474576271,
+          "beneficio_liquido": -0.0008234329125989633,
+          "beneficio_tratar_todos": -0.6232921533254651,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 166
+        },
+        {
+          "limiar": 0.39850847457627114,
+          "beneficio_liquido": -0.0007785535014604176,
+          "beneficio_tratar_todos": -0.6461174121315237,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 150
+        },
+        {
+          "limiar": 0.4069661016949152,
+          "beneficio_liquido": -0.0007636934064644891,
+          "beneficio_tratar_todos": -0.6695937215045733,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 140
+        },
+        {
+          "limiar": 0.4154237288135593,
+          "beneficio_liquido": -0.0007373803300913545,
+          "beneficio_tratar_todos": -0.6937493395686727,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 131
+        },
+        {
+          "limiar": 0.4238813559322034,
+          "beneficio_liquido": -0.0007354551030305945,
+          "beneficio_tratar_todos": -0.7186141838052283,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 124
+        },
+        {
+          "limiar": 0.43233898305084745,
+          "beneficio_liquido": -0.0007231400539076468,
+          "beneficio_tratar_todos": -0.7442199546674884,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 118
+        },
+        {
+          "limiar": 0.4407966101694915,
+          "beneficio_liquido": -0.0006819449612085949,
+          "beneficio_tratar_todos": -0.7706002704126184,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 108
+        },
+        {
+          "limiar": 0.44925423728813557,
+          "beneficio_liquido": -0.0006577801390908166,
+          "beneficio_tratar_todos": -0.7977908143572203,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 101
+        },
+        {
+          "limiar": 0.45771186440677963,
+          "beneficio_liquido": -0.0006526424237842904,
+          "beneficio_tratar_todos": -0.8258294959125962,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 97
+        },
+        {
+          "limiar": 0.4661694915254237,
+          "beneficio_liquido": -0.0006163958467952842,
+          "beneficio_tratar_todos": -0.8547566269279755,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 89
+        },
+        {
+          "limiar": 0.47462711864406776,
+          "beneficio_liquido": -0.0005776059722266018,
+          "beneficio_tratar_todos": -0.8846151150667327,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 79
+        },
+        {
+          "limiar": 0.4830847457627118,
+          "beneficio_liquido": -0.0005661483734095965,
+          "beneficio_tratar_todos": -0.9154506761664212,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 75
+        },
+        {
+          "limiar": 0.4915423728813559,
+          "beneficio_liquido": -0.0005366423786894175,
+          "beneficio_tratar_todos": -0.9473120677930437,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 69
+        },
+        {
+          "limiar": 0.5,
+          "beneficio_liquido": -0.000512952038984355,
+          "beneficio_tratar_todos": -0.9802513464991023,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 64
+        }
+      ],
+      "limiares_uteis": 4,
+      "por_regiao": [
+        {
+          "regiao": "Centro-Oeste",
+          "n": 9807,
+          "positivos": 84,
+          "roc_auc": 0.626962700126847,
+          "pr_auc": 0.03434434250053364,
+          "prevalencia": 0.008565310492505354,
+          "pr_auc_sobre_prevalencia": 4.009701986937302,
+          "ic_roc_auc": {
+            "mediana": 0.6271696223485794,
+            "ic_inferior": 0.5611824931556496,
+            "ic_superior": 0.6842924606847778,
+            "n_replicas": 500
+          },
+          "ic_pr_auc": {
+            "mediana": 0.03651695876359255,
+            "ic_inferior": 0.017891055960066248,
+            "ic_superior": 0.08121604248900045,
+            "n_replicas": 500
+          }
+        },
+        {
+          "regiao": "Nordeste",
+          "n": 37674,
+          "positivos": 28,
+          "roc_auc": 0.5855535780693831,
+          "pr_auc": 0.0009066802641805558,
+          "prevalencia": 0.0007432181345224824,
+          "pr_auc_sobre_prevalencia": 1.2199382954549378,
+          "ic_roc_auc": {
+            "mediana": 0.5808737031443295,
+            "ic_inferior": 0.49681191228815813,
+            "ic_superior": 0.6743866854570016,
+            "n_replicas": 500
+          },
+          "ic_pr_auc": {
+            "mediana": 0.0009420663281901516,
+            "ic_inferior": 0.0007409752267021528,
+            "ic_superior": 0.0013363221660478515,
+            "n_replicas": 500
+          }
+        },
+        {
+          "regiao": "Norte",
+          "n": 9450,
+          "positivos": 81,
+          "roc_auc": 0.7574599183806855,
+          "pr_auc": 0.030832183637884356,
+          "prevalencia": 0.008571428571428572,
+          "pr_auc_sobre_prevalencia": 3.597088091086508,
+          "ic_roc_auc": {
+            "mediana": 0.7572121878166636,
+            "ic_inferior": 0.7079555936375412,
+            "ic_superior": 0.8037352465248541,
+            "n_replicas": 500
+          },
+          "ic_pr_auc": {
+            "mediana": 0.03293207038073452,
+            "ic_inferior": 0.02172628340223066,
+            "ic_superior": 0.05713433597605882,
+            "n_replicas": 500
+          }
+        },
+        {
+          "regiao": "Sudeste",
+          "n": 35028,
+          "positivos": 711,
+          "roc_auc": 0.6873963677857972,
+          "pr_auc": 0.03931711450215093,
+          "prevalencia": 0.020298047276464542,
+          "pr_auc_sobre_prevalencia": 1.936989995473056,
+          "ic_roc_auc": {
+            "mediana": 0.6868367123321582,
+            "ic_inferior": 0.6673481438283675,
+            "ic_superior": 0.7054676942293674,
+            "n_replicas": 500
+          },
+          "ic_pr_auc": {
+            "mediana": 0.0394009799678734,
+            "ic_inferior": 0.036273666392547844,
+            "ic_superior": 0.042541040044686965,
+            "n_replicas": 500
+          }
+        },
+        {
+          "regiao": "Sul",
+          "n": 25011,
+          "positivos": 251,
+          "roc_auc": 0.7591060636291667,
+          "pr_auc": 0.05357964113395336,
+          "prevalencia": 0.010035584342889129,
+          "pr_auc_sobre_prevalencia": 5.338965754586883,
+          "ic_roc_auc": {
+            "mediana": 0.758857341232807,
+            "ic_inferior": 0.7231658744665924,
+            "ic_superior": 0.7917657721295754,
+            "n_replicas": 500
+          },
+          "ic_pr_auc": {
+            "mediana": 0.055554530026167295,
+            "ic_inferior": 0.042287182056719226,
+            "ic_superior": 0.07121979552157655,
+            "n_replicas": 500
+          }
+        }
+      ],
+      "dobras": [
+        {
+          "ano_teste": 2005,
+          "anos_treino": [
+            1994,
+            2004
+          ],
+          "n_treino": 61270,
+          "n_teste": 5570,
+          "positivos_teste": 3
+        },
+        {
+          "ano_teste": 2006,
+          "anos_treino": [
+            1994,
+            2005
+          ],
+          "n_treino": 66840,
+          "n_teste": 5570,
+          "positivos_teste": 2
+        },
+        {
+          "ano_teste": 2007,
+          "anos_treino": [
+            1994,
+            2006
+          ],
+          "n_treino": 72410,
+          "n_teste": 5570,
+          "positivos_teste": 16
+        },
+        {
+          "ano_teste": 2008,
+          "anos_treino": [
+            1994,
+            2007
+          ],
+          "n_treino": 77980,
+          "n_teste": 5570,
+          "positivos_teste": 67
+        },
+        {
+          "ano_teste": 2009,
+          "anos_treino": [
+            1994,
+            2008
+          ],
+          "n_treino": 83550,
+          "n_teste": 5570,
+          "positivos_teste": 61
+        },
+        {
+          "ano_teste": 2010,
+          "anos_treino": [
+            1994,
+            2009
+          ],
+          "n_treino": 89120,
+          "n_teste": 5570,
+          "positivos_teste": 2
+        },
+        {
+          "ano_teste": 2011,
+          "anos_treino": [
+            1994,
+            2010
+          ],
+          "n_treino": 94690,
+          "n_teste": 5570,
+          "positivos_teste": 2
+        },
+        {
+          "ano_teste": 2012,
+          "anos_treino": [
+            1994,
+            2011
+          ],
+          "n_treino": 100260,
+          "n_teste": 5570,
+          "positivos_teste": 0
+        },
+        {
+          "ano_teste": 2013,
+          "anos_treino": [
+            1994,
+            2012
+          ],
+          "n_treino": 105830,
+          "n_teste": 5570,
+          "positivos_teste": 3
+        },
+        {
+          "ano_teste": 2014,
+          "anos_treino": [
+            1994,
+            2013
+          ],
+          "n_treino": 111400,
+          "n_teste": 5570,
+          "positivos_teste": 2
+        },
+        {
+          "ano_teste": 2015,
+          "anos_treino": [
+            1994,
+            2014
+          ],
+          "n_treino": 116970,
+          "n_teste": 5570,
+          "positivos_teste": 18
+        },
+        {
+          "ano_teste": 2016,
+          "anos_treino": [
+            1994,
+            2015
+          ],
+          "n_treino": 122540,
+          "n_teste": 5570,
+          "positivos_teste": 55
+        },
+        {
+          "ano_teste": 2017,
+          "anos_treino": [
+            1994,
+            2016
+          ],
+          "n_treino": 128110,
+          "n_teste": 5570,
+          "positivos_teste": 318
+        },
+        {
+          "ano_teste": 2018,
+          "anos_treino": [
+            1994,
+            2017
+          ],
+          "n_treino": 133680,
+          "n_teste": 5570,
+          "positivos_teste": 280
+        },
+        {
+          "ano_teste": 2019,
+          "anos_treino": [
+            1994,
+            2018
+          ],
+          "n_treino": 139250,
+          "n_teste": 5570,
+          "positivos_teste": 61
+        },
+        {
+          "ano_teste": 2020,
+          "anos_treino": [
+            1994,
+            2019
+          ],
+          "n_treino": 144820,
+          "n_teste": 5570,
+          "positivos_teste": 80
+        },
+        {
+          "ano_teste": 2021,
+          "anos_treino": [
+            1994,
+            2020
+          ],
+          "n_treino": 150390,
+          "n_teste": 5570,
+          "positivos_teste": 82
+        },
+        {
+          "ano_teste": 2022,
+          "anos_treino": [
+            1994,
+            2021
+          ],
+          "n_treino": 155960,
+          "n_teste": 5570,
+          "positivos_teste": 10
+        },
+        {
+          "ano_teste": 2023,
+          "anos_treino": [
+            1994,
+            2022
+          ],
+          "n_treino": 161530,
+          "n_teste": 5570,
+          "positivos_teste": 12
+        },
+        {
+          "ano_teste": 2024,
+          "anos_treino": [
+            1994,
+            2023
+          ],
+          "n_treino": 167100,
+          "n_teste": 5570,
+          "positivos_teste": 19
+        },
+        {
+          "ano_teste": 2025,
+          "anos_treino": [
+            1994,
+            2024
+          ],
+          "n_treino": 172670,
+          "n_teste": 5570,
+          "positivos_teste": 62
+        }
+      ],
+      "segundos": 296.6
+    },
+    "espaco_temporal": {
+      "metricas": {
+        "n": 116970,
+        "positivos": 1155,
+        "prevalencia": 0.009874326750448833,
+        "roc_auc": 0.5237705379137836,
+        "pr_auc": 0.024043502145946805,
+        "pr_auc_sobre_prevalencia": 2.4349510355077038,
+        "limiar": 0.08505908229130481,
+        "vp": 129,
+        "fp": 2517,
+        "fn": 1026,
+        "tn": 113298,
+        "precisao": 0.048752834467120185,
+        "recall": 0.11168831168831168,
+        "f2": 0.08876961189099919,
+        "municipios_investigados_por_evento": 20.511627906976745,
+        "brier": 0.010282974446618303,
+        "brier_referencia_prevalencia": 0.009776824421674199
+      },
+      "ic_roc_auc": {
+        "mediana": 0.5242634067281133,
+        "ic_inferior": 0.5050495437659664,
+        "ic_superior": 0.5415225318292926,
+        "n_replicas": 500
+      },
+      "ic_pr_auc": {
+        "mediana": 0.024541711972569637,
+        "ic_inferior": 0.018656744855629282,
+        "ic_superior": 0.031340047597613274,
+        "n_replicas": 500
+      },
+      "calibracao": [
+        {
+          "faixa": 0,
+          "n": 23385,
+          "probabilidade_media_prevista": 0.00029681288885100243,
+          "frequencia_observada": 0.00863801582210819,
+          "eventos": 202
+        },
+        {
+          "faixa": 1,
+          "n": 11673,
+          "probabilidade_media_prevista": 0.003281813434018482,
+          "frequencia_observada": 0.011136811445215455,
+          "eventos": 130
+        },
+        {
+          "faixa": 2,
+          "n": 11730,
+          "probabilidade_media_prevista": 0.005847859303743857,
+          "frequencia_observada": 0.009889173060528559,
+          "eventos": 116
+        },
+        {
+          "faixa": 3,
+          "n": 11697,
+          "probabilidade_media_prevista": 0.00886000246043559,
+          "frequencia_observada": 0.010857484825168847,
+          "eventos": 127
+        },
+        {
+          "faixa": 4,
+          "n": 11697,
+          "probabilidade_media_prevista": 0.01305472547914581,
+          "frequencia_observada": 0.009147644695220997,
+          "eventos": 107
+        },
+        {
+          "faixa": 5,
+          "n": 11697,
+          "probabilidade_media_prevista": 0.018533209731375407,
+          "frequencia_observada": 0.00854920064973925,
+          "eventos": 100
+        },
+        {
+          "faixa": 6,
+          "n": 11697,
+          "probabilidade_media_prevista": 0.02626515609964327,
+          "frequencia_observada": 0.008976660682226212,
+          "eventos": 105
+        },
+        {
+          "faixa": 7,
+          "n": 11697,
+          "probabilidade_media_prevista": 0.038238736115630716,
+          "frequencia_observada": 0.006411900487304437,
+          "eventos": 75
+        },
+        {
+          "faixa": 8,
+          "n": 11697,
+          "probabilidade_media_prevista": 0.07713985452145042,
+          "frequencia_observada": 0.01649995725399675,
+          "eventos": 193
+        }
+      ],
+      "curva_de_decisao": [
+        {
+          "limiar": 0.001,
+          "beneficio_liquido": 0.0074130812012320095,
+          "beneficio_tratar_todos": 0.008883209960409241,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 95759
+        },
+        {
+          "limiar": 0.009457627118644066,
+          "beneficio_liquido": 0.0002944197716384196,
+          "beneficio_tratar_todos": 0.0004206782498285683,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 66601
+        },
+        {
+          "limiar": 0.017915254237288136,
+          "beneficio_liquido": -0.0029025680417435413,
+          "beneficio_tratar_todos": -0.008187610612559218,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 41832
+        },
+        {
+          "limiar": 0.0263728813559322,
+          "beneficio_liquido": -0.003769258092438129,
+          "beneficio_tratar_todos": -0.01694545508188007,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 28107
+        },
+        {
+          "limiar": 0.03483050847457627,
+          "beneficio_liquido": -0.00414277193609924,
+          "beneficio_tratar_todos": -0.02585678675429834,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 20462
+        },
+        {
+          "limiar": 0.04328813559322034,
+          "beneficio_liquido": -0.0033742988867128103,
+          "beneficio_tratar_todos": -0.03492567625205539,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 13505
+        },
+        {
+          "limiar": 0.0517457627118644,
+          "beneficio_liquido": -0.002712148065718941,
+          "beneficio_tratar_todos": -0.04415633942344573,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 9408
+        },
+        {
+          "limiar": 0.06020338983050847,
+          "beneficio_liquido": -0.002140116181058871,
+          "beneficio_tratar_todos": -0.053553143877570306,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 6582
+        },
+        {
+          "limiar": 0.06866101694915254,
+          "beneficio_liquido": -0.0015304424302119664,
+          "beneficio_tratar_todos": -0.0631206158751482,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 4642
+        },
+        {
+          "limiar": 0.0771186440677966,
+          "beneficio_liquido": -0.0012134134053507315,
+          "beneficio_tratar_todos": -0.07286344759822808,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 3475
+        },
+        {
+          "limiar": 0.08557627118644068,
+          "beneficio_liquido": -0.0009096416996271068,
+          "beneficio_tratar_todos": -0.08278650482333078,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 2621
+        },
+        {
+          "limiar": 0.09403389830508474,
+          "beneficio_liquido": -0.0007345249535863749,
+          "beneficio_tratar_todos": -0.09289483502438672,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 2072
+        },
+        {
+          "limiar": 0.1024915254237288,
+          "beneficio_liquido": -0.0006016375036210752,
+          "beneficio_tratar_todos": -0.103193675933819,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 1670
+        },
+        {
+          "limiar": 0.11094915254237288,
+          "beneficio_liquido": -0.0005235401785163192,
+          "beneficio_tratar_todos": -0.11368846459228121,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 1374
+        },
+        {
+          "limiar": 0.11940677966101694,
+          "beneficio_liquido": -0.0004903922197354037,
+          "beneficio_tratar_todos": -0.12438484691990218,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 1160
+        },
+        {
+          "limiar": 0.12786440677966102,
+          "beneficio_liquido": -0.0004326225162126446,
+          "beneficio_tratar_todos": -0.13528868784444026,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 963
+        },
+        {
+          "limiar": 0.13632203389830508,
+          "beneficio_liquido": -0.0004072913882004512,
+          "beneficio_tratar_todos": -0.14640608202452102,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 852
+        },
+        {
+          "limiar": 0.14477966101694914,
+          "beneficio_liquido": -0.00035821350652186007,
+          "beneficio_tratar_todos": -0.15774336520915452,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 731
+        },
+        {
+          "limiar": 0.1532372881355932,
+          "beneficio_liquido": -0.0003199005162518295,
+          "beneficio_tratar_todos": -0.16930712627801833,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 644
+        },
+        {
+          "limiar": 0.1616949152542373,
+          "beneficio_liquido": -0.0002895008936559297,
+          "beneficio_tratar_todos": -0.1811042200105847,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 559
+        },
+        {
+          "limiar": 0.17015254237288135,
+          "beneficio_liquido": -0.0002892455398438158,
+          "beneficio_tratar_todos": -0.1931417806360883,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 500
+        },
+        {
+          "limiar": 0.17861016949152542,
+          "beneficio_liquido": -0.0002797106800339598,
+          "beneficio_tratar_todos": -0.20542723622061654,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 436
+        },
+        {
+          "limiar": 0.18706779661016948,
+          "beneficio_liquido": -0.0002670689858498563,
+          "beneficio_tratar_todos": -0.2179683239522865,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 387
+        },
+        {
+          "limiar": 0.19552542372881354,
+          "beneficio_liquido": -0.000232648346823361,
+          "beneficio_tratar_todos": -0.23077310639060167,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 337
+        },
+        {
+          "limiar": 0.2039830508474576,
+          "beneficio_liquido": -0.00024868498813246614,
+          "beneficio_tratar_todos": -0.24384998875169847,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 290
+        },
+        {
+          "limiar": 0.2124406779661017,
+          "beneficio_liquido": -0.000242318855260377,
+          "beneficio_tratar_todos": -0.2572077373073541,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 251
+        },
+        {
+          "limiar": 0.22089830508474576,
+          "beneficio_liquido": -0.000255239029183447,
+          "beneficio_tratar_todos": -0.2708554989823899,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 223
+        },
+        {
+          "limiar": 0.22935593220338982,
+          "beneficio_liquido": -0.00022135863788422236,
+          "beneficio_tratar_todos": -0.28480282224253356,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 196
+        },
+        {
+          "limiar": 0.23781355932203388,
+          "beneficio_liquido": -0.00017572182414006616,
+          "beneficio_tratar_todos": -0.2990596793729795,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 171
+        },
+        {
+          "limiar": 0.24627118644067794,
+          "beneficio_liquido": -0.00014957352330822177,
+          "beneficio_tratar_todos": -0.31363649025688134,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 151
+        },
+        {
+          "limiar": 0.25472881355932203,
+          "beneficio_liquido": -0.0001189509542268728,
+          "beneficio_tratar_todos": -0.3285441477729303,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 131
+        },
+        {
+          "limiar": 0.2631864406779661,
+          "beneficio_liquido": -9.652698871256933e-05,
+          "beneficio_tratar_todos": -0.3437940449421125,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 119
+        },
+        {
+          "limiar": 0.27164406779661016,
+          "beneficio_liquido": -8.728190150694975e-05,
+          "beneficio_tratar_todos": -0.3593981039658277,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 101
+        },
+        {
+          "limiar": 0.2801016949152542,
+          "beneficio_liquido": -0.00011269027572083891,
+          "beneficio_tratar_todos": -0.37536880731090816,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 91
+        },
+        {
+          "limiar": 0.2885593220338983,
+          "beneficio_liquido": -7.473294695427212e-05,
+          "beneficio_tratar_todos": -0.39171923101187645,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 77
+        },
+        {
+          "limiar": 0.29701694915254234,
+          "beneficio_liquido": -7.404057937575794e-05,
+          "beneficio_tratar_todos": -0.4084630803771703,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 71
+        },
+        {
+          "limiar": 0.3054745762711864,
+          "beneficio_liquido": -6.832183505799375e-05,
+          "beneficio_tratar_todos": -0.4256147283042564,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 64
+        },
+        {
+          "limiar": 0.31393220338983047,
+          "beneficio_liquido": -8.982088679081246e-05,
+          "beneficio_tratar_todos": -0.44318925642876406,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 58
+        },
+        {
+          "limiar": 0.3223898305084746,
+          "beneficio_liquido": -9.713101430058937e-05,
+          "beneficio_tratar_todos": -0.4612024993552495,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 58
+        },
+        {
+          "limiar": 0.33084745762711865,
+          "beneficio_liquido": -8.368168943984893e-05,
+          "beneficio_tratar_todos": -0.47967109224223703,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 47
+        },
+        {
+          "limiar": 0.3393050847457627,
+          "beneficio_liquido": -8.481058820594952e-05,
+          "beneficio_tratar_todos": -0.4986125220421107,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 37
+        },
+        {
+          "limiar": 0.34776271186440677,
+          "beneficio_liquido": -7.177889493079499e-05,
+          "beneficio_tratar_todos": -0.5180451827276004,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 33
+        },
+        {
+          "limiar": 0.35622033898305083,
+          "beneficio_liquido": -7.169777457732512e-05,
+          "beneficio_tratar_todos": -0.5379884348714824,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 32
+        },
+        {
+          "limiar": 0.3646779661016949,
+          "beneficio_liquido": -4.685045888023789e-05,
+          "beneficio_tratar_todos": -0.558462669985154,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 26
+        },
+        {
+          "limiar": 0.37313559322033896,
+          "beneficio_liquido": -4.376423304083093e-05,
+          "beneficio_tratar_todos": -0.579489380065527,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 22
+        },
+        {
+          "limiar": 0.381593220338983,
+          "beneficio_liquido": -3.638436323224003e-05,
+          "beneficio_tratar_todos": -0.6010912328488602,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 20
+        },
+        {
+          "limiar": 0.3900508474576271,
+          "beneficio_liquido": -2.8325656216717396e-05,
+          "beneficio_tratar_todos": -0.6232921533254651,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 18
+        },
+        {
+          "limiar": 0.39850847457627114,
+          "beneficio_liquido": -2.5223610934126976e-05,
+          "beneficio_tratar_todos": -0.6461174121315237,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 17
+        },
+        {
+          "limiar": 0.4069661016949152,
+          "beneficio_liquido": -2.4471595126296398e-05,
+          "beneficio_tratar_todos": -0.6695937215045733,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 14
+        },
+        {
+          "limiar": 0.4154237288135593,
+          "beneficio_liquido": -2.0481891843663504e-05,
+          "beneficio_tratar_todos": -0.6937493395686727,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 13
+        },
+        {
+          "limiar": 0.4238813559322034,
+          "beneficio_liquido": -9.833932399875108e-06,
+          "beneficio_tratar_todos": -0.7186141838052283,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 11
+        },
+        {
+          "limiar": 0.43233898305084745,
+          "beneficio_liquido": -1.9930777102939226e-05,
+          "beneficio_tratar_todos": -0.7442199546674884,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 10
+        },
+        {
+          "limiar": 0.4407966101694915,
+          "beneficio_liquido": -1.4786258802657257e-05,
+          "beneficio_tratar_todos": -0.7706002704126184,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 9
+        },
+        {
+          "limiar": 0.44925423728813557,
+          "beneficio_liquido": -1.619491280833538e-05,
+          "beneficio_tratar_todos": -0.7977908143572203,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 9
+        },
+        {
+          "limiar": 0.45771186440677963,
+          "beneficio_liquido": -1.764750607632533e-05,
+          "beneficio_tratar_todos": -0.8258294959125962,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 9
+        },
+        {
+          "limiar": 0.4661694915254237,
+          "beneficio_liquido": -1.9146127032956812e-05,
+          "beneficio_tratar_todos": -0.8547566269279755,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 9
+        },
+        {
+          "limiar": 0.47462711864406776,
+          "beneficio_liquido": -1.2969565162865387e-05,
+          "beneficio_tratar_todos": -0.8846151150667327,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 8
+        },
+        {
+          "limiar": 0.4830847457627118,
+          "beneficio_liquido": -2.3409526731579922e-05,
+          "beneficio_tratar_todos": -0.9154506761664212,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 5
+        },
+        {
+          "limiar": 0.4915423728813559,
+          "beneficio_liquido": -2.4509950394373943e-05,
+          "beneficio_tratar_todos": -0.9473120677930437,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 5
+        },
+        {
+          "limiar": 0.5,
+          "beneficio_liquido": -8.54920064973925e-06,
+          "beneficio_tratar_todos": -0.9802513464991023,
+          "beneficio_tratar_nenhum": 0.0,
+          "municipios_sinalizados": 3
+        }
+      ],
+      "limiares_uteis": 0,
+      "por_regiao": [
+        {
+          "regiao": "Centro-Oeste",
+          "n": 9807,
+          "positivos": 84,
+          "roc_auc": 0.4535692246661084,
+          "pr_auc": 0.009192748345127478,
+          "prevalencia": 0.008565310492505354,
+          "pr_auc_sobre_prevalencia": 1.073253369293633,
+          "ic_roc_auc": {
+            "mediana": 0.454250598727612,
+            "ic_inferior": 0.39365933378390955,
+            "ic_superior": 0.5123902485760322,
+            "n_replicas": 500
+          },
+          "ic_pr_auc": {
+            "mediana": 0.009555048474242999,
+            "ic_inferior": 0.007070538080960201,
+            "ic_superior": 0.016095512825778382,
+            "n_replicas": 500
+          }
+        },
+        {
+          "regiao": "Nordeste",
+          "n": 37674,
+          "positivos": 28,
+          "roc_auc": 0.449237634808479,
+          "pr_auc": 0.000642450511446741,
+          "prevalencia": 0.0007432181345224824,
+          "pr_auc_sobre_prevalencia": 0.86441716315159,
+          "ic_roc_auc": {
+            "mediana": 0.44987823597270815,
+            "ic_inferior": 0.3774118954015225,
+            "ic_superior": 0.525593736006861,
+            "n_replicas": 500
+          },
+          "ic_pr_auc": {
+            "mediana": 0.0006746812444542248,
+            "ic_inferior": 0.0005903132983521085,
+            "ic_superior": 0.0008665860636949122,
+            "n_replicas": 500
+          }
+        },
+        {
+          "regiao": "Norte",
+          "n": 9450,
+          "positivos": 81,
+          "roc_auc": 0.5555390841084796,
+          "pr_auc": 0.009848878531235304,
+          "prevalencia": 0.008571428571428572,
+          "pr_auc_sobre_prevalencia": 1.1490358286441187,
+          "ic_roc_auc": {
+            "mediana": 0.5544430740200477,
+            "ic_inferior": 0.50169025048459,
+            "ic_superior": 0.6152273586782784,
+            "n_replicas": 500
+          },
+          "ic_pr_auc": {
+            "mediana": 0.010111494227430223,
+            "ic_inferior": 0.008378627660677835,
+            "ic_superior": 0.012738382597570813,
+            "n_replicas": 500
+          }
+        },
+        {
+          "regiao": "Sudeste",
+          "n": 35028,
+          "positivos": 711,
+          "roc_auc": 0.5597862151208963,
+          "pr_auc": 0.025059278977687328,
+          "prevalencia": 0.020298047276464542,
+          "pr_auc_sobre_prevalencia": 1.2345659972298617,
+          "ic_roc_auc": {
+            "mediana": 0.5590912079061658,
+            "ic_inferior": 0.5388967190036372,
+            "ic_superior": 0.5802826982907399,
+            "n_replicas": 500
+          },
+          "ic_pr_auc": {
+            "mediana": 0.025243342752266917,
+            "ic_inferior": 0.023038720382562983,
+            "ic_superior": 0.027752782998578168,
+            "n_replicas": 500
+          }
+        },
+        {
+          "regiao": "Sul",
+          "n": 25011,
+          "positivos": 251,
+          "roc_auc": 0.7373708719242578,
+          "pr_auc": 0.08049981192343103,
+          "prevalencia": 0.010035584342889129,
+          "pr_auc_sobre_prevalencia": 8.021437434330412,
+          "ic_roc_auc": {
+            "mediana": 0.7372818097561289,
+            "ic_inferior": 0.6970460383828178,
+            "ic_superior": 0.7765263722975625,
+            "n_replicas": 500
+          },
+          "ic_pr_auc": {
+            "mediana": 0.082240013734494,
+            "ic_inferior": 0.059692150235751286,
+            "ic_superior": 0.11294976200618596,
+            "n_replicas": 500
+          }
+        }
+      ],
+      "dobras": [
+        {
+          "regiao_teste": "Centro-Oeste",
+          "ano_teste": 2005,
+          "n_treino": 56133,
+          "n_teste": 467,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Centro-Oeste",
+          "ano_teste": 2006,
+          "n_treino": 61236,
+          "n_teste": 467,
+          "positivos_teste": 1
+        },
+        {
+          "regiao_teste": "Centro-Oeste",
+          "ano_teste": 2007,
+          "n_treino": 66339,
+          "n_teste": 467,
+          "positivos_teste": 11
+        },
+        {
+          "regiao_teste": "Centro-Oeste",
+          "ano_teste": 2008,
+          "n_treino": 71442,
+          "n_teste": 467,
+          "positivos_teste": 28
+        },
+        {
+          "regiao_teste": "Centro-Oeste",
+          "ano_teste": 2009,
+          "n_treino": 76545,
+          "n_teste": 467,
+          "positivos_teste": 2
+        },
+        {
+          "regiao_teste": "Centro-Oeste",
+          "ano_teste": 2010,
+          "n_treino": 81648,
+          "n_teste": 467,
+          "positivos_teste": 1
+        },
+        {
+          "regiao_teste": "Centro-Oeste",
+          "ano_teste": 2011,
+          "n_treino": 86751,
+          "n_teste": 467,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Centro-Oeste",
+          "ano_teste": 2012,
+          "n_treino": 91854,
+          "n_teste": 467,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Centro-Oeste",
+          "ano_teste": 2013,
+          "n_treino": 96957,
+          "n_teste": 467,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Centro-Oeste",
+          "ano_teste": 2014,
+          "n_treino": 102060,
+          "n_teste": 467,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Centro-Oeste",
+          "ano_teste": 2015,
+          "n_treino": 107163,
+          "n_teste": 467,
+          "positivos_teste": 11
+        },
+        {
+          "regiao_teste": "Centro-Oeste",
+          "ano_teste": 2016,
+          "n_treino": 112266,
+          "n_teste": 467,
+          "positivos_teste": 9
+        },
+        {
+          "regiao_teste": "Centro-Oeste",
+          "ano_teste": 2017,
+          "n_treino": 117369,
+          "n_teste": 467,
+          "positivos_teste": 11
+        },
+        {
+          "regiao_teste": "Centro-Oeste",
+          "ano_teste": 2018,
+          "n_treino": 122472,
+          "n_teste": 467,
+          "positivos_teste": 1
+        },
+        {
+          "regiao_teste": "Centro-Oeste",
+          "ano_teste": 2019,
+          "n_treino": 127575,
+          "n_teste": 467,
+          "positivos_teste": 1
+        },
+        {
+          "regiao_teste": "Centro-Oeste",
+          "ano_teste": 2020,
+          "n_treino": 132678,
+          "n_teste": 467,
+          "positivos_teste": 6
+        },
+        {
+          "regiao_teste": "Centro-Oeste",
+          "ano_teste": 2021,
+          "n_treino": 137781,
+          "n_teste": 467,
+          "positivos_teste": 2
+        },
+        {
+          "regiao_teste": "Centro-Oeste",
+          "ano_teste": 2022,
+          "n_treino": 142884,
+          "n_teste": 467,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Centro-Oeste",
+          "ano_teste": 2023,
+          "n_treino": 147987,
+          "n_teste": 467,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Centro-Oeste",
+          "ano_teste": 2024,
+          "n_treino": 153090,
+          "n_teste": 467,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Centro-Oeste",
+          "ano_teste": 2025,
+          "n_treino": 158193,
+          "n_teste": 467,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Nordeste",
+          "ano_teste": 2005,
+          "n_treino": 41536,
+          "n_teste": 1794,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Nordeste",
+          "ano_teste": 2006,
+          "n_treino": 45312,
+          "n_teste": 1794,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Nordeste",
+          "ano_teste": 2007,
+          "n_treino": 49088,
+          "n_teste": 1794,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Nordeste",
+          "ano_teste": 2008,
+          "n_treino": 52864,
+          "n_teste": 1794,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Nordeste",
+          "ano_teste": 2009,
+          "n_treino": 56640,
+          "n_teste": 1794,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Nordeste",
+          "ano_teste": 2010,
+          "n_treino": 60416,
+          "n_teste": 1794,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Nordeste",
+          "ano_teste": 2011,
+          "n_treino": 64192,
+          "n_teste": 1794,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Nordeste",
+          "ano_teste": 2012,
+          "n_treino": 67968,
+          "n_teste": 1794,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Nordeste",
+          "ano_teste": 2013,
+          "n_treino": 71744,
+          "n_teste": 1794,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Nordeste",
+          "ano_teste": 2014,
+          "n_treino": 75520,
+          "n_teste": 1794,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Nordeste",
+          "ano_teste": 2015,
+          "n_treino": 79296,
+          "n_teste": 1794,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Nordeste",
+          "ano_teste": 2016,
+          "n_treino": 83072,
+          "n_teste": 1794,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Nordeste",
+          "ano_teste": 2017,
+          "n_treino": 86848,
+          "n_teste": 1794,
+          "positivos_teste": 28
+        },
+        {
+          "regiao_teste": "Nordeste",
+          "ano_teste": 2018,
+          "n_treino": 90624,
+          "n_teste": 1794,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Nordeste",
+          "ano_teste": 2019,
+          "n_treino": 94400,
+          "n_teste": 1794,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Nordeste",
+          "ano_teste": 2020,
+          "n_treino": 98176,
+          "n_teste": 1794,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Nordeste",
+          "ano_teste": 2021,
+          "n_treino": 101952,
+          "n_teste": 1794,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Nordeste",
+          "ano_teste": 2022,
+          "n_treino": 105728,
+          "n_teste": 1794,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Nordeste",
+          "ano_teste": 2023,
+          "n_treino": 109504,
+          "n_teste": 1794,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Nordeste",
+          "ano_teste": 2024,
+          "n_treino": 113280,
+          "n_teste": 1794,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Nordeste",
+          "ano_teste": 2025,
+          "n_treino": 117056,
+          "n_teste": 1794,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Norte",
+          "ano_teste": 2005,
+          "n_treino": 56320,
+          "n_teste": 450,
+          "positivos_teste": 3
+        },
+        {
+          "regiao_teste": "Norte",
+          "ano_teste": 2006,
+          "n_treino": 61440,
+          "n_teste": 450,
+          "positivos_teste": 1
+        },
+        {
+          "regiao_teste": "Norte",
+          "ano_teste": 2007,
+          "n_treino": 66560,
+          "n_teste": 450,
+          "positivos_teste": 5
+        },
+        {
+          "regiao_teste": "Norte",
+          "ano_teste": 2008,
+          "n_treino": 71680,
+          "n_teste": 450,
+          "positivos_teste": 4
+        },
+        {
+          "regiao_teste": "Norte",
+          "ano_teste": 2009,
+          "n_treino": 76800,
+          "n_teste": 450,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Norte",
+          "ano_teste": 2010,
+          "n_treino": 81920,
+          "n_teste": 450,
+          "positivos_teste": 1
+        },
+        {
+          "regiao_teste": "Norte",
+          "ano_teste": 2011,
+          "n_treino": 87040,
+          "n_teste": 450,
+          "positivos_teste": 2
+        },
+        {
+          "regiao_teste": "Norte",
+          "ano_teste": 2012,
+          "n_treino": 92160,
+          "n_teste": 450,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Norte",
+          "ano_teste": 2013,
+          "n_treino": 97280,
+          "n_teste": 450,
+          "positivos_teste": 3
+        },
+        {
+          "regiao_teste": "Norte",
+          "ano_teste": 2014,
+          "n_treino": 102400,
+          "n_teste": 450,
+          "positivos_teste": 2
+        },
+        {
+          "regiao_teste": "Norte",
+          "ano_teste": 2015,
+          "n_treino": 107520,
+          "n_teste": 450,
+          "positivos_teste": 4
+        },
+        {
+          "regiao_teste": "Norte",
+          "ano_teste": 2016,
+          "n_treino": 112640,
+          "n_teste": 450,
+          "positivos_teste": 2
+        },
+        {
+          "regiao_teste": "Norte",
+          "ano_teste": 2017,
+          "n_treino": 117760,
+          "n_teste": 450,
+          "positivos_teste": 25
+        },
+        {
+          "regiao_teste": "Norte",
+          "ano_teste": 2018,
+          "n_treino": 122880,
+          "n_teste": 450,
+          "positivos_teste": 4
+        },
+        {
+          "regiao_teste": "Norte",
+          "ano_teste": 2019,
+          "n_treino": 128000,
+          "n_teste": 450,
+          "positivos_teste": 5
+        },
+        {
+          "regiao_teste": "Norte",
+          "ano_teste": 2020,
+          "n_treino": 133120,
+          "n_teste": 450,
+          "positivos_teste": 1
+        },
+        {
+          "regiao_teste": "Norte",
+          "ano_teste": 2021,
+          "n_treino": 138240,
+          "n_teste": 450,
+          "positivos_teste": 3
+        },
+        {
+          "regiao_teste": "Norte",
+          "ano_teste": 2022,
+          "n_treino": 143360,
+          "n_teste": 450,
+          "positivos_teste": 4
+        },
+        {
+          "regiao_teste": "Norte",
+          "ano_teste": 2023,
+          "n_treino": 148480,
+          "n_teste": 450,
+          "positivos_teste": 3
+        },
+        {
+          "regiao_teste": "Norte",
+          "ano_teste": 2024,
+          "n_treino": 153600,
+          "n_teste": 450,
+          "positivos_teste": 5
+        },
+        {
+          "regiao_teste": "Norte",
+          "ano_teste": 2025,
+          "n_treino": 158720,
+          "n_teste": 450,
+          "positivos_teste": 4
+        },
+        {
+          "regiao_teste": "Sudeste",
+          "ano_teste": 2005,
+          "n_treino": 42922,
+          "n_teste": 1668,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Sudeste",
+          "ano_teste": 2006,
+          "n_treino": 46824,
+          "n_teste": 1668,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Sudeste",
+          "ano_teste": 2007,
+          "n_treino": 50726,
+          "n_teste": 1668,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Sudeste",
+          "ano_teste": 2008,
+          "n_treino": 54628,
+          "n_teste": 1668,
+          "positivos_teste": 12
+        },
+        {
+          "regiao_teste": "Sudeste",
+          "ano_teste": 2009,
+          "n_treino": 58530,
+          "n_teste": 1668,
+          "positivos_teste": 7
+        },
+        {
+          "regiao_teste": "Sudeste",
+          "ano_teste": 2010,
+          "n_treino": 62432,
+          "n_teste": 1668,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Sudeste",
+          "ano_teste": 2011,
+          "n_treino": 66334,
+          "n_teste": 1668,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Sudeste",
+          "ano_teste": 2012,
+          "n_treino": 70236,
+          "n_teste": 1668,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Sudeste",
+          "ano_teste": 2013,
+          "n_treino": 74138,
+          "n_teste": 1668,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Sudeste",
+          "ano_teste": 2014,
+          "n_treino": 78040,
+          "n_teste": 1668,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Sudeste",
+          "ano_teste": 2015,
+          "n_treino": 81942,
+          "n_teste": 1668,
+          "positivos_teste": 3
+        },
+        {
+          "regiao_teste": "Sudeste",
+          "ano_teste": 2016,
+          "n_treino": 85844,
+          "n_teste": 1668,
+          "positivos_teste": 44
+        },
+        {
+          "regiao_teste": "Sudeste",
+          "ano_teste": 2017,
+          "n_treino": 89746,
+          "n_teste": 1668,
+          "positivos_teste": 254
+        },
+        {
+          "regiao_teste": "Sudeste",
+          "ano_teste": 2018,
+          "n_treino": 93648,
+          "n_teste": 1668,
+          "positivos_teste": 275
+        },
+        {
+          "regiao_teste": "Sudeste",
+          "ano_teste": 2019,
+          "n_treino": 97550,
+          "n_teste": 1668,
+          "positivos_teste": 24
+        },
+        {
+          "regiao_teste": "Sudeste",
+          "ano_teste": 2020,
+          "n_treino": 101452,
+          "n_teste": 1668,
+          "positivos_teste": 4
+        },
+        {
+          "regiao_teste": "Sudeste",
+          "ano_teste": 2021,
+          "n_treino": 105354,
+          "n_teste": 1668,
+          "positivos_teste": 8
+        },
+        {
+          "regiao_teste": "Sudeste",
+          "ano_teste": 2022,
+          "n_treino": 109256,
+          "n_teste": 1668,
+          "positivos_teste": 5
+        },
+        {
+          "regiao_teste": "Sudeste",
+          "ano_teste": 2023,
+          "n_treino": 113158,
+          "n_teste": 1668,
+          "positivos_teste": 3
+        },
+        {
+          "regiao_teste": "Sudeste",
+          "ano_teste": 2024,
+          "n_treino": 117060,
+          "n_teste": 1668,
+          "positivos_teste": 14
+        },
+        {
+          "regiao_teste": "Sudeste",
+          "ano_teste": 2025,
+          "n_treino": 120962,
+          "n_teste": 1668,
+          "positivos_teste": 58
+        },
+        {
+          "regiao_teste": "Sul",
+          "ano_teste": 2005,
+          "n_treino": 48169,
+          "n_teste": 1191,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Sul",
+          "ano_teste": 2006,
+          "n_treino": 52548,
+          "n_teste": 1191,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Sul",
+          "ano_teste": 2007,
+          "n_treino": 56927,
+          "n_teste": 1191,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Sul",
+          "ano_teste": 2008,
+          "n_treino": 61306,
+          "n_teste": 1191,
+          "positivos_teste": 23
+        },
+        {
+          "regiao_teste": "Sul",
+          "ano_teste": 2009,
+          "n_treino": 65685,
+          "n_teste": 1191,
+          "positivos_teste": 52
+        },
+        {
+          "regiao_teste": "Sul",
+          "ano_teste": 2010,
+          "n_treino": 70064,
+          "n_teste": 1191,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Sul",
+          "ano_teste": 2011,
+          "n_treino": 74443,
+          "n_teste": 1191,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Sul",
+          "ano_teste": 2012,
+          "n_treino": 78822,
+          "n_teste": 1191,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Sul",
+          "ano_teste": 2013,
+          "n_treino": 83201,
+          "n_teste": 1191,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Sul",
+          "ano_teste": 2014,
+          "n_treino": 87580,
+          "n_teste": 1191,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Sul",
+          "ano_teste": 2015,
+          "n_treino": 91959,
+          "n_teste": 1191,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Sul",
+          "ano_teste": 2016,
+          "n_treino": 96338,
+          "n_teste": 1191,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Sul",
+          "ano_teste": 2017,
+          "n_treino": 100717,
+          "n_teste": 1191,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Sul",
+          "ano_teste": 2018,
+          "n_treino": 105096,
+          "n_teste": 1191,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Sul",
+          "ano_teste": 2019,
+          "n_treino": 109475,
+          "n_teste": 1191,
+          "positivos_teste": 31
+        },
+        {
+          "regiao_teste": "Sul",
+          "ano_teste": 2020,
+          "n_treino": 113854,
+          "n_teste": 1191,
+          "positivos_teste": 69
+        },
+        {
+          "regiao_teste": "Sul",
+          "ano_teste": 2021,
+          "n_treino": 118233,
+          "n_teste": 1191,
+          "positivos_teste": 69
+        },
+        {
+          "regiao_teste": "Sul",
+          "ano_teste": 2022,
+          "n_treino": 122612,
+          "n_teste": 1191,
+          "positivos_teste": 1
+        },
+        {
+          "regiao_teste": "Sul",
+          "ano_teste": 2023,
+          "n_treino": 126991,
+          "n_teste": 1191,
+          "positivos_teste": 6
+        },
+        {
+          "regiao_teste": "Sul",
+          "ano_teste": 2024,
+          "n_treino": 131370,
+          "n_teste": 1191,
+          "positivos_teste": 0
+        },
+        {
+          "regiao_teste": "Sul",
+          "ano_teste": 2025,
+          "n_treino": 135749,
+          "n_teste": 1191,
+          "positivos_teste": 0
+        }
+      ],
+      "segundos": 1052.9
+    }
+  },
+  "segundos_total": 1350.6
+}

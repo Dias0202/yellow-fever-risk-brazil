@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vacinação – Modelagem de risco de febre amarela</title>
+<meta name="description" content="Estudo de evento da cobertura vacinal em torno do ano do surto e suas consequências para cenários de imunização.">
+<link rel="stylesheet" href="css/painel.css">
+</head>
+<body>
+
+<header class="site-header">
+  <h1>Modelagem de Risco de Febre Amarela – Brasil</h1>
+  <nav class="site-nav">
+    <a href="index.html">Início</a>
+    <a href="previsao.html">Previsão</a>
+    <a href="validacao.html">Validação</a>
+    <a href="determinantes.html">Determinantes</a>
+    <a href="vacinacao.html" class="active">Vacinação</a>
+    <a href="cenarios.html">Cenários</a>
+    <a href="metodos.html">Dados &amp; documentação</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <section class="section-block">
+    <h2>A cobertura vacinal registrada é resposta ao surto</h2>
+    <p class="lead">
+      Um modelo treinado com a cobertura vacinal do próprio ano aprende que
+      aumentar a cobertura eleva o risco previsto. O resultado é fisicamente
+      absurdo, e não é defeito de implementação: a causa está na própria variável.
+    </p>
+    <p>
+      O diagnóstico está nesta página. A cobertura registrada
+      pelo Programa Nacional de Imunizações não descreve a condição do município
+      antes do surto: descreve, em boa medida, o bloqueio vacinal e a campanha de
+      massa que o surto dispara, contabilizados no ano em que ocorrem.
+    </p>
+  </section>
+
+  <section class="section-block">
+    <h2>O estudo de evento</h2>
+    <p>
+      A figura alinha todos os surtos no tempo, com o ano do surto em zero, e mostra
+      a cobertura vacinal duplamente centrada — pela média nacional daquele ano,
+      que remove as campanhas nacionais, e pela média histórica do próprio
+      município, que remove tudo que nele é fixo. O que sobra é o desvio em relação
+      ao normal daquele município naquele momento do país.
+    </p>
+
+    <div class="figure-container">
+      <div class="controles" id="ctrl-evento">
+        <span class="rotulo">Surtos considerados:</span>
+        <button class="botao" data-serie="todos" aria-pressed="true">Todos</button>
+        <button class="botao" data-serie="primeiro_surto" aria-pressed="false">Apenas o primeiro de cada município</button>
+      </div>
+      <div id="fig-evento"></div>
+      <p class="figure-caption">
+        <strong>Figura 1. Cobertura vacinal em torno do ano do surto.</strong>
+        A cobertura permanece no patamar normal do município até o ano anterior e
+        salta no ano do surto, mantendo-se elevada por pelo menos três anos. A
+        segunda opção existe porque município com vários surtos tem janelas
+        sobrepostas — o ano −1 de um surto pode ser o ano 0 do anterior,
+        contaminando justamente o lado que precisa estar limpo. Restrita ao
+        primeiro surto de cada município, a linha de base anterior fica ainda mais
+        plana.
+      </p>
+    </div>
+
+    <div class="metric-grid">
+      <div class="metric-card">
+        <h4>Salto no ano do surto</h4>
+        <span class="value alerta" id="m-salto">—</span>
+        <span class="desc">Vezes o desvio observado no ano anterior</span>
+      </div>
+      <div class="metric-card">
+        <h4>Associação sem defasagem</h4>
+        <span class="value alerta" id="m-lag0">—</span>
+        <span class="desc">Dentro do município: mais imunidade acompanha mais surto</span>
+      </div>
+      <div class="metric-card">
+        <h4>Associação com dois anos de defasagem</h4>
+        <span class="value" id="m-lag2">—</span>
+        <span class="desc">Indistinguível de zero (p = 0,35)</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <h2>Por que a associação bruta engana</h2>
+    <p>
+      Três medições encaixadas, cada uma removendo uma fonte de confundimento. A
+      terceira é a única que responde à pergunta que um cenário faz — porque um
+      cenário não troca um município por outro, ele move a cobertura do próprio
+      município.
+    </p>
+
+    <div class="figure-container">
+      <div id="fig-centragem"></div>
+      <p class="figure-caption">
+        <strong>Figura 2. Associação entre imunidade e evento sob três controles.</strong>
+        Remover o confundimento entre municípios não reduz a associação: aumenta.
+        Dentro do mesmo município, os anos de imunidade acima da própria tendência
+        são os anos <em>com</em> surto. Vacina não causa febre amarela, de modo que
+        o que a figura mostra é a seta do tempo invertida.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <h2>A variável está saturada no horizonte de projeção</h2>
+    <p>
+      Mesmo respeitada a seta do tempo, resta um obstáculo independente. Um cenário
+      precisa de contraste para mover, e a imunidade acumulada praticamente não
+      varia mais entre municípios.
+    </p>
+
+    <div class="figure-container">
+      <div id="fig-saturacao"></div>
+      <p class="figure-caption">
+        <strong>Figura 3. Distribuição da imunidade acumulada entre municípios, por ano.</strong>
+        A faixa cobre do primeiro ao nono decil e a linha é a média nacional. A
+        amplitude interdecil cai de <span class="num" id="cap-amp-2013">—</span> em
+        2013 para <span class="num" id="cap-amp-2025">—</span> em 2025. Os últimos
+        três anos merecem ressalva própria: a fonte do PNI termina em 2022, e a
+        imunidade nesse trecho é apenas decaimento por renovação populacional, sem
+        nenhum dado de entrada.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <h2>O que isso significa para o modelo</h2>
+    <p>
+      A variável de modelagem é a imunidade defasada em dois anos, o que é duplamente
+      justificado: remove a campanha disparada pelo surto e corresponde ao uso —
+      só se pode agir sobre a imunidade que já existe quando o ano começa. Um ano
+      não basta, porque no ano seguinte ao surto a cobertura ainda está elevada.
+    </p>
+    <p>
+      Medida a ablação, a imunidade contemporânea acrescentava
+      <strong>+0,0199 de ROC-AUC</strong> (IC 95% +0,0070 a +0,0320) e
+      <strong>nada</strong> de PR-AUC. É a assinatura de um vazamento: melhora a
+      ordenação global sem melhorar a detecção no ponto em que o modelo seria
+      operado.
+    </p>
+
+    <div class="ressalva">
+      <p>
+        <strong>Mesmo defasada, a alavanca não existe.</strong>
+        No corte de 2019, a imunidade defasada é a 4ª variável mais importante pelo
+        critério de Gini e a 27ª pela permutação, com importância média negativa. A
+        família inteira contribui −0,52% para a PR-AUC. Nenhum cenário de vacinação
+        é reportável a partir deste painel de dados.
+      </p>
+    </div>
+
+    <h3>O caminho correto para avaliar vacinação</h3>
+    <p>
+      Não é perturbar uma variável do modelo e ler o que sai. É declarar a eficácia
+      vacinal como parâmetro externo, de fonte independente, e aplicá-la sobre a
+      população suscetível projetada. Isso é análise de impacto com parâmetro
+      declarado, e não inferência a partir de dados observacionais que não
+      identificam o efeito — o que é exatamente o que estes dados não fazem.
+    </p>
+  </section>
+
+  <footer class="rodape">
+    <p>
+      Valores lidos de <code>dados/vacinacao.json</code>, gerado por
+      <code>yfvrisk.viz.exportar_painel</code> a partir de <code>analysis/f5_00_diagnostico_vacinacao.py</code>.
+    </p>
+  </footer>
+
+</div>
+
+<script type="module" src="js/pagina-vacinacao.js"></script>
+</body>
+</html>

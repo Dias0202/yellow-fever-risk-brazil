@@ -1,0 +1,452 @@
+/* Painel de risco de febre amarela silvestre.
+
+   Barra escura no topo, fundo cinza-claro, painéis brancos com borda fina, azul
+   institucional como único acento, tipografia de sistema. Os números vêm de
+   arquivo gerado pela análise, nunca do HTML. */
+
+/* ---------------------------------------------------------------- tokens */
+:root {
+  --fundo:         #f7f7f7;
+  --painel:        #ffffff;
+  --painel-suave:  #f8f9fa;
+  --borda:         #e0e0e0;
+  --borda-suave:   #eeeeee;
+  --borda-forte:   #dee2e6;
+
+  --titulo:        #2c3e50;
+  --texto:         #4a4a4a;
+  --texto-fraco:   #6c757d;
+  --texto-tenue:   #8a8a8a;
+
+  --azul:          #007bff;
+  --azul-escuro:   #0059b8;
+  --azul-fraco:    rgba(0, 123, 255, 0.08);
+
+  --barra:         #222222;
+
+  /* Divergente do SHAP: valor baixo da variável → alto. */
+  --baixo:  #2c7fb8;
+  --meio:   #dcd9d2;
+  --alto:   #c0392b;
+
+  /* Famílias de variáveis e macrorregiões. Escolhidas para se distinguirem
+     sobre branco e manterem ordem de luminância em impressão monocromática. */
+  --clima:      #2c7fb8;
+  --clima-def:  #7fb3d5;
+  --paisagem:   #4a9b6e;
+  --imunidade:  #c0392b;
+  --demografia: #d9822b;
+
+  --sans: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, Roboto,
+          Helvetica, Arial, sans-serif;
+  --mono: "Cascadia Mono", Consolas, ui-monospace, "SF Mono", Menlo, monospace;
+
+  --largura: 1100px;
+}
+
+/* ------------------------------------------------------------- estrutura */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background-color: var(--fundo);
+  color: var(--texto);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ------------------------------------------------------------- cabeçalho */
+.site-header {
+  background-color: var(--barra);
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.site-nav a {
+  color: #ccc;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-size: 0.95rem;
+}
+
+.site-nav a.active,
+.site-nav a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ------------------------------------------------------------ tipografia */
+.container {
+  max-width: var(--largura);
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.section-block {
+  background: var(--painel);
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--borda);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+h2 {
+  border-bottom: 2px solid var(--azul);
+  padding-bottom: 12px;
+  margin: 0 0 25px;
+  color: var(--titulo);
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+h3 {
+  color: #444;
+  margin: 2rem 0 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-left: 4px solid var(--azul);
+  padding-left: 10px;
+  line-height: 1.35;
+}
+
+h4 {
+  color: #555;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 1.6rem 0 0.5rem;
+}
+
+p, li { line-height: 1.7; font-size: 1rem; color: var(--texto); }
+
+p { margin: 0 0 1.1rem; }
+
+.lead {
+  font-size: 1.1rem;
+  color: #3d3d3d;
+}
+
+a { color: var(--azul); }
+a:hover { color: var(--azul-escuro); }
+
+strong { color: #333; font-weight: 600; }
+
+.num {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.94em;
+}
+
+/* --------------------------------------------------------- cartão de métrica */
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.metric-card {
+  background: var(--painel-suave);
+  padding: 1.4rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid var(--borda-forte);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  border-color: var(--azul);
+}
+
+.metric-card h4 {
+  margin: 0;
+  color: #666;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.metric-card .value {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--titulo);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+
+.metric-card .value.destaque { color: var(--azul); }
+.metric-card .value.alerta { color: var(--alto); }
+
+.metric-card .desc {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.84rem;
+  color: #888;
+  line-height: 1.45;
+}
+
+/* -------------------------------------------------------------- figuras */
+.figure-container {
+  margin: 2rem 0;
+}
+
+.figure-caption {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+  border-top: 1px solid var(--borda-suave);
+  padding-top: 0.9rem;
+  max-width: 62rem;
+}
+
+.figure-caption strong { color: #333; }
+
+/* --------------------------------------------------------------- tabela */
+.tech-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+.tech-table th,
+.tech-table td {
+  padding: 11px 15px 11px 0;
+  border-bottom: 1px solid var(--borda);
+  text-align: left;
+  vertical-align: top;
+}
+
+.tech-table thead th {
+  background-color: #f1f3f5;
+  color: #333;
+  font-weight: 600;
+  padding-left: 15px;
+}
+
+.tech-table tbody td:first-child { padding-left: 15px; }
+
+.tech-table td.n, .tech-table th.n {
+  text-align: right;
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.tech-table tbody tr:hover { background: #fbfcfd; }
+
+.tech-table tr.realce td {
+  background: var(--azul-fraco);
+  font-weight: 600;
+  color: #333;
+}
+
+/* -------------------------------------------------------------- controle */
+.controles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 1.4rem;
+  font-size: 0.88rem;
+}
+
+.controles .rotulo {
+  color: var(--texto-fraco);
+  margin-right: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.botao {
+  font: inherit;
+  font-size: 0.88rem;
+  color: #444;
+  background: var(--painel-suave);
+  border: 1px solid var(--borda-forte);
+  border-radius: 4px;
+  padding: 0.36rem 0.85rem;
+  cursor: pointer;
+  transition: background 0.16s, color 0.16s, border-color 0.16s;
+}
+
+.botao:hover { border-color: var(--azul); color: var(--azul); }
+
+.botao[aria-pressed="true"] {
+  background: var(--azul);
+  border-color: var(--azul);
+  color: #fff;
+}
+
+/* ------------------------------------------------------------------ svg */
+svg { display: block; width: 100%; height: auto; overflow: visible; }
+
+.eixo line, .eixo path {
+  stroke: #ccc;
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+}
+
+.eixo text {
+  font-family: var(--sans);
+  font-size: 11px;
+  fill: var(--texto-fraco);
+  font-variant-numeric: tabular-nums;
+}
+
+.grade line {
+  stroke: #ececec;
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+}
+
+.rotulo-serie {
+  font-family: var(--sans);
+  font-size: 12.5px;
+  fill: #444;
+}
+
+.rotulo-valor {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  fill: var(--titulo);
+  font-variant-numeric: tabular-nums;
+}
+
+.rotulo-eixo {
+  font-family: var(--sans);
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  fill: var(--texto-tenue);
+}
+
+/* --------------------------------------------------------- dica flutuante */
+.dica {
+  position: fixed;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -120%);
+  transition: opacity 0.12s;
+  background: var(--barra);
+  color: #fff;
+  padding: 0.55rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  max-width: 20rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+}
+
+.dica.ativa { opacity: 1; }
+.dica b { color: #fff; }
+
+.dica .destaque-dica {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+  color: #7fc4ff;
+}
+
+/* --------------------------------------------------------------- entrada */
+[data-animar] { opacity: 0; transition: opacity 0.6s ease; }
+[data-animar].visivel { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  [data-animar] { opacity: 1 !important; transition: none !important; }
+  * { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}
+
+/* -------------------------------------------------------------- ressalva */
+.ressalva {
+  background: var(--painel-suave);
+  border-left: 4px solid var(--azul);
+  border-radius: 0 6px 6px 0;
+  padding: 1.1rem 1.3rem;
+  margin: 1.8rem 0;
+  font-size: 0.96rem;
+}
+
+.ressalva p:last-child { margin-bottom: 0; }
+
+/* -------------------------------------------------------- ligações rápidas */
+.home-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card-link {
+  display: block;
+  background: var(--painel);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  padding: 1.3rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.card-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  border-color: var(--azul);
+}
+
+.card-link h4 {
+  margin: 0 0 0.5rem;
+  color: var(--titulo);
+  font-size: 1.05rem;
+}
+
+.card-link p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.55;
+}
+
+/* --------------------------------------------------------------- rodapé */
+.rodape {
+  border-top: 1px solid var(--borda);
+  margin-top: 1rem;
+  padding: 2rem 0 1rem;
+  font-size: 0.88rem;
+  color: var(--texto-tenue);
+}
+
+.rodape p { font-size: 0.88rem; color: var(--texto-tenue); max-width: 60rem; }
+
+@media (max-width: 768px) {
+  .section-block { padding: 1.5rem 1.2rem; }
+  h2 { font-size: 1.45rem; }
+  h3 { font-size: 1.15rem; }
+  .site-header { padding: 0.7rem 1rem; }
+  .site-header h1 { font-size: 1rem; }
+  .site-nav a { margin-left: 0; margin-right: 0.9rem; font-size: 0.85rem; }
+  .container { padding: 1.2rem 1rem 2rem; }
+}

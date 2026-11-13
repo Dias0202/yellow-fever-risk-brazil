@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dados &amp; documentação – Modelagem de risco de febre amarela</title>
+<meta name="description" content="Fontes de dados, decisões metodológicas, controles de qualidade e limitações declaradas do modelo de risco de febre amarela silvestre.">
+<link rel="stylesheet" href="css/painel.css">
+</head>
+<body>
+
+<header class="site-header">
+  <h1>Modelagem de Risco de Febre Amarela – Brasil</h1>
+  <nav class="site-nav">
+    <a href="index.html">Início</a>
+    <a href="previsao.html">Previsão</a>
+    <a href="validacao.html">Validação</a>
+    <a href="determinantes.html">Determinantes</a>
+    <a href="vacinacao.html">Vacinação</a>
+    <a href="cenarios.html">Cenários</a>
+    <a href="metodos.html" class="active">Dados &amp; documentação</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <section class="section-block">
+    <h2>Dois modelos, duas perguntas</h2>
+    <p class="lead">
+      O projeto tem dois modelos, porque responde a duas perguntas diferentes, e
+      cada um é avaliado pela validação que corresponde ao seu uso.
+    </p>
+    <table class="tech-table">
+      <thead><tr><th>Modelo</th><th>Pergunta</th><th>Validação</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Previsão por temporada: regressão logística sobre doze variáveis de propagação, refratariedade, floresta, relevo, população e clima normal, com regularização L2 forte e sem peso de classe</td>
+          <td>Onde a onda em curso deve aparecer na temporada que começa em julho?</td>
+          <td>Janela expansiva por temporada: treina em tudo até T−1, prevê T, avança. Calibração de Platt ajustada só sobre temporadas anteriores.</td>
+        </tr>
+        <tr>
+          <td>Adequabilidade ambiental: floresta aleatória com 300 árvores e folha mínima de 5 sobre clima, paisagem, imunidade e demografia</td>
+          <td>Quais determinantes ecológicos sustentam o risco, e como o clima projetado o desloca?</td>
+          <td>Blocos temporais, espaciais e espaço-temporais; importância por permutação fora da amostra.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      Os valores das figuras são lidos de arquivos JSON gerados pela análise, e não
+      digitados no HTML: atualizar o portal é reexecutar a análise.
+    </p>
+  </section>
+
+  <section class="section-block">
+    <h2>O painel analítico</h2>
+    <p>
+      A unidade de análise passou de município×período para
+      <strong>município-ano</strong>: 178.240 linhas cobrindo 5.570 municípios entre
+      1994 e 2025, com 32 variáveis de modelagem ambiental em cinco famílias. A
+      resolução anual é o que permite partição temporal: com períodos plurianuais
+      largos presentes dos dois lados do teste, o modelo nunca precisaria
+      extrapolar. O modelo de previsão usa o mesmo painel reexpresso por temporada
+      de monitoramento, julho a junho, com 86 variáveis defasadas para o instante
+      da previsão.
+    </p>
+
+    <table class="tech-table">
+      <thead><tr><th>Família</th><th class="n">Variáveis</th><th>Conteúdo</th></tr></thead>
+      <tbody>
+        <tr><td>Clima</td><td class="n">9</td><td>Chuva anual e sazonalidade, temperaturas, déficit de pressão de vapor, vento, trimestre seco, amplitude térmica</td></tr>
+        <tr><td>Clima defasado</td><td class="n">8</td><td>Quatro variáveis climáticas com defasagem de um e dois anos</td></tr>
+        <tr><td>Paisagem</td><td class="n">11</td><td>Frações de uso do solo, cobertura florestal, perda anual e acumulada, interface floresta–antrópico</td></tr>
+        <tr><td>Imunidade</td><td class="n">1</td><td>Imunidade acumulada defasada em dois anos</td></tr>
+        <tr><td>Demografia</td><td class="n">3</td><td>População em log, densidade e área</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Controles de qualidade na construção do painel</h3>
+    <table class="tech-table">
+      <thead><tr><th>Armadilha</th><th>Tratamento</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Os tiles da base florestal Hansen são organizados em faixas de 10° de latitude, e o recorte "óbvio" para o Brasil omite a faixa ao norte do equador: 44 municípios, 12,4% do território, ficariam sem dado — e uma imputação pela média nacional poria floresta média do Brasil em plena Amazônia.</td>
+          <td>A faixa 10N é baixada e verificada por soma de verificação. Nenhum município recebe valor imputado sem estar declarado.</td>
+        </tr>
+        <tr>
+          <td>As colunas normalizadas do derivado de uso do solo estão três ordens de grandeza fora de escala e praticamente sem variância.</td>
+          <td>Frações de área calculadas a partir das contagens de pixels de cada classe no município.</td>
+        </tr>
+        <tr>
+          <td>Imputar cobertura vacinal ausente como 0% equivale a "população 100% suscetível", e a ausência é sistematicamente maior em municípios pequenos, remotos e de baixa notificação.</td>
+          <td>A ausência não incrementa a imunidade acumulada, mas também não a zera, e fica marcada em coluna própria.</td>
+        </tr>
+        <tr>
+          <td>A cobertura vacinal registrada é resposta ao surto, não condição anterior a ele.</td>
+          <td>A variável de modelagem é a imunidade defasada em dois anos. Ver <a href="vacinacao.html">Vacinação</a>.</td>
+        </tr>
+        <tr>
+          <td>Um download truncado (um arquivo climático de zero byte) passaria despercebido.</td>
+          <td>Todo download é verificado por tamanho mínimo e soma de verificação antes de ser promovido a definitivo, com manifesto por arquivo.</td>
+        </tr>
+        <tr>
+          <td>Exportações manuais sem URL, data ou parâmetros de consulta não são reprodutíveis.</td>
+          <td>Arquivo de proveniência declarando origem, período, lacunas conhecidas e pendências de cada fonte.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="section-block">
+    <h2>Fontes de dados</h2>
+    <table class="tech-table">
+      <thead><tr><th>Fonte</th><th>Conteúdo</th><th>Período</th><th>Lacunas declaradas</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Ministério da Saúde, CGARB/DEDT/SVSA</td>
+          <td>Casos humanos confirmados, por município provável de infecção</td>
+          <td class="n">1994–2025</td>
+          <td>7 registros sem código municipal, descartados e contabilizados; nenhum caso registrado em 2012</td>
+        </tr>
+        <tr>
+          <td>Ministério da Saúde, CGARB/DEDT/SVSA</td>
+          <td>Epizootias em primatas não humanos</td>
+          <td class="n">2000–2025</td>
+          <td>Sem registro nacional em 2004–2006 e 2010–2013; marcados como lacuna de vigilância, não como ausência de circulação</td>
+        </tr>
+        <tr>
+          <td>TerraClimate (Abatzoglou et al., 2018)</td>
+          <td>Clima mensal em grade de 1/24 de grau</td>
+          <td class="n">1994–2024</td>
+          <td>Não há 2025, enquanto a epidemiologia vai até 2025</td>
+        </tr>
+        <tr>
+          <td>WorldClim 2.1 (CMIP6)</td>
+          <td>Projeções climáticas mensais, cinco modelos × quatro trajetórias</td>
+          <td class="n">2021–2040</td>
+          <td>Não projeta vento nem déficit de pressão de vapor; tratamento declarado em <a href="cenarios.html">Cenários</a></td>
+        </tr>
+        <tr>
+          <td>Hansen et al. (2013), GFC-2024-v1.12</td>
+          <td>Cobertura arbórea e perda anual, a 30 m</td>
+          <td class="n">2000–2024</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>Derivado do MapBiomas (Abdalla e Augusto, 2022)</td>
+          <td>Proporção de uso e cobertura do solo</td>
+          <td class="n">1985–2020</td>
+          <td>Termina em 2020; é um derivado de terceiros, e não a coleção oficial do MapBiomas</td>
+        </tr>
+        <tr>
+          <td>IBGE</td>
+          <td>Estimativas populacionais municipais e malha municipal 2022</td>
+          <td class="n">1994–2025</td>
+          <td>Sem planilha para 1996, 2007, 2010, 2022 e 2024, interpolados e marcados</td>
+        </tr>
+        <tr>
+          <td>Programa Nacional de Imunizações, DATASUS</td>
+          <td>Cobertura vacinal contra febre amarela</td>
+          <td class="n">1994–2022</td>
+          <td>Termina em 2022 enquanto o painel vai a 2025; 40% das células vazias, concentradas no início da série</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="section-block">
+    <h2>Decisões metodológicas</h2>
+    <table class="tech-table">
+      <thead><tr><th>Decisão</th><th>Justificativa</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Unidade município-ano, e temporada julho–junho na previsão</td>
+          <td>Permite partição temporal. Períodos plurianuais largos permitiriam ao modelo interpolar no tempo em vez de prever; o ano civil cortaria a temporada de transmissão ao meio.</td>
+        </tr>
+        <tr>
+          <td>Variáveis de propagação estritamente defasadas</td>
+          <td>Toda variável de contágio da temporada t usa apenas desfechos até t−1. É o que existe na operação real, ao fim de junho.</td>
+        </tr>
+        <tr>
+          <td>Sem peso de classe, e parcimônia na previsão</td>
+          <td>Peso de classe melhora a calibração de um classificador, não a ordenação. Com dez formas de medir "quão perto esteve a onda", o ajuste as fazia se cancelarem; um representante por mecanismo remove a colinearidade na origem.</td>
+        </tr>
+        <tr>
+          <td>PR-AUC como métrica principal</td>
+          <td>Com prevalência de 0,74%, a ROC-AUC permanece alta mesmo quando quase todo alerta é falso. A PR-AUC responde à pergunta operacional.</td>
+        </tr>
+        <tr>
+          <td>Validação em bloco espaço-temporal</td>
+          <td>Nem a macrorregião nem o ano de teste aparecem no treino. É o esquema que corresponde à afirmação de transferibilidade do modelo ambiental: prever território e período não vistos.</td>
+        </tr>
+        <tr>
+          <td>Importância medida fora da amostra</td>
+          <td>Importância de Gini calculada durante o treino registra o que a floresta memorizou. Fora da amostra, ela não guarda relação estatística com a permutação.</td>
+        </tr>
+        <tr>
+          <td>Efeito local acumulado em vez de dependência parcial</td>
+          <td>As variáveis são correlacionadas entre si; a dependência parcial obrigaria o modelo a avaliar combinações que não existem no território.</td>
+        </tr>
+        <tr>
+          <td>Reamostragem por município, nunca por linha</td>
+          <td>As trinta e duas linhas de um município não são independentes. Reamostrar linhas produziria intervalos falsamente estreitos.</td>
+        </tr>
+        <tr>
+          <td>Conjunto de cinco modelos climáticos</td>
+          <td>Escolhidos por cobrirem a faixa de sensibilidade climática do CMIP6. Um conjunto só de modelos de sensibilidade média reportaria incerteza falsamente estreita.</td>
+        </tr>
+        <tr>
+          <td>Método delta aplicado ano a ano</td>
+          <td>Transporta a mudança projetada e não o nível, cancelando o viés de cada modelo climático. Aplicado a cada ano observado porque a média entre anos reduz a sazonalidade da chuva em 20%, e a floresta é não linear.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="section-block">
+    <h2>O que ainda está em aberto</h2>
+    <ul>
+      <li>
+        <strong>Proxy de esforço de vigilância.</strong> A população em log está
+        entre as quatro variáveis robustas, o que é compatível tanto com risco real
+        quanto com viés de notificação. Nada no painel atual separa as duas
+        hipóteses.
+      </li>
+      <li>
+        <strong>Separação entre caso humano e epizootia.</strong> Os dois desfechos
+        têm sistemas de vigilância e vieses distintos, e o bloqueio vacinal responde
+        ao caso humano notificado, não à epizootia.
+      </li>
+      <li>
+        <strong>Projeção de uso do solo.</strong> Mantido fixo nos cenários. É o
+        candidato mais provável a dominar o efeito climático no horizonte de
+        2021–2040.
+      </li>
+      <li>
+        <strong>Eficácia vacinal como parâmetro externo.</strong> O caminho correto
+        para avaliar imunização, já que os dados observacionais não identificam o
+        efeito protetor.
+      </li>
+      <li>
+        <strong>Extensão do horizonte para 2041–2060.</strong> As trajetórias de
+        emissão só divergem de fato depois de 2040.
+      </li>
+      <li>
+        <strong>Emergência de onda nova.</strong> Prever onde a próxima onda
+        começa exigiria variáveis que não estão no painel: densidade e
+        suscetibilidade de primatas, deslocamento humano e gatilho climático
+        sazonal.
+      </li>
+      <li>
+        <strong>Versão em inglês do portal.</strong> A documentação do repositório
+        está em inglês; o portal, por ora, só em português.
+      </li>
+    </ul>
+  </section>
+
+  <section class="section-block">
+    <h2>Créditos</h2>
+    <p>
+      Projeto desenvolvido no Laboratório de Vírus da Universidade Federal de Minas
+      Gerais, com financiamento da Fundação de Amparo à Pesquisa do Estado de Minas
+      Gerais (FAPEMIG).
+    </p>
+    <p>
+      Código, métricas e tabelas derivadas acompanham o repositório do projeto. Cada figura
+      deste portal é reproduzível a partir dos arquivos em <code>dados/</code>, que
+      por sua vez são gerados por <code>yfvrisk.viz.exportar_painel</code> a partir
+      das saídas da análise.
+    </p>
+  </section>
+
+  <footer class="rodape">
+    <p>Última atualização dos dados exibidos: agosto de 2026.</p>
+  </footer>
+
+</div>
+
+</body>
+</html>

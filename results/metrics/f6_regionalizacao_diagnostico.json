@@ -1,0 +1,31 @@
+{
+  "fonte": "https://servicodados.ibge.gov.br/api/v1/localidades/municipios?orderBy=id",
+  "municipios_na_api": 5571,
+  "municipios_apos_alinhamento": 5570,
+  "municipios_da_api_fora_da_referencia": [
+    "5101837"
+  ],
+  "unidades": {
+    "microrregiao": 558,
+    "mesorregiao": 137,
+    "regiao_imediata": 510,
+    "regiao_intermediaria": 133
+  },
+  "municipios_por_unidade": {
+    "microrregiao": {
+      "min": 1,
+      "mediana": 8.0,
+      "max": 41
+    },
+    "regiao_imediata": {
+      "min": 1,
+      "mediana": 9.0,
+      "max": 47
+    },
+    "mesorregiao": {
+      "min": 1,
+      "mediana": 32.0,
+      "max": 216
+    }
+  }
+}

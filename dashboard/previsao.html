@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Previsão da próxima temporada – Modelagem de risco de febre amarela</title>
+<meta name="description" content="Previsão prospectiva de ocorrência de febre amarela silvestre por município para a próxima temporada de monitoramento, com desempenho medido e calibração verificada.">
+<link rel="stylesheet" href="css/painel.css">
+</head>
+<body>
+
+<header class="site-header">
+  <h1>Modelagem de Risco de Febre Amarela – Brasil</h1>
+  <nav class="site-nav">
+    <a href="index.html">Início</a>
+    <a href="previsao.html" class="active">Previsão</a>
+    <a href="validacao.html">Validação</a>
+    <a href="determinantes.html">Determinantes</a>
+    <a href="vacinacao.html">Vacinação</a>
+    <a href="cenarios.html">Cenários</a>
+    <a href="metodos.html">Dados &amp; documentação</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <section class="section-block">
+    <h2>Previsão para a temporada <span id="rot-temporada">—</span></h2>
+    <p class="lead">
+      Esta é a única página do portal que faz afirmação sobre o futuro. O modelo
+      que a produz trabalha por temporada de monitoramento, usa a estrutura de
+      propagação da onda e é avaliado prospectivamente, temporada a temporada.
+    </p>
+    <p>
+      A pergunta operacional é: ao fim de junho, com o histórico fechado, quais
+      municípios devem entrar na lista de prioridade da temporada que começa em
+      julho? A resposta abaixo vem acompanhada do desempenho medido em
+      <span class="num" id="m-temporadas">—</span> temporadas anteriores, com as
+      mesmas variáveis — anunciar o número de um modelo e publicar a lista de
+      outro seria enganoso.
+    </p>
+
+    <div class="metric-grid">
+      <div class="metric-card">
+        <h4>PR-AUC sobre o acaso</h4>
+        <span class="value destaque" id="m-vezes">—</span>
+        <span class="desc">Validação prospectiva; persistência local dá 2,0×</span>
+      </div>
+      <div class="metric-card">
+        <h4>Surtos capturados em 500 municípios</h4>
+        <span class="value" id="m-rec500">—</span>
+        <span class="desc">Lista fixa por temporada, sobre 5.570 municípios</span>
+      </div>
+      <div class="metric-card">
+        <h4>Surtos capturados em 1.000</h4>
+        <span class="value" id="m-rec1000">—</span>
+        <span class="desc">Ordenando pela força de infecção, melhor na cauda</span>
+      </div>
+      <div class="metric-card">
+        <h4>Faixa de probabilidade prevista</h4>
+        <span class="value" id="m-faixa">—</span>
+        <span class="desc">Contra taxa de base de 0,73% por temporada</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <h2>Por que um modelo de habitat não prevê</h2>
+    <p>
+      Um modelo de adequabilidade de habitat pergunta se o município tem clima e
+      floresta compatíveis com o ciclo silvestre. A febre amarela silvestre, porém,
+      é uma <strong>onda epizoótica que se propaga no espaço</strong>, por floresta
+      contígua, entre populações de primatas suscetíveis: o município é atingido
+      porque a onda chegou perto dele, não porque seu clima mudou.
+    </p>
+    <p>
+      Três medições, feitas antes de construir o modelo, mostram o tamanho desse
+      sinal.
+    </p>
+
+    <div class="figure-container">
+      <div id="fig-contagio"></div>
+      <p class="figure-caption">
+        <strong>Figura 1. Sinais de contágio e de persistência.</strong>
+        Quantas vezes mais provável é um evento na temporada seguinte, dado que
+        houve foco perto na anterior. Variáveis estáticas de habitat não capturam
+        nenhum desses sinais.
+      </p>
+    </div>
+
+    <h3>O ano civil corta a temporada ao meio</h3>
+    <p>
+      Quase todos os casos humanos ocorrem entre dezembro e maio. Agregado por ano
+      civil, dezembro e janeiro da mesma onda cairiam em unidades diferentes. A
+      fonte resolve isso: os arquivos do Ministério da Saúde trazem o campo de
+      temporada de monitoramento, julho a junho, completo em todos os registros, e
+      ele é a unidade de tempo deste modelo.
+    </p>
+
+    <div class="figure-container">
+      <div id="fig-sazonalidade"></div>
+      <p class="figure-caption">
+        <strong>Figura 2. Distribuição mensal dos registros, 1994–2025.</strong>
+        A linha vertical marca o início da temporada de monitoramento. Ela cai no
+        fundo do vale sazonal, de modo que o corte separa ondas em vez de parti-las;
+        o corte por ano civil, em janeiro, cai no pico.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <h2>O que cada bloco de variáveis acrescenta</h2>
+    <p>
+      A atribuição do ganho é direta: mesmo algoritmo, mesma validação, conjuntos
+      de variáveis encaixados. O salto está entre o conjunto ambiental — habitat
+      estático — e o de propagação.
+    </p>
+
+    <div class="figure-container">
+      <div id="fig-ganho"></div>
+      <p class="figure-caption">
+        <strong>Figura 3. PR-AUC em múltiplos do acaso, por conjunto de variáveis.</strong>
+        O que falta a um modelo de habitat é a estrutura de contágio, e não mais
+        variáveis ambientais. Acrescentar clima, paisagem e relevo ao conjunto
+        ambiental já esgotado não move o resultado; acrescentar força de infecção,
+        distância ao foco e refratariedade, sim.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <h2>O modelo, variável a variável</h2>
+    <p>
+      O modelo final é uma regressão logística sobre doze variáveis, com um
+      representante por mecanismo e regularização forte. A parcimônia não é
+      estética: com dez formas de medir "quão perto esteve a onda", o ajuste as
+      fazia se cancelarem, e o efeito era pôr no fundo da lista municípios que
+      depois tinham surto.
+    </p>
+
+    <div class="figure-container">
+      <div id="fig-coeficientes"></div>
+      <p class="figure-caption">
+        <strong>Figura 4. Coeficientes do modelo final, em escala padronizada.</strong>
+        Todos têm o sinal que a epidemiologia prevê. Distância ao foco entra
+        negativa; força de infecção, cobertura florestal e altitude entram
+        positivas. Temporadas desde o último evento entra positiva porque a área
+        recém-atingida é refratária — a população local de primatas foi dizimada e
+        a sobrevivente está imune.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <h2>A probabilidade é uma probabilidade</h2>
+    <p>
+      Ordenar bem não é o mesmo que acertar a magnitude. O critério de aceitação
+      do modelo incluiu monotonicidade: um modelo cujo decil de menor risco
+      previsto tem taxa observada acima da média não pode ser usado, por melhor
+      que seja a sua PR-AUC. Com todas as variáveis de propagação juntas, o
+      cancelamento entre preditores colineares produzia exatamente isso; o conjunto
+      parcimonioso resolve, e a figura abaixo o verifica.
+    </p>
+
+    <div class="figure-container">
+      <div id="fig-calibracao"></div>
+      <p class="figure-caption">
+        <strong>Figura 5. Previsto contra observado, por decil de risco, fora da amostra.</strong>
+        A calibração é ajustada sempre sobre temporadas anteriores à prevista.
+        Diferentemente do modelo ambiental — cujo decil de topo é superestimado
+        por fator de 2,4 a 4,7 vezes sob bloco espaço-temporal — aqui a rampa de
+        cor de um mapa <em>poderia</em> ser lida como probabilidade.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <h2>A lista</h2>
+    <p>
+      Os cem municípios de maior risco previsto para a temporada
+      <span id="rot-temporada-2">—</span>. A coluna de distância ao foco mostra o
+      quanto de cada previsão vem de proximidade à onda em curso.
+    </p>
+
+    <div class="controles" id="ctrl-lista">
+      <span class="rotulo">Ordenar por:</span>
+      <button class="botao" data-ordem="posto_logistica" aria-pressed="true">Modelo (lista curta)</button>
+      <button class="botao" data-ordem="posto_forca" aria-pressed="false">Força de infecção (lista larga)</button>
+      <span class="rotulo" style="margin-left:1rem">Região:</span>
+      <button class="botao" data-regiao="" aria-pressed="true">Todas</button>
+    </div>
+
+    <table class="tech-table" id="tab-lista">
+      <thead>
+        <tr>
+          <th class="n">#</th><th>Município</th><th>UF</th>
+          <th class="n">Probabilidade</th><th class="n">Foco mais próximo</th>
+          <th class="n">Focos &lt; 100 km</th><th class="n">Temporadas desde evento</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="ressalva">
+      <p>
+        <strong>Nenhuma das duas ordenações domina a outra.</strong> O modelo é
+        melhor no topo da lista — em cem municípios captura quase o dobro de
+        surtos. A força de infecção crua é melhor na cauda, e em mil municípios
+        captura mais. Para lista curta, use a primeira; para varredura larga em
+        torno da onda, a segunda.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <h2>O que esta previsão não faz</h2>
+    <p>
+      O desempenho não é uniforme, e o padrão tem leitura epidemiológica direta.
+      Separando os municípios conforme houvesse ou não foco a menos de 200 km na
+      temporada anterior, a discriminação dentro da faixa já sob pressão é
+      pequena: a força de infecção é semelhante para todos os municípios próximos
+      ao foco, e qual deles será atingido depende de detalhe que os dados não
+      contêm.
+    </p>
+    <p>
+      Por temporada, o contraste é nítido. Nas temporadas em que a onda apenas
+      avançava — 2018/19, 2019/20, 2020/21 — o desempenho chega a 23, 16 e 8,6
+      vezes o acaso. Na temporada em que a onda <strong>chegou</strong> à Mata
+      Atlântica, 2016/17, cai a 1,2 vezes.
+    </p>
+
+    <div class="ressalva">
+      <p>
+        <strong>A previsão funciona para o avanço de uma onda em curso e não
+        funciona para a emergência de uma onda nova.</strong> É limitação de fundo,
+        e não de ajuste: prever onde a próxima onda começa exigiria variáveis que
+        não estão no painel — densidade e suscetibilidade de primatas, deslocamento
+        humano como via de introdução, e gatilho climático sazonal.
+      </p>
+    </div>
+
+    <table class="tech-table">
+      <thead><tr><th>Limitação</th><th>Consequência</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Emergência de onda nova não é prevista</td>
+          <td>O modelo diz para onde a onda em curso avança, não onde a próxima começa.</td>
+        </tr>
+        <tr>
+          <td>População é o segundo maior coeficiente</td>
+          <td>Continua ambíguo entre exposição real e esforço de notificação. Município grande é mais investigado, e portanto mais notificado.</td>
+        </tr>
+        <tr>
+          <td>Nenhuma variável de primata</td>
+          <td><i>Alouatta</i> é a sentinela do sistema, e a densidade de hospedeiro só aparece indiretamente, por cobertura florestal.</td>
+        </tr>
+        <tr>
+          <td>Clima recente indisponível na hora de prever</td>
+          <td>A série climática termina antes do fim da última temporada, o que impede usar gatilhos de anomalia — justamente as variáveis com mecanismo mais plausível para onda nova.</td>
+        </tr>
+        <tr>
+          <td>Agregar em microrregião não ajuda</td>
+          <td>Testado: eleva a prevalência e reduz a razão sobre ela. O alerta não pode ser suavizado agregando.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer class="rodape">
+    <p>
+      Valores lidos de <code>dados/previsao.json</code>, gerado por
+      <code>yfvrisk.viz.exportar_painel</code> a partir das análises <code>f6_*</code>. A
+      lista completa dos 5.570 municípios está em
+      <code>results/tables/f6_05_previsao_proxima_temporada.csv</code>.
+    </p>
+  </footer>
+
+</div>
+
+<script type="module" src="js/pagina-previsao.js"></script>
+</body>
+</html>

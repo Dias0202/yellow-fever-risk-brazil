@@ -1,0 +1,613 @@
+{
+  "ano_corte": 2019,
+  "n_variaveis": 32,
+  "variaveis": [
+    "ppt_total",
+    "tmax_medio",
+    "tmin_medio",
+    "vpd_medio",
+    "ws_medio",
+    "ppt_sazonalidade",
+    "ppt_trimestre_seco",
+    "tmax_mes_mais_quente",
+    "amplitude_termica",
+    "ppt_total_lag1",
+    "ppt_total_lag2",
+    "tmax_medio_lag1",
+    "tmax_medio_lag2",
+    "vpd_medio_lag1",
+    "vpd_medio_lag2",
+    "ppt_trimestre_seco_lag1",
+    "ppt_trimestre_seco_lag2",
+    "floresta_frac",
+    "silvicultura_frac",
+    "pastagem_frac",
+    "urbano_frac",
+    "areas_umidas_frac",
+    "savana_frac",
+    "mosaico_agropecuario_frac",
+    "interface_floresta_antropico",
+    "cobertura_florestal",
+    "perda_ano_km2",
+    "perda_acumulada_km2",
+    "imunidade_defasada2",
+    "populacao_log",
+    "densidade_hab_km2",
+    "area_km2"
+  ],
+  "grupos_usados": [
+    "CLIMA",
+    "CLIMA_DEFASADO",
+    "PAISAGEM",
+    "IMUNIDADE",
+    "DEMOGRAFIA"
+  ],
+  "n_treino": 144820,
+  "positivos_treino": 1051,
+  "n_explicacao": 33420,
+  "positivos_explicacao": 265,
+  "desempenho_fora_da_amostra": {
+    "n": 33420,
+    "positivos": 265,
+    "prevalencia": 0.007929383602633153,
+    "roc_auc": 0.813797230276318,
+    "pr_auc": 0.033310510396618795,
+    "pr_auc_sobre_prevalencia": 4.200895311150944,
+    "limiar": 0.07844589933612701,
+    "vp": 117,
+    "fp": 2583,
+    "fn": 148,
+    "tn": 30572,
+    "precisao": 0.043333333333333335,
+    "recall": 0.44150943396226416,
+    "f2": 0.15558510638297873,
+    "municipios_investigados_por_evento": 23.076923076923077,
+    "brier": 0.009378390736448304,
+    "brier_referencia_prevalencia": 0.007866508478315444
+  },
+  "mdi_amplitude": [
+    0.014973219990850118,
+    0.07690418099150118
+  ],
+  "spearman_mdi_permutacao_fora": 0.30388563049853373,
+  "spearman_mdi_permutacao_fora_p": 0.0908565395293234,
+  "spearman_mdi_permutacao_treino": 0.9054252199413488,
+  "spearman_shap_permutacao": 0.3775659824046921,
+  "n_ic_inclui_zero": 14,
+  "n_importancia_negativa": 9,
+  "variaveis_negativas": [
+    "pastagem_frac",
+    "areas_umidas_frac",
+    "interface_floresta_antropico",
+    "imunidade_defasada2",
+    "area_km2",
+    "ws_medio",
+    "vpd_medio_lag2",
+    "perda_ano_km2",
+    "tmax_mes_mais_quente"
+  ],
+  "importancia_permutacao": [
+    {
+      "variavel": "ppt_sazonalidade",
+      "importancia_media": 0.0064026704596537405,
+      "importancia_desvio": 0.0014806965611206331,
+      "ic_inferior": 0.0038404552971419495,
+      "ic_superior": 0.008789612610763038
+    },
+    {
+      "variavel": "perda_acumulada_km2",
+      "importancia_media": 0.005550570820353499,
+      "importancia_desvio": 0.0015387075358854793,
+      "ic_inferior": 0.0034428107392385503,
+      "ic_superior": 0.008400012895200844
+    },
+    {
+      "variavel": "savana_frac",
+      "importancia_media": 0.004212978974713912,
+      "importancia_desvio": 0.0010311301058098172,
+      "ic_inferior": 0.0025268695443612737,
+      "ic_superior": 0.005958009200734007
+    },
+    {
+      "variavel": "ppt_trimestre_seco_lag2",
+      "importancia_media": 0.004013221279748616,
+      "importancia_desvio": 0.0011792254877748623,
+      "ic_inferior": 0.0017707825429200857,
+      "ic_superior": 0.006102431442907409
+    },
+    {
+      "variavel": "cobertura_florestal",
+      "importancia_media": 0.0035414338727866026,
+      "importancia_desvio": 0.0015812952944034638,
+      "ic_inferior": 0.0006419670958168434,
+      "ic_superior": 0.006182505135019472
+    },
+    {
+      "variavel": "populacao_log",
+      "importancia_media": 0.003463215502726974,
+      "importancia_desvio": 0.000829543504421111,
+      "ic_inferior": 0.001921233858062963,
+      "ic_superior": 0.00465755174111475
+    },
+    {
+      "variavel": "silvicultura_frac",
+      "importancia_media": 0.0034565149257709516,
+      "importancia_desvio": 0.0014133010477539107,
+      "ic_inferior": 0.0006112046017529427,
+      "ic_superior": 0.00560117589180287
+    },
+    {
+      "variavel": "vpd_medio_lag1",
+      "importancia_media": 0.003366683196423469,
+      "importancia_desvio": 0.0006515378181526761,
+      "ic_inferior": 0.002417135178047299,
+      "ic_superior": 0.004477951899353059
+    },
+    {
+      "variavel": "ppt_trimestre_seco_lag1",
+      "importancia_media": 0.002767476345513144,
+      "importancia_desvio": 0.0009428296043714444,
+      "ic_inferior": 0.0009711257583913035,
+      "ic_superior": 0.004379589725198692
+    },
+    {
+      "variavel": "tmax_medio_lag1",
+      "importancia_media": 0.002628837346801708,
+      "importancia_desvio": 0.0002705793613696171,
+      "ic_inferior": 0.0021965449283308453,
+      "ic_superior": 0.0030277326663601676
+    },
+    {
+      "variavel": "tmin_medio",
+      "importancia_media": 0.0022733896200801706,
+      "importancia_desvio": 0.0007895660113056013,
+      "ic_inferior": 0.0011636019665726932,
+      "ic_superior": 0.0036682749757072047
+    },
+    {
+      "variavel": "tmax_medio",
+      "importancia_media": 0.0021826739314136532,
+      "importancia_desvio": 0.0006838389276262323,
+      "ic_inferior": 0.0008854469522546328,
+      "ic_superior": 0.003215630254675097
+    },
+    {
+      "variavel": "densidade_hab_km2",
+      "importancia_media": 0.0017804998955765483,
+      "importancia_desvio": 0.0005391149822746881,
+      "ic_inferior": 0.0007947898627927577,
+      "ic_superior": 0.0025571714304367557
+    },
+    {
+      "variavel": "ppt_total",
+      "importancia_media": 0.0017250199478385502,
+      "importancia_desvio": 0.0018312745776697123,
+      "ic_inferior": -0.001447268862306149,
+      "ic_superior": 0.004330713247194197
+    },
+    {
+      "variavel": "tmax_medio_lag2",
+      "importancia_media": 0.0015919249614618255,
+      "importancia_desvio": 0.0005844273169825293,
+      "ic_inferior": 0.0005835540603244269,
+      "ic_superior": 0.002490454980693786
+    },
+    {
+      "variavel": "ppt_total_lag1",
+      "importancia_media": 0.0014163064567804253,
+      "importancia_desvio": 0.0010276598955745835,
+      "ic_inferior": -0.00010602792547683478,
+      "ic_superior": 0.003510430148293932
+    },
+    {
+      "variavel": "ppt_total_lag2",
+      "importancia_media": 0.0013821575368007483,
+      "importancia_desvio": 0.0005587028112353498,
+      "ic_inferior": 0.00045243508305976913,
+      "ic_superior": 0.002268258505597047
+    },
+    {
+      "variavel": "urbano_frac",
+      "importancia_media": 0.0013103988873719224,
+      "importancia_desvio": 0.000518083335384067,
+      "ic_inferior": 0.0005170019802516344,
+      "ic_superior": 0.0022493675723094654
+    },
+    {
+      "variavel": "vpd_medio",
+      "importancia_media": 0.0009294883071778784,
+      "importancia_desvio": 0.00034128862975817934,
+      "ic_inferior": 0.00033028413210235436,
+      "ic_superior": 0.0014958038944458928
+    },
+    {
+      "variavel": "amplitude_termica",
+      "importancia_media": 0.000902388805436163,
+      "importancia_desvio": 0.0005131612633086254,
+      "ic_inferior": 0.00012915926525748704,
+      "ic_superior": 0.0018542550492439596
+    },
+    {
+      "variavel": "mosaico_agropecuario_frac",
+      "importancia_media": 0.0006685257511417876,
+      "importancia_desvio": 0.0006111649433650501,
+      "ic_inferior": -0.0001574507382657322,
+      "ic_superior": 0.0018521391582994981
+    },
+    {
+      "variavel": "ppt_trimestre_seco",
+      "importancia_media": 0.0005362063645711788,
+      "importancia_desvio": 0.001141140954016069,
+      "ic_inferior": -0.001126222595999459,
+      "ic_superior": 0.0023818400694549467
+    },
+    {
+      "variavel": "floresta_frac",
+      "importancia_media": 0.00031692890012071756,
+      "importancia_desvio": 0.0004819772286144664,
+      "ic_inferior": -0.000513228281920289,
+      "ic_superior": 0.001064594960916071
+    },
+    {
+      "variavel": "pastagem_frac",
+      "importancia_media": -0.00027749630186893297,
+      "importancia_desvio": 0.00046292960686752536,
+      "ic_inferior": -0.0010657177499729538,
+      "ic_superior": 0.0005923709111635464
+    },
+    {
+      "variavel": "areas_umidas_frac",
+      "importancia_media": -0.0003224353181362997,
+      "importancia_desvio": 0.0007346850654225726,
+      "ic_inferior": -0.0014851782399137922,
+      "ic_superior": 0.0009611260562508575
+    },
+    {
+      "variavel": "interface_floresta_antropico",
+      "importancia_media": -0.00036058653095847844,
+      "importancia_desvio": 0.000414459046578236,
+      "ic_inferior": -0.0009688602211983755,
+      "ic_superior": 0.00045567044653504725
+    },
+    {
+      "variavel": "imunidade_defasada2",
+      "importancia_media": -0.0004765793249253563,
+      "importancia_desvio": 0.00034831056466995126,
+      "ic_inferior": -0.000988279876516815,
+      "ic_superior": 0.0001393391975676071
+    },
+    {
+      "variavel": "area_km2",
+      "importancia_media": -0.0008436535315108302,
+      "importancia_desvio": 0.00039004167545459486,
+      "ic_inferior": -0.0016147430965778417,
+      "ic_superior": -0.0002696981772480987
+    },
+    {
+      "variavel": "ws_medio",
+      "importancia_media": -0.0009688295835763031,
+      "importancia_desvio": 0.0008720483022766155,
+      "ic_inferior": -0.002314585354152798,
+      "ic_superior": 0.0005845067777775813
+    },
+    {
+      "variavel": "vpd_medio_lag2",
+      "importancia_media": -0.0011734009392948875,
+      "importancia_desvio": 0.000736386345290421,
+      "ic_inferior": -0.0026771671109438442,
+      "ic_superior": -0.00012840293320028984
+    },
+    {
+      "variavel": "perda_ano_km2",
+      "importancia_media": -0.0013753115726946278,
+      "importancia_desvio": 0.0010718173838825025,
+      "ic_inferior": -0.003061932639756136,
+      "ic_superior": 0.00011382538690792612
+    },
+    {
+      "variavel": "tmax_mes_mais_quente",
+      "importancia_media": -0.002824194168854799,
+      "importancia_desvio": 0.0004936670322138071,
+      "ic_inferior": -0.0037034076632546206,
+      "ic_superior": -0.0018926129364641706
+    }
+  ],
+  "importancia_mdi": [
+    {
+      "variavel": "perda_acumulada_km2",
+      "mdi": 0.07690418099150118
+    },
+    {
+      "variavel": "ppt_sazonalidade",
+      "mdi": 0.05112146909328237
+    },
+    {
+      "variavel": "ppt_total",
+      "mdi": 0.04686109685359804
+    },
+    {
+      "variavel": "imunidade_defasada2",
+      "mdi": 0.0453397820698107
+    },
+    {
+      "variavel": "silvicultura_frac",
+      "mdi": 0.04320973672176246
+    },
+    {
+      "variavel": "perda_ano_km2",
+      "mdi": 0.041538846480866365
+    },
+    {
+      "variavel": "ppt_trimestre_seco_lag1",
+      "mdi": 0.04134195673401672
+    },
+    {
+      "variavel": "populacao_log",
+      "mdi": 0.04074041900429719
+    },
+    {
+      "variavel": "ppt_trimestre_seco_lag2",
+      "mdi": 0.040654899021175375
+    },
+    {
+      "variavel": "ppt_trimestre_seco",
+      "mdi": 0.03983166590451872
+    },
+    {
+      "variavel": "vpd_medio_lag1",
+      "mdi": 0.03577295194828572
+    },
+    {
+      "variavel": "ws_medio",
+      "mdi": 0.03294357589834509
+    },
+    {
+      "variavel": "ppt_total_lag1",
+      "mdi": 0.032613450383814475
+    },
+    {
+      "variavel": "area_km2",
+      "mdi": 0.03192061389694432
+    },
+    {
+      "variavel": "tmin_medio",
+      "mdi": 0.03059370119100142
+    },
+    {
+      "variavel": "densidade_hab_km2",
+      "mdi": 0.02958470304127504
+    },
+    {
+      "variavel": "ppt_total_lag2",
+      "mdi": 0.027784900039018817
+    },
+    {
+      "variavel": "areas_umidas_frac",
+      "mdi": 0.027015459787737305
+    },
+    {
+      "variavel": "cobertura_florestal",
+      "mdi": 0.022891443710086997
+    },
+    {
+      "variavel": "floresta_frac",
+      "mdi": 0.022584327257638537
+    },
+    {
+      "variavel": "amplitude_termica",
+      "mdi": 0.02235288472238341
+    },
+    {
+      "variavel": "urbano_frac",
+      "mdi": 0.022029224153221644
+    },
+    {
+      "variavel": "vpd_medio_lag2",
+      "mdi": 0.021837500224705816
+    },
+    {
+      "variavel": "tmax_medio_lag2",
+      "mdi": 0.021277403064457093
+    },
+    {
+      "variavel": "savana_frac",
+      "mdi": 0.02119405250073003
+    },
+    {
+      "variavel": "interface_floresta_antropico",
+      "mdi": 0.020532657760323945
+    },
+    {
+      "variavel": "mosaico_agropecuario_frac",
+      "mdi": 0.019688209727071044
+    },
+    {
+      "variavel": "tmax_medio",
+      "mdi": 0.019086316916935155
+    },
+    {
+      "variavel": "tmax_mes_mais_quente",
+      "mdi": 0.01899357305320515
+    },
+    {
+      "variavel": "vpd_medio",
+      "mdi": 0.018670542511496288
+    },
+    {
+      "variavel": "tmax_medio_lag1",
+      "mdi": 0.018115235345643448
+    },
+    {
+      "variavel": "pastagem_frac",
+      "mdi": 0.014973219990850118
+    }
+  ],
+  "importancia_por_grupo": [
+    {
+      "grupo": "PAISAGEM",
+      "n_variaveis": 11,
+      "queda_media_pr_auc": 0.018433678031747773,
+      "queda_desvio": 0.0008617766133023684,
+      "queda_relativa": 0.5533892399805106
+    },
+    {
+      "grupo": "CLIMA",
+      "n_variaveis": 9,
+      "queda_media_pr_auc": 0.01572891151378124,
+      "queda_desvio": 0.001404698196573353,
+      "queda_relativa": 0.4721906487322336
+    },
+    {
+      "grupo": "CLIMA_DEFASADO",
+      "n_variaveis": 8,
+      "queda_media_pr_auc": 0.006059151049422701,
+      "queda_desvio": 0.002162023879907159,
+      "queda_relativa": 0.18189907561541713
+    },
+    {
+      "grupo": "DEMOGRAFIA",
+      "n_variaveis": 3,
+      "queda_media_pr_auc": 0.005182116015414411,
+      "queda_desvio": 0.0009597733241316086,
+      "queda_relativa": 0.15556999738858474
+    },
+    {
+      "grupo": "IMUNIDADE",
+      "n_variaveis": 1,
+      "queda_media_pr_auc": -0.00017342228193319083,
+      "queda_desvio": 0.000340838488083835,
+      "queda_relativa": -0.005206233103855238
+    }
+  ],
+  "shap_resumo": [
+    {
+      "variavel": "ppt_trimestre_seco_lag1",
+      "shap_medio_absoluto": 0.027837366791107637
+    },
+    {
+      "variavel": "ppt_trimestre_seco_lag2",
+      "shap_medio_absoluto": 0.027808600115982036
+    },
+    {
+      "variavel": "ppt_sazonalidade",
+      "shap_medio_absoluto": 0.025220527573827378
+    },
+    {
+      "variavel": "ppt_total",
+      "shap_medio_absoluto": 0.024888561903437825
+    },
+    {
+      "variavel": "populacao_log",
+      "shap_medio_absoluto": 0.02315190575082126
+    },
+    {
+      "variavel": "ppt_trimestre_seco",
+      "shap_medio_absoluto": 0.021360757832136448
+    },
+    {
+      "variavel": "perda_ano_km2",
+      "shap_medio_absoluto": 0.019431999718015142
+    },
+    {
+      "variavel": "ppt_total_lag1",
+      "shap_medio_absoluto": 0.017778137761799668
+    },
+    {
+      "variavel": "ppt_total_lag2",
+      "shap_medio_absoluto": 0.017652748802026785
+    },
+    {
+      "variavel": "silvicultura_frac",
+      "shap_medio_absoluto": 0.01632256575552045
+    },
+    {
+      "variavel": "ws_medio",
+      "shap_medio_absoluto": 0.016282693953156114
+    },
+    {
+      "variavel": "tmin_medio",
+      "shap_medio_absoluto": 0.01583328578142789
+    },
+    {
+      "variavel": "cobertura_florestal",
+      "shap_medio_absoluto": 0.015739592383335305
+    },
+    {
+      "variavel": "perda_acumulada_km2",
+      "shap_medio_absoluto": 0.01563227519343142
+    },
+    {
+      "variavel": "vpd_medio_lag1",
+      "shap_medio_absoluto": 0.015444589021477731
+    },
+    {
+      "variavel": "vpd_medio_lag2",
+      "shap_medio_absoluto": 0.01518629853168612
+    },
+    {
+      "variavel": "area_km2",
+      "shap_medio_absoluto": 0.01464942707329611
+    },
+    {
+      "variavel": "densidade_hab_km2",
+      "shap_medio_absoluto": 0.013857788173090226
+    },
+    {
+      "variavel": "savana_frac",
+      "shap_medio_absoluto": 0.013755210773830573
+    },
+    {
+      "variavel": "tmax_mes_mais_quente",
+      "shap_medio_absoluto": 0.01328865414737896
+    },
+    {
+      "variavel": "areas_umidas_frac",
+      "shap_medio_absoluto": 0.013231322237196672
+    },
+    {
+      "variavel": "tmax_medio_lag2",
+      "shap_medio_absoluto": 0.013167538252817268
+    },
+    {
+      "variavel": "amplitude_termica",
+      "shap_medio_absoluto": 0.013006393412875824
+    },
+    {
+      "variavel": "mosaico_agropecuario_frac",
+      "shap_medio_absoluto": 0.01264927476427022
+    },
+    {
+      "variavel": "tmax_medio",
+      "shap_medio_absoluto": 0.011863377220098113
+    },
+    {
+      "variavel": "urbano_frac",
+      "shap_medio_absoluto": 0.01183824434926346
+    },
+    {
+      "variavel": "floresta_frac",
+      "shap_medio_absoluto": 0.0117752476687173
+    },
+    {
+      "variavel": "pastagem_frac",
+      "shap_medio_absoluto": 0.011710132567720992
+    },
+    {
+      "variavel": "vpd_medio",
+      "shap_medio_absoluto": 0.011681779921285912
+    },
+    {
+      "variavel": "interface_floresta_antropico",
+      "shap_medio_absoluto": 0.011000593250287186
+    },
+    {
+      "variavel": "tmax_medio_lag1",
+      "shap_medio_absoluto": 0.010793350748305869
+    },
+    {
+      "variavel": "imunidade_defasada2",
+      "shap_medio_absoluto": 0.003855955215990265
+    }
+  ],
+  "segundos_total": 1268.5
+}

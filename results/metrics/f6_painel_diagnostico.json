@@ -1,0 +1,73 @@
+{
+  "linhas": 178240,
+  "municipios": 5570,
+  "temporadas": [
+    1994,
+    2025
+  ],
+  "grupos": {
+    "PROPAGACAO": 21,
+    "SUSCETIBILIDADE": 6,
+    "CLIMA_NORMAL": 12,
+    "CLIMA_RECENTE": 24,
+    "CLIMA_ANOMALIA": 12,
+    "PAISAGEM": 3,
+    "RELEVO": 5,
+    "DEMOGRAFIA": 3
+  },
+  "total_variaveis": 86,
+  "variaveis_declaradas_ausentes_do_painel": [],
+  "prevalencia": {
+    "yf_event": 0.007262408061620432,
+    "caso_humano": 0.004100306943881392,
+    "epizootia": 0.00426825736954885
+  },
+  "eventos_por_temporada": {
+    "1994": 4,
+    "1995": 9,
+    "1996": 6,
+    "1997": 11,
+    "1998": 19,
+    "1999": 62,
+    "2000": 20,
+    "2001": 10,
+    "2002": 15,
+    "2003": 5,
+    "2004": 3,
+    "2005": 3,
+    "2006": 5,
+    "2007": 50,
+    "2008": 79,
+    "2009": 4,
+    "2010": 2,
+    "2011": 0,
+    "2012": 2,
+    "2013": 2,
+    "2014": 11,
+    "2015": 20,
+    "2016": 280,
+    "2017": 296,
+    "2018": 62,
+    "2019": 70,
+    "2020": 94,
+    "2021": 18,
+    "2022": 11,
+    "2023": 15,
+    "2024": 66,
+    "2025": 0
+  },
+  "fracao_ausente": {
+    "avanco_da_frente": 0.2188,
+    "projecao_na_frente": 0.2188,
+    "vpd_temporada_anomalia": 0.0625,
+    "ws_temporada_anomalia": 0.0625,
+    "ppt_sazonalidade_anomalia": 0.0625,
+    "ppt_pre_estacao_anomalia": 0.0625,
+    "ppt_transmissao_anomalia": 0.0625,
+    "ppt_temporada_t1": 0.0625,
+    "tmin_temporada_t1": 0.0625,
+    "tmax_temporada_t1": 0.0625,
+    "ppt_sazonalidade_t1": 0.0625,
+    "ws_temporada_t1": 0.0625
+  }
+}

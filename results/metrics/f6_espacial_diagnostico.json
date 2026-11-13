@@ -1,0 +1,26 @@
+{
+  "municipios": 5570,
+  "raio_maximo_km": 600.0,
+  "pares": 2982850,
+  "densidade": 0.19232201340261057,
+  "piso_floresta": 0.05,
+  "amostras_corredor": 12,
+  "vizinhos_por_municipio": {
+    "min": 14,
+    "mediana": 1084.0,
+    "max": 1882
+  },
+  "distancia_km": {
+    "mediana": 368.04164327272963,
+    "p05": 94.06809000651114
+  },
+  "floresta_corredor": {
+    "media": 0.2922406636057582,
+    "p10": 0.11199348081413125,
+    "p90": 0.5088575171000337
+  },
+  "razao_efetiva_sobre_euclidiana": {
+    "mediana": 3.717630997045675,
+    "p90": 8.929091164330607
+  }
+}

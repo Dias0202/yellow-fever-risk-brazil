@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Validação e calibração – Modelagem de risco de febre amarela</title>
+<meta name="description" content="Esquemas de partição, transferência por macrorregião, calibração por decil e curva de decisão do modelo de risco de febre amarela silvestre.">
+<link rel="stylesheet" href="css/painel.css">
+</head>
+<body>
+
+<header class="site-header">
+  <h1>Modelagem de Risco de Febre Amarela – Brasil</h1>
+  <nav class="site-nav">
+    <a href="index.html">Início</a>
+    <a href="previsao.html">Previsão</a>
+    <a href="validacao.html" class="active">Validação</a>
+    <a href="determinantes.html">Determinantes</a>
+    <a href="vacinacao.html">Vacinação</a>
+    <a href="cenarios.html">Cenários</a>
+    <a href="metodos.html">Dados &amp; documentação</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <section class="section-block">
+    <h2>Como o desempenho do modelo ambiental foi medido</h2>
+    <p class="lead">
+      Um modelo espacial e temporal só pode ser avaliado por uma partição que
+      reproduza o uso pretendido. Prever o próximo ano exige testar em anos não
+      vistos; recomendar prioridades para uma região exige testar em regiões não
+      vistas.
+    </p>
+    <p>
+      Esta página avalia o modelo ambiental — a floresta aleatória de adequabilidade
+      de habitat que sustenta as páginas de determinantes e de cenários. Com
+      linhas sorteadas ao acaso, o mesmo município e anos adjacentes aparecem dos
+      dois lados da partição, e o modelo nunca precisa extrapolar. Os quatro
+      esquemas abaixo mantêm tudo constante e variam apenas o que é retirado do
+      treino. A previsão operacional usa outro modelo e outra validação — ver
+      <a href="previsao.html">Previsão</a>.
+    </p>
+
+    <table class="tech-table" id="tab-esquemas">
+      <thead>
+        <tr>
+          <th>Esquema</th><th class="n">ROC-AUC</th><th class="n">PR-AUC</th>
+          <th class="n">Vezes o acaso</th><th class="n">Municípios por surto</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <p>
+      Com prevalência de 0,74%, a PR-AUC é a métrica informativa. A partição
+      aleatória sugere um modelo 57 vezes melhor que o acaso; sob o bloco
+      espaço-temporal, 2,4 vezes.
+    </p>
+  </section>
+
+  <section class="section-block">
+    <h2>Onde o modelo transfere</h2>
+    <p>
+      A decomposição por macrorregião usa o mesmo bloco espaço-temporal: para cada
+      região deixada de fora, o treino usa apenas as demais regiões e apenas anos
+      anteriores. É o teste de transferência — o modelo precisa acertar num
+      território de que nunca viu um único registro.
+    </p>
+
+    <div class="figure-container">
+      <div id="fig-regiao"></div>
+      <p class="figure-caption">
+        <strong>Figura 1. ROC-AUC por macrorregião sob bloco espaço-temporal.</strong>
+        O ponto é a estimativa e a barra o intervalo de confiança de 95% por
+        reamostragem. A linha vertical marca o sorteio. Quatro das cinco regiões
+        têm intervalo que cruza 0,5. O Sul é a exceção, e por margem larga.
+      </p>
+    </div>
+
+    <div class="ressalva">
+      <p>
+        Retirada do treino, cada região perde desempenho — o Norte cai 0,20 de AUC
+        e o Centro-Oeste 0,17. <strong>O Sul cai 0,02.</strong> É a única região
+        cujo risco o modelo prevê a partir de relações ecológicas aprendidas em
+        outro lugar, sem nenhuma história local — a afirmação de transferibilidade
+        ecológica que um modelo de habitat precisa sustentar.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <h2>A probabilidade do modelo ambiental não é probabilidade</h2>
+    <p>
+      Discriminação e calibração são propriedades distintas. Um modelo pode ordenar
+      corretamente os municípios e ainda assim errar sistematicamente a magnitude
+      do risco. A figura confronta, por decil de risco previsto, a probabilidade
+      média que o modelo atribui com a frequência de eventos efetivamente
+      observada.
+    </p>
+
+    <div class="figure-container">
+      <div id="fig-calibracao"></div>
+      <p class="figure-caption">
+        <strong>Figura 2. Calibração por faixa de risco previsto, bloco espaço-temporal.</strong>
+        Pontos sobre a diagonal indicariam calibração perfeita. O decil de maior
+        risco previsto é superestimado por um fator de
+        <span class="num" id="cap-fator">—</span>. É a razão direta pela qual a
+        rampa de cor de um mapa de risco não poderia ser lida como probabilidade
+        de surto.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <h2>Nenhum limiar compensa</h2>
+    <p>
+      A pergunta operacional não é se o modelo discrimina, e sim se existe algum
+      ponto de corte em que agir sobre o alerta produza mais benefício do que as
+      duas estratégias triviais: investigar todos os municípios ou não investigar
+      nenhum. A curva de decisão responde diretamente, ponderando verdadeiros e
+      falsos positivos pela razão de troca implícita em cada limiar.
+    </p>
+
+    <div class="figure-container">
+      <div id="fig-decisao"></div>
+      <p class="figure-caption">
+        <strong>Figura 3. Curva de decisão sob bloco espaço-temporal.</strong>
+        Em nenhum limiar a curva do modelo supera simultaneamente as duas
+        referências. À esquerda ela acompanha a estratégia de investigar todos; à
+        direita, colapsa para a de não investigar nenhum. O número de limiares com
+        benefício líquido estritamente superior às duas é
+        <span class="num" id="cap-limiares">—</span>.
+      </p>
+    </div>
+
+    <div class="ressalva">
+      <p>
+        Isso não invalida a vigilância baseada em risco — invalida o modelo de
+        habitat como instrumento de priorização municipal no horizonte testado. A
+        priorização municipal vem do modelo de propagação, que tem limiares com
+        benefício líquido positivo em validação prospectiva; ver
+        <a href="previsao.html">Previsão</a>.
+      </p>
+    </div>
+  </section>
+
+  <footer class="rodape">
+    <p>
+      Valores lidos de <code>dados/validacao.json</code>, gerado por
+      <code>yfvrisk.viz.exportar_painel</code> a partir das análises <code>f3_*</code>.
+    </p>
+  </footer>
+
+</div>
+
+<script type="module" src="js/pagina-validacao.js"></script>
+</body>
+</html>

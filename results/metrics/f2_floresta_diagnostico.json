@@ -1,0 +1,29 @@
+{
+  "limiar_cobertura_arborea_pct": 30,
+  "tiles_treecover2000": 28,
+  "tiles_lossyear": 21,
+  "tiles_sem_lossyear": [
+    "00N_030W",
+    "10S_030W",
+    "20S_030W",
+    "20S_040W",
+    "30S_030W",
+    "30S_040W",
+    "30S_050W"
+  ],
+  "municipios_sem_cobertura_hansen": 0,
+  "municipios_com_cobertura_parcial": 0,
+  "linhas": 178240,
+  "floresta_total_2000_km2": 5236677.0890368605,
+  "perda_total_2001_2024_km2": 738757.829220034,
+  "anos_sem_dado_de_perda": {
+    "antes": [
+      1994,
+      1999
+    ],
+    "depois": [
+      2025,
+      2025
+    ]
+  }
+}

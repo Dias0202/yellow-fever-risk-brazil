@@ -1,0 +1,99 @@
+{
+  "linhas": 178240,
+  "municipios": 5570,
+  "anos": [
+    1994,
+    2025
+  ],
+  "grupos_de_variaveis": {
+    "CLIMA": 9,
+    "CLIMA_DEFASADO": 8,
+    "PAISAGEM": 11,
+    "IMUNIDADE": 1,
+    "DEMOGRAFIA": 3,
+    "HISTORICO": 3
+  },
+  "variaveis": {
+    "CLIMA": [
+      "ppt_total",
+      "tmax_medio",
+      "tmin_medio",
+      "vpd_medio",
+      "ws_medio",
+      "ppt_sazonalidade",
+      "ppt_trimestre_seco",
+      "tmax_mes_mais_quente",
+      "amplitude_termica"
+    ],
+    "CLIMA_DEFASADO": [
+      "ppt_total_lag1",
+      "ppt_total_lag2",
+      "tmax_medio_lag1",
+      "tmax_medio_lag2",
+      "vpd_medio_lag1",
+      "vpd_medio_lag2",
+      "ppt_trimestre_seco_lag1",
+      "ppt_trimestre_seco_lag2"
+    ],
+    "PAISAGEM": [
+      "floresta_frac",
+      "silvicultura_frac",
+      "pastagem_frac",
+      "urbano_frac",
+      "areas_umidas_frac",
+      "savana_frac",
+      "mosaico_agropecuario_frac",
+      "interface_floresta_antropico",
+      "cobertura_florestal",
+      "perda_ano_km2",
+      "perda_acumulada_km2"
+    ],
+    "IMUNIDADE": [
+      "imunidade_defasada2"
+    ],
+    "DEMOGRAFIA": [
+      "populacao_log",
+      "densidade_hab_km2",
+      "area_km2"
+    ],
+    "HISTORICO": [
+      "evento_ano_anterior",
+      "eventos_ultimos_5_anos",
+      "anos_desde_ultimo_evento"
+    ]
+  },
+  "total_de_variaveis": 35,
+  "prevalencia": {
+    "yf_event": 0.00738330341113106,
+    "caso_humano": 0.00421903052064632,
+    "epizootia": 0.004185368043087972
+  },
+  "ausentes_por_variavel": {
+    "ppt_total": 5570,
+    "tmax_medio": 5570,
+    "tmin_medio": 5570,
+    "vpd_medio": 5570,
+    "ws_medio": 5570,
+    "ppt_sazonalidade": 5570,
+    "ppt_trimestre_seco": 5570,
+    "tmax_mes_mais_quente": 5570,
+    "amplitude_termica": 5570,
+    "ppt_total_lag1": 5570,
+    "ppt_total_lag2": 11140,
+    "tmax_medio_lag1": 5570,
+    "tmax_medio_lag2": 11140,
+    "vpd_medio_lag1": 5570,
+    "vpd_medio_lag2": 11140,
+    "ppt_trimestre_seco_lag1": 5570,
+    "ppt_trimestre_seco_lag2": 11140,
+    "floresta_frac": 32,
+    "silvicultura_frac": 32,
+    "pastagem_frac": 32,
+    "urbano_frac": 32,
+    "areas_umidas_frac": 32,
+    "savana_frac": 32,
+    "mosaico_agropecuario_frac": 32,
+    "interface_floresta_antropico": 32,
+    "imunidade_defasada2": 11140
+  }
+}

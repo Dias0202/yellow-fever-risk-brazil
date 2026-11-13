@@ -1,0 +1,124 @@
+{
+  "temporada_prevista": 2025,
+  "ultima_observada": 2024,
+  "variaveis_operacionais": [
+    "forca_k50",
+    "forca_k200",
+    "forca_epiz_k100",
+    "dist_foco_mais_proximo",
+    "temporadas_desde_evento",
+    "eventos_locais_10t",
+    "cobertura_florestal_t1",
+    "altitude_media",
+    "amplitude_altimetrica",
+    "populacao_log_t1",
+    "tmax_temporada_normal",
+    "ppt_sazonalidade_normal"
+  ],
+  "C_regularizacao": 0.003,
+  "variaveis_excluidas_por_indisponibilidade": [
+    "ppt_pre_estacao_anomalia",
+    "ppt_transmissao_anomalia",
+    "tmax_transmissao_anomalia",
+    "vpd_temporada_anomalia"
+  ],
+  "motivo_exclusao": "A serie do TerraClimate termina no ano civil de 2024, o que deixa a temporada 2024/25 incompleta e sem as anomalias climaticas. As demais foram removidas por multicolinearidade - ver o passo 6.",
+  "desempenho_prospectivo": {
+    "logistica": {
+      "roc_auc": 0.73370697140199,
+      "pr_auc_sobre_prevalencia": 7.276037972691858,
+      "temporadas": 21,
+      "recall_top50": 0.05919854280510018,
+      "investigados_por_surto_top50": 16.153846153846153,
+      "recall_top100": 0.10837887067395265,
+      "investigados_por_surto_top100": 17.647058823529413,
+      "recall_top250": 0.22313296903460839,
+      "investigados_por_surto_top250": 21.428571428571427,
+      "recall_top500": 0.35974499089253187,
+      "investigados_por_surto_top500": 26.582278481012658,
+      "recall_top1000": 0.5145719489981785,
+      "investigados_por_surto_top1000": 37.16814159292036
+    },
+    "forca": {
+      "roc_auc": 0.7747560323994758,
+      "pr_auc_sobre_prevalencia": 8.139416117039104,
+      "temporadas": 21,
+      "recall_top50": 0.039162112932604735,
+      "investigados_por_surto_top50": 24.41860465116279,
+      "recall_top100": 0.08287795992714025,
+      "investigados_por_surto_top100": 23.076923076923077,
+      "recall_top250": 0.17577413479052822,
+      "investigados_por_surto_top250": 27.202072538860104,
+      "recall_top500": 0.36156648451730417,
+      "investigados_por_surto_top500": 26.448362720403022,
+      "recall_top1000": 0.5409836065573771,
+      "investigados_por_surto_top1000": 35.35353535353536
+    }
+  },
+  "calibracao_fora_da_amostra": [
+    {
+      "faixa": 1,
+      "n": 11697,
+      "previsto": 0.003130283805382309,
+      "observado": 0.00025647601949217746
+    },
+    {
+      "faixa": 2,
+      "n": 11697,
+      "previsto": 0.0037868405337060053,
+      "observado": 0.001538856116953065
+    },
+    {
+      "faixa": 3,
+      "n": 11697,
+      "previsto": 0.004275926187928412,
+      "observado": 0.0023082841754295974
+    },
+    {
+      "faixa": 4,
+      "n": 11697,
+      "previsto": 0.0047577175702488905,
+      "observado": 0.002992220227408737
+    },
+    {
+      "faixa": 5,
+      "n": 11697,
+      "previsto": 0.00532601794309528,
+      "observado": 0.004702060357356587
+    },
+    {
+      "faixa": 6,
+      "n": 11697,
+      "previsto": 0.00602324379402717,
+      "observado": 0.007095836539283577
+    },
+    {
+      "faixa": 7,
+      "n": 11697,
+      "previsto": 0.00699982207291634,
+      "observado": 0.00923313670171839
+    },
+    {
+      "faixa": 8,
+      "n": 11697,
+      "previsto": 0.008628325755113563,
+      "observado": 0.01094297683166624
+    },
+    {
+      "faixa": 9,
+      "n": 11697,
+      "previsto": 0.012218764536348617,
+      "observado": 0.01581602120201761
+    },
+    {
+      "faixa": 10,
+      "n": 11697,
+      "previsto": 0.0387220470838659,
+      "observado": 0.038984354962810976
+    }
+  ],
+  "n_treino": 172670,
+  "eventos_treino": 1254,
+  "tabela": "results/tables/f6_05_previsao_proxima_temporada.csv",
+  "recomendacao": "Lista curta (ate ~100): ordenar por `posto_logistica`. Lista larga (500+): ordenar por `posto_forca`. Nenhuma domina a outra."
+}

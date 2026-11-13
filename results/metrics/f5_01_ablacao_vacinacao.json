@@ -1,0 +1,305 @@
+{
+  "cortes": [
+    2014,
+    2019
+  ],
+  "variantes": {
+    "modelo_final": [
+      "ppt_total",
+      "tmax_medio",
+      "tmin_medio",
+      "vpd_medio",
+      "ws_medio",
+      "ppt_sazonalidade",
+      "ppt_trimestre_seco",
+      "tmax_mes_mais_quente",
+      "amplitude_termica",
+      "ppt_total_lag1",
+      "ppt_total_lag2",
+      "tmax_medio_lag1",
+      "tmax_medio_lag2",
+      "vpd_medio_lag1",
+      "vpd_medio_lag2",
+      "ppt_trimestre_seco_lag1",
+      "ppt_trimestre_seco_lag2",
+      "floresta_frac",
+      "silvicultura_frac",
+      "pastagem_frac",
+      "urbano_frac",
+      "areas_umidas_frac",
+      "savana_frac",
+      "mosaico_agropecuario_frac",
+      "interface_floresta_antropico",
+      "cobertura_florestal",
+      "perda_ano_km2",
+      "perda_acumulada_km2",
+      "populacao_log",
+      "densidade_hab_km2",
+      "area_km2",
+      "imunidade_defasada2"
+    ],
+    "sem_imunidade": [
+      "ppt_total",
+      "tmax_medio",
+      "tmin_medio",
+      "vpd_medio",
+      "ws_medio",
+      "ppt_sazonalidade",
+      "ppt_trimestre_seco",
+      "tmax_mes_mais_quente",
+      "amplitude_termica",
+      "ppt_total_lag1",
+      "ppt_total_lag2",
+      "tmax_medio_lag1",
+      "tmax_medio_lag2",
+      "vpd_medio_lag1",
+      "vpd_medio_lag2",
+      "ppt_trimestre_seco_lag1",
+      "ppt_trimestre_seco_lag2",
+      "floresta_frac",
+      "silvicultura_frac",
+      "pastagem_frac",
+      "urbano_frac",
+      "areas_umidas_frac",
+      "savana_frac",
+      "mosaico_agropecuario_frac",
+      "interface_floresta_antropico",
+      "cobertura_florestal",
+      "perda_ano_km2",
+      "perda_acumulada_km2",
+      "populacao_log",
+      "densidade_hab_km2",
+      "area_km2"
+    ],
+    "imunidade_a_jusante": [
+      "ppt_total",
+      "tmax_medio",
+      "tmin_medio",
+      "vpd_medio",
+      "ws_medio",
+      "ppt_sazonalidade",
+      "ppt_trimestre_seco",
+      "tmax_mes_mais_quente",
+      "amplitude_termica",
+      "ppt_total_lag1",
+      "ppt_total_lag2",
+      "tmax_medio_lag1",
+      "tmax_medio_lag2",
+      "vpd_medio_lag1",
+      "vpd_medio_lag2",
+      "ppt_trimestre_seco_lag1",
+      "ppt_trimestre_seco_lag2",
+      "floresta_frac",
+      "silvicultura_frac",
+      "pastagem_frac",
+      "urbano_frac",
+      "areas_umidas_frac",
+      "savana_frac",
+      "mosaico_agropecuario_frac",
+      "interface_floresta_antropico",
+      "cobertura_florestal",
+      "perda_ano_km2",
+      "perda_acumulada_km2",
+      "populacao_log",
+      "densidade_hab_km2",
+      "area_km2",
+      "imunidade_acumulada",
+      "suscetivel_pct"
+    ],
+    "com_construtos_de_registro": [
+      "ppt_total",
+      "tmax_medio",
+      "tmin_medio",
+      "vpd_medio",
+      "ws_medio",
+      "ppt_sazonalidade",
+      "ppt_trimestre_seco",
+      "tmax_mes_mais_quente",
+      "amplitude_termica",
+      "ppt_total_lag1",
+      "ppt_total_lag2",
+      "tmax_medio_lag1",
+      "tmax_medio_lag2",
+      "vpd_medio_lag1",
+      "vpd_medio_lag2",
+      "ppt_trimestre_seco_lag1",
+      "ppt_trimestre_seco_lag2",
+      "floresta_frac",
+      "silvicultura_frac",
+      "pastagem_frac",
+      "urbano_frac",
+      "areas_umidas_frac",
+      "savana_frac",
+      "mosaico_agropecuario_frac",
+      "interface_floresta_antropico",
+      "cobertura_florestal",
+      "perda_ano_km2",
+      "perda_acumulada_km2",
+      "populacao_log",
+      "densidade_hab_km2",
+      "area_km2",
+      "imunidade_defasada2",
+      "imunidade_relativa2",
+      "anos_com_registro_pni"
+    ]
+  },
+  "referencia": "sem_imunidade",
+  "n_reamostragens": 500,
+  "resultados": [
+    {
+      "corte": 2014,
+      "variante": "modelo_final",
+      "n_variaveis": 32,
+      "roc_auc": 0.5043997737409465,
+      "pr_auc": 0.016440061212377673,
+      "pr_auc_sobre_prevalencia": 1.0103134909552458
+    },
+    {
+      "corte": 2014,
+      "variante": "sem_imunidade",
+      "n_variaveis": 31,
+      "roc_auc": 0.5182483558052254,
+      "pr_auc": 0.01688271841194866,
+      "pr_auc_sobre_prevalencia": 1.0375167072217597
+    },
+    {
+      "corte": 2014,
+      "variante": "imunidade_a_jusante",
+      "n_variaveis": 33,
+      "roc_auc": 0.5253547961589212,
+      "pr_auc": 0.017139450021355442,
+      "pr_auc_sobre_prevalencia": 1.053293984762736
+    },
+    {
+      "corte": 2014,
+      "variante": "com_construtos_de_registro",
+      "n_variaveis": 34,
+      "roc_auc": 0.4877530738982498,
+      "pr_auc": 0.015755132731468027,
+      "pr_auc_sobre_prevalencia": 0.9682216473992438
+    },
+    {
+      "corte": 2019,
+      "variante": "modelo_final",
+      "n_variaveis": 32,
+      "roc_auc": 0.7952738281883549,
+      "pr_auc": 0.03194624241007988,
+      "pr_auc_sobre_prevalencia": 4.028843099414602
+    },
+    {
+      "corte": 2019,
+      "variante": "sem_imunidade",
+      "n_variaveis": 31,
+      "roc_auc": 0.7937942141399885,
+      "pr_auc": 0.03187706382424336,
+      "pr_auc_sobre_prevalencia": 4.020118766061182
+    },
+    {
+      "corte": 2019,
+      "variante": "imunidade_a_jusante",
+      "n_variaveis": 33,
+      "roc_auc": 0.8141115913533632,
+      "pr_auc": 0.031164470532355572,
+      "pr_auc_sobre_prevalencia": 3.930251340344616
+    },
+    {
+      "corte": 2019,
+      "variante": "com_construtos_de_registro",
+      "n_variaveis": 34,
+      "roc_auc": 0.8077742336595123,
+      "pr_auc": 0.03593489257483868,
+      "pr_auc_sobre_prevalencia": 4.531864565475882
+    }
+  ],
+  "diferencas_com_intervalo": {
+    "2014": [
+      {
+        "variante": "modelo_final",
+        "referencia": "sem_imunidade",
+        "delta_roc_auc": -0.01328251130305924,
+        "ic95_roc_auc": [
+          -0.02596801753474478,
+          -0.0013059031851926255
+        ],
+        "delta_pr_auc": -0.0005014405003214182,
+        "ic95_pr_auc": [
+          -0.0014736939020803907,
+          0.00026010816773092935
+        ]
+      },
+      {
+        "variante": "imunidade_a_jusante",
+        "referencia": "sem_imunidade",
+        "delta_roc_auc": 0.0076688779548514975,
+        "ic95_roc_auc": [
+          -0.006119860728542484,
+          0.021187651540755834
+        ],
+        "delta_pr_auc": 0.00012129850283487109,
+        "ic95_pr_auc": [
+          -0.0015715936365596533,
+          0.0010161658843354494
+        ]
+      },
+      {
+        "variante": "com_construtos_de_registro",
+        "referencia": "sem_imunidade",
+        "delta_roc_auc": -0.030301745687636,
+        "ic95_roc_auc": [
+          -0.047046563043766164,
+          -0.013262874850313078
+        ],
+        "delta_pr_auc": -0.0012460930836126825,
+        "ic95_pr_auc": [
+          -0.0029209928461688506,
+          -0.0002728437175061804
+        ]
+      }
+    ],
+    "2019": [
+      {
+        "variante": "modelo_final",
+        "referencia": "sem_imunidade",
+        "delta_roc_auc": 0.0010251274568410897,
+        "ic95_roc_auc": [
+          -0.012290205280529529,
+          0.013291857055755696
+        ],
+        "delta_pr_auc": -3.078526621579076e-05,
+        "ic95_pr_auc": [
+          -0.0026600696368515695,
+          0.002456907801996122
+        ]
+      },
+      {
+        "variante": "imunidade_a_jusante",
+        "referencia": "sem_imunidade",
+        "delta_roc_auc": 0.019857453010694335,
+        "ic95_roc_auc": [
+          0.006972293001358347,
+          0.03201194221428469
+        ],
+        "delta_pr_auc": -0.0010593726270346968,
+        "ic95_pr_auc": [
+          -0.004580344612712849,
+          0.0015231476148285783
+        ]
+      },
+      {
+        "variante": "com_construtos_de_registro",
+        "referencia": "sem_imunidade",
+        "delta_roc_auc": 0.013531230332446015,
+        "ic95_roc_auc": [
+          -0.001835975755068178,
+          0.028999217233334106
+        ],
+        "delta_pr_auc": 0.005111972647101462,
+        "ic95_pr_auc": [
+          -0.001101997651591019,
+          0.015655053632894992
+        ]
+      }
+    ]
+  },
+  "segundos_total": 169.7
+}
